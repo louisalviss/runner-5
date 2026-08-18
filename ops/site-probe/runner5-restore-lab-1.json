@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE",
+  "siteSlug": "runner5-restore-lab-1",
+  "siteUrl": "https://runner5-restore-lab-1.wasmer.app/",
+  "home": {
+    "url": "https://runner5-restore-lab-1.wasmer.app/",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "bytesSampled": 69517,
+    "bodySample": "<!DOCTYPE html>\n<html lang=\"en-US\">\n<head>\n\t<meta charset=\"UTF-8\" />\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n<meta name='robots' content='max-image-preview:large' />\n<title>WordPress Site 95e41d</title>\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"WordPress Site 95e41d &raquo; Feed\" href=\"https://runner5-restore-lab-1.wasmer.app/feed/\" />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"WordPress Site 95e41d &raquo; Comments Feed\" href=\"https://r"
+  },
+  "wpJson": {
+    "url": "https://runner5-restore-lab-1.wasmer.app/wp-json/",
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "bytesSampled": 131072,
+    "bodySample": "{\"name\":\"WordPress Site 95e41d\",\"description\":\"\",\"url\":\"https:\\/\\/runner5-restore-lab-1.wasmer.app\",\"home\":\"https:\\/\\/runner5-restore-lab-1.wasmer.app\",\"gmt_offset\":\"0\",\"timezone_string\":\"\",\"page_for_posts\":0,\"page_on_front\":0,\"show_on_front\":\"posts\",\"namespaces\":[\"oembed\\/1.0\",\"wasmer\\/v1\",\"wp\\/v2\",\"wp-site-health\\/v1\",\"wp-block-editor\\/v1\",\"wp-abilities\\/v1\"],\"authentication\":{\"application-passwords\":{\"endpoints\":{\"authorization\":\"https:\\/\\/runner5-restore-lab-1.wasmer.app\\/wp-admin\\/authorize"
+  },
+  "wpLogin": {
+    "url": "https://runner5-restore-lab-1.wasmer.app/wp-login.php",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "bytesSampled": 4953,
+    "bodySample": "<!DOCTYPE html>\n\t<html lang=\"en-US\">\n\t<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\t<title>Log In &lsaquo; WordPress Site 95e41d &#8212; WordPress</title>\n\t<meta name='robots' content='max-image-preview:large, noindex, noarchive' />\n<link rel='stylesheet' href='https://runner5-restore-lab-1.wasmer.app/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5Bchunk_0%5D=dashicons,buttons,forms,l10n,wp-base-styles,login&amp;ver=7.0.4' media='all' />\n\t<meta name='referrer"
+  },
+  "homeOk": true,
+  "wpApiOk": true,
+  "wpLoginOk": true,
+  "checkedAt": "2026-08-18T03:47:56Z"
+}
