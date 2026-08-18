@@ -1,0 +1,88 @@
+name: Probe WordPress Speed
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'speed-probe/requests/*.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: runner5-wordpress-speed-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Measure live response timings
+        shell: bash
+        run: |
+          set -euo pipefail
+          request="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep '^speed-probe/requests/.*\.json$' | tail -1 || true)"
+          test -n "$request" && test -f "$request"
+          export REQUEST_PATH="$request"
+          python - <<'PY'
+          import json, os, ssl, urllib.request, urllib.error, time, statistics
+          req=json.load(open(os.environ['REQUEST_PATH']))
+          base=req['site_url'].rstrip('/')+'/'
+          slug=req['site_slug']
+          ctx=ssl.create_default_context()
+          def once(path='/'):
+              url=base.rstrip('/')+path
+              start=time.perf_counter()
+              try:
+                  r=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Runner5SpeedProbe/1.0','Cache-Control':'no-cache'}),timeout=30,context=ctx)
+                  headers_at=time.perf_counter()
+                  body=r.read()
+                  done=time.perf_counter()
+                  return {'status':r.status,'ttfbMs':round((headers_at-start)*1000,1),'totalMs':round((done-start)*1000,1),'bytes':len(body),'cacheControl':r.headers.get('cache-control'),'age':r.headers.get('age'),'server':r.headers.get('server')}
+              except Exception as e:
+                  done=time.perf_counter()
+                  return {'status':None,'ttfbMs':None,'totalMs':round((done-start)*1000,1),'error':str(e)}
+          runs=[]
+          for i in range(8):
+              runs.append(once('/'))
+              time.sleep(0.5)
+          api=once('/wp-json/')
+          vals=[x['ttfbMs'] for x in runs if isinstance(x.get('ttfbMs'),(int,float))]
+          result={
+            'siteSlug':slug,'siteUrl':base,'runs':runs,'wpJson':api,
+            'firstTtfbMs': vals[0] if vals else None,
+            'warmMedianTtfbMs': round(statistics.median(vals[1:]),1) if len(vals)>1 else None,
+            'warmMinTtfbMs': min(vals[1:]) if len(vals)>1 else None,
+            'checkedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
+          }
+          open('/tmp/wp-speed.json','w').write(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result,indent=2))
+          PY
+
+      - name: Persist speed result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s /tmp/wp-speed.json || exit 2
+          slug="$(python -c 'import json; print(json.load(open("/tmp/wp-speed.json"))["siteSlug"])')"
+          cp /tmp/wp-speed.json /tmp/wp-speed-safe.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p ops/speed-probe
+            cp /tmp/wp-speed-safe.json "ops/speed-probe/${slug}.json"
+            git add "ops/speed-probe/${slug}.json"
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Persist WordPress speed probe: ${slug}"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 3
