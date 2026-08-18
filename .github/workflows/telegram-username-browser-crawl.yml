@@ -39,7 +39,7 @@ jobs:
             ('getgems',f'https://getgems.io/collection/{COL}'),
             ('fragstat','https://fragstat.org/marketplace'),
           ]
-          allout=[]
+          allout=[]; summaries=[]
           with sync_playwright() as p:
             browser=p.chromium.launch(headless=True,args=['--disable-blink-features=AutomationControlled'])
             ctx=browser.new_context(viewport={'width':1440,'height':1100},locale='en-US',user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36')
@@ -47,31 +47,54 @@ jobs:
               net=[]
               page=ctx.new_page()
               page.on('response',lambda r,net=net: net.append({'url':r.url,'status':r.status,'type':r.request.resource_type}) if ('api' in r.url.lower() or 'graphql' in r.url.lower() or 'nft' in r.url.lower() or 'username' in r.url.lower()) else None)
-              row={'name':name,'url':url}
+              row={'name':name,'url':url}; sort_action=None
               try:
                 resp=page.goto(url,wait_until='domcontentloaded',timeout=90000)
                 row['status']=resp.status if resp else None
                 page.wait_for_timeout(6000)
-                for _ in range(18):
+                if name=='getgems':
+                  try:
+                    page.get_by_text('Price: High to Low',exact=True).click(timeout=5000)
+                    page.wait_for_timeout(500)
+                    page.get_by_text('Price: Low to High',exact=True).click(timeout=5000)
+                    page.wait_for_timeout(5000)
+                    sort_action='low_to_high_clicked'
+                  except Exception as e:
+                    sort_action='sort_failed:'+repr(e)
+                for _ in range(24):
                   page.mouse.wheel(0,2500)
-                  page.wait_for_timeout(700)
+                  page.wait_for_timeout(650)
                 text=page.locator('body').inner_text(timeout=20000)
                 anchors=page.eval_on_selector_all('a','els => els.map(a => ({text:(a.innerText||"").trim(), href:a.href}))')
-                row['title']=page.title()
+                row['title']=page.title(); row['sort_action']=sort_action
                 row['text']=text[:1200000]
                 row['links']=anchors[:5000]
                 row['usernames']=sorted(set(re.findall(r'@([A-Za-z0-9_]{4,32})',text)))[:5000]
                 row['network']=net[-3000:]
                 page.screenshot(path=f'crawl-results/{name}.png',full_page=False)
+
+                lines=[x.strip() for x in text.splitlines() if x.strip()]
+                item_rows=[]
+                for i,line in enumerate(lines):
+                  if re.fullmatch(r'@[A-Za-z0-9_]{4,32}',line):
+                    item_rows.append({'username':line[1:],'context':lines[i:i+9]})
+                unique_net=[]; seen=set()
+                for n in net:
+                  if n['url'] not in seen:
+                    seen.add(n['url']); unique_net.append(n)
+                summaries.append({'name':name,'url':url,'status':row.get('status'),'title':row.get('title'),'sort_action':sort_action,'username_count':len(row['usernames']),'items':item_rows[:500],'network':unique_net[:500]})
               except Exception as e:
                 row['error']=repr(e)
+                summaries.append({'name':name,'url':url,'error':repr(e),'sort_action':sort_action})
                 try: page.screenshot(path=f'crawl-results/{name}-error.png',full_page=False)
                 except Exception: pass
               finally:
                 page.close()
               allout.append(row)
             browser.close()
-          Path('crawl-results/browser.json').write_text(json.dumps({'captured_at':time.time(),'results':allout},ensure_ascii=False,indent=2))
+          captured=time.time()
+          Path('crawl-results/browser.json').write_text(json.dumps({'captured_at':captured,'results':allout},ensure_ascii=False,indent=2))
+          Path('crawl-results/browser-summary.json').write_text(json.dumps({'captured_at':captured,'results':summaries},ensure_ascii=False,indent=2))
           PY
       - name: Commit result
         run: |
@@ -79,4 +102,5 @@ jobs:
           git config user.email "runner-5-bot@users.noreply.github.com"
           git add crawl-results/
           git commit -m "Update Telegram username browser crawl" || exit 0
+          git pull --rebase origin main || true
           git push
