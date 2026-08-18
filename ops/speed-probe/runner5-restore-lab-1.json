@@ -3,15 +3,9 @@
   "siteUrl": "https://runner5-restore-lab-1.wasmer.app/",
   "runs": [
     {
-      "status": null,
-      "ttfbMs": null,
-      "totalMs": 30335.2,
-      "error": "The read operation timed out"
-    },
-    {
       "status": 200,
-      "ttfbMs": 26519.0,
-      "totalMs": 26692.5,
+      "ttfbMs": 9857.6,
+      "totalMs": 10144.7,
       "bytes": 69517,
       "cacheControl": null,
       "age": null,
@@ -19,8 +13,8 @@
     },
     {
       "status": 200,
-      "ttfbMs": 14826.5,
-      "totalMs": 14997.2,
+      "ttfbMs": 8972.7,
+      "totalMs": 9258.5,
       "bytes": 69517,
       "cacheControl": null,
       "age": null,
@@ -28,8 +22,8 @@
     },
     {
       "status": 200,
-      "ttfbMs": 5159.8,
-      "totalMs": 5333.4,
+      "ttfbMs": 19924.2,
+      "totalMs": 20211.5,
       "bytes": 69517,
       "cacheControl": null,
       "age": null,
@@ -37,8 +31,8 @@
     },
     {
       "status": 200,
-      "ttfbMs": 8766.3,
-      "totalMs": 8937.0,
+      "ttfbMs": 8581.0,
+      "totalMs": 8866.9,
       "bytes": 69517,
       "cacheControl": null,
       "age": null,
@@ -46,8 +40,8 @@
     },
     {
       "status": 200,
-      "ttfbMs": 9568.8,
-      "totalMs": 9742.2,
+      "ttfbMs": 8719.3,
+      "totalMs": 9006.5,
       "bytes": 69517,
       "cacheControl": null,
       "age": null,
@@ -55,8 +49,8 @@
     },
     {
       "status": 200,
-      "ttfbMs": 10743.2,
-      "totalMs": 10913.9,
+      "ttfbMs": 10399.0,
+      "totalMs": 10684.8,
       "bytes": 69517,
       "cacheControl": null,
       "age": null,
@@ -64,8 +58,17 @@
     },
     {
       "status": 200,
-      "ttfbMs": 20813.7,
-      "totalMs": 20987.2,
+      "ttfbMs": 5376.5,
+      "totalMs": 5663.7,
+      "bytes": 69517,
+      "cacheControl": null,
+      "age": null,
+      "server": null
+    },
+    {
+      "status": 200,
+      "ttfbMs": 7436.3,
+      "totalMs": 7722.1,
       "bytes": 69517,
       "cacheControl": null,
       "age": null,
@@ -74,15 +77,15 @@
   ],
   "wpJson": {
     "status": 200,
-    "ttfbMs": 1120.0,
-    "totalMs": 1461.1,
+    "ttfbMs": 5363.2,
+    "totalMs": 5949.0,
     "bytes": 193728,
     "cacheControl": null,
     "age": null,
     "server": null
   },
-  "firstTtfbMs": 26519.0,
-  "warmMedianTtfbMs": 10156.0,
-  "warmMinTtfbMs": 5159.8,
-  "checkedAt": "2026-08-18T04:16:51Z"
+  "firstTtfbMs": 9857.6,
+  "warmMedianTtfbMs": 8719.3,
+  "warmMinTtfbMs": 5376.5,
+  "checkedAt": "2026-08-18T04:20:17Z"
 }
