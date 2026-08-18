@@ -1,0 +1,105 @@
+name: Create WordPress Site
+
+on:
+  workflow_dispatch:
+    inputs:
+      site_name:
+        description: Human-readable site name
+        required: true
+        type: string
+      site_slug:
+        description: Stable lowercase site slug
+        required: true
+        type: string
+      app_name:
+        description: Wasmer app name
+        required: true
+        type: string
+      domain_mode:
+        description: Domain mode
+        required: true
+        default: wasmer
+        type: choice
+        options: [wasmer]
+  push:
+    branches: [main]
+    paths:
+      - 'site-factory/requests/*.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: runner5-wordpress-site-factory
+  cancel-in-progress: false
+
+jobs:
+  create-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      WASMER_USERNAME: ${{ secrets.WASMER_USERNAME }}
+      WASMER_PASSWORD: ${{ secrets.WASMER_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Resolve site request
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_SITE_NAME: ${{ inputs.site_name }}
+          INPUT_SITE_SLUG: ${{ inputs.site_slug }}
+          INPUT_APP_NAME: ${{ inputs.app_name }}
+          INPUT_DOMAIN_MODE: ${{ inputs.domain_mode }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            python - <<'PY'
+          import json, os
+          req = {
+              'site_name': os.environ['INPUT_SITE_NAME'],
+              'site_slug': os.environ['INPUT_SITE_SLUG'],
+              'app_name': os.environ['INPUT_APP_NAME'],
+              'domain_mode': os.environ.get('INPUT_DOMAIN_MODE') or 'wasmer',
+          }
+          open('/tmp/site-factory-request.json','w').write(json.dumps(req, ensure_ascii=False, indent=2))
+          PY
+            request='/tmp/site-factory-request.json'
+          else
+            request="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep '^site-factory/requests/.*\.json$' | tail -1 || true)"
+            test -n "$request" || { echo 'No site request JSON found'; exit 2; }
+          fi
+          slug="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["site_slug"])' "$request")"
+          echo "SITE_FACTORY_REQUEST=$request" >> "$GITHUB_ENV"
+          echo "SITE_FACTORY_SLUG=$slug" >> "$GITHUB_ENV"
+
+      - name: Install browser automation
+        run: npm install --no-save playwright-core@1.58.2
+
+      - name: Provision WordPress site
+        run: node scripts/provision-wordpress-site.mjs
+
+      - name: Persist safe factory state
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          slug="${SITE_FACTORY_SLUG:-unknown}"
+          status="/tmp/site-factory-${slug}.json"
+          if [ ! -f "$status" ]; then
+            printf '{"status":"FAILED","siteSlug":"%s","detail":"factory_status_missing"}\n' "$slug" > "$status"
+          fi
+          echo 'SAFE_SITE_FACTORY_STATUS:'
+          cat "$status"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p ops/site-factory
+          cp "$status" "ops/site-factory/${slug}.json"
+          git add "ops/site-factory/${slug}.json"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Persist WordPress Site Factory state: ${slug}"
+          git push origin HEAD:main
