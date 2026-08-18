@@ -1,0 +1,82 @@
+name: Probe WordPress Readiness
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site-probe/requests/*.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: runner5-wordpress-readiness-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Resolve request and probe
+        shell: bash
+        run: |
+          set -euo pipefail
+          request="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep '^site-probe/requests/.*\.json$' | tail -1 || true)"
+          test -n "$request" && test -f "$request"
+          export REQUEST_PATH="$request"
+          python - <<'PY'
+          import json, os, ssl, urllib.request, urllib.error, time
+          req=json.load(open(os.environ['REQUEST_PATH']))
+          base=req['site_url'].rstrip('/')+'/'
+          slug=req['site_slug']
+          ctx=ssl.create_default_context()
+          def get(path):
+              url=base.rstrip('/')+path
+              try:
+                  r=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Runner5ReadinessProbe/1.0'}),timeout=20,context=ctx)
+                  body=r.read(131072)
+                  return {'url':url,'status':r.status,'contentType':r.headers.get('content-type'),'bytesSampled':len(body),'bodySample':body[:500].decode('utf-8','ignore')}
+              except urllib.error.HTTPError as e:
+                  body=e.read(8192)
+                  return {'url':url,'status':e.code,'contentType':e.headers.get('content-type'),'bytesSampled':len(body),'bodySample':body[:500].decode('utf-8','ignore')}
+              except Exception as e:
+                  return {'url':url,'status':None,'error':str(e)}
+          home=get('/')
+          api=get('/wp-json/')
+          login=get('/wp-login.php')
+          api_text=(api.get('bodySample') or '').lower()
+          api_ok=api.get('status') in range(200,400) and ('namespaces' in api_text or 'routes' in api_text or 'wp/v2' in api_text or 'application/json' in (api.get('contentType') or '').lower())
+          login_ok=login.get('status') in range(200,500) and login.get('status') not in (404,)
+          home_ok=home.get('status') in range(200,400)
+          result={'status':'COMPLETE' if home_ok and api_ok and login_ok else 'PARTIAL','siteSlug':slug,'siteUrl':base,'home':home,'wpJson':api,'wpLogin':login,'homeOk':home_ok,'wpApiOk':api_ok,'wpLoginOk':login_ok,'checkedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+          open('/tmp/wp-readiness.json','w').write(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result,indent=2))
+          PY
+
+      - name: Persist probe result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s /tmp/wp-readiness.json || exit 2
+          slug="$(python -c 'import json; print(json.load(open("/tmp/wp-readiness.json"))["siteSlug"])')"
+          cp /tmp/wp-readiness.json /tmp/wp-readiness-safe.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p ops/site-probe
+            cp /tmp/wp-readiness-safe.json "ops/site-probe/${slug}.json"
+            git add "ops/site-probe/${slug}.json"
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Persist WordPress readiness probe: ${slug}"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 3
