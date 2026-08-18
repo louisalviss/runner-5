@@ -1,0 +1,88 @@
+{
+  "siteSlug": "runner5-restore-lab-1",
+  "siteUrl": "https://runner5-restore-lab-1.wasmer.app/",
+  "runs": [
+    {
+      "status": null,
+      "ttfbMs": null,
+      "totalMs": 30335.2,
+      "error": "The read operation timed out"
+    },
+    {
+      "status": 200,
+      "ttfbMs": 26519.0,
+      "totalMs": 26692.5,
+      "bytes": 69517,
+      "cacheControl": null,
+      "age": null,
+      "server": null
+    },
+    {
+      "status": 200,
+      "ttfbMs": 14826.5,
+      "totalMs": 14997.2,
+      "bytes": 69517,
+      "cacheControl": null,
+      "age": null,
+      "server": null
+    },
+    {
+      "status": 200,
+      "ttfbMs": 5159.8,
+      "totalMs": 5333.4,
+      "bytes": 69517,
+      "cacheControl": null,
+      "age": null,
+      "server": null
+    },
+    {
+      "status": 200,
+      "ttfbMs": 8766.3,
+      "totalMs": 8937.0,
+      "bytes": 69517,
+      "cacheControl": null,
+      "age": null,
+      "server": null
+    },
+    {
+      "status": 200,
+      "ttfbMs": 9568.8,
+      "totalMs": 9742.2,
+      "bytes": 69517,
+      "cacheControl": null,
+      "age": null,
+      "server": null
+    },
+    {
+      "status": 200,
+      "ttfbMs": 10743.2,
+      "totalMs": 10913.9,
+      "bytes": 69517,
+      "cacheControl": null,
+      "age": null,
+      "server": null
+    },
+    {
+      "status": 200,
+      "ttfbMs": 20813.7,
+      "totalMs": 20987.2,
+      "bytes": 69517,
+      "cacheControl": null,
+      "age": null,
+      "server": null
+    }
+  ],
+  "wpJson": {
+    "status": 200,
+    "ttfbMs": 1120.0,
+    "totalMs": 1461.1,
+    "bytes": 193728,
+    "cacheControl": null,
+    "age": null,
+    "server": null
+  },
+  "firstTtfbMs": 26519.0,
+  "warmMedianTtfbMs": 10156.0,
+  "warmMinTtfbMs": 5159.8,
+  "checkedAt": "2026-08-18T04:16:51Z"
+}
