@@ -1,0 +1,82 @@
+name: Telegram Username Browser Crawl
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/telegram-username-browser-crawl.yml"
+      - "telegram-browser-trigger.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-username-browser-crawl
+  cancel-in-progress: true
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Playwright
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Crawl rendered marketplaces
+        run: |
+          mkdir -p crawl-results
+          python - <<'PY'
+          import json, re, time
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+
+          COL='EQCA14o1-VWhS2efqoh_9M1b_A9DtKTuoqfmkn83AbJzwnPi'
+          pages=[
+            ('getgems',f'https://getgems.io/collection/{COL}'),
+            ('fragstat','https://fragstat.org/marketplace'),
+          ]
+          allout=[]
+          with sync_playwright() as p:
+            browser=p.chromium.launch(headless=True,args=['--disable-blink-features=AutomationControlled'])
+            ctx=browser.new_context(viewport={'width':1440,'height':1100},locale='en-US',user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36')
+            for name,url in pages:
+              net=[]
+              page=ctx.new_page()
+              page.on('response',lambda r,net=net: net.append({'url':r.url,'status':r.status,'type':r.request.resource_type}) if ('api' in r.url.lower() or 'graphql' in r.url.lower() or 'nft' in r.url.lower() or 'username' in r.url.lower()) else None)
+              row={'name':name,'url':url}
+              try:
+                resp=page.goto(url,wait_until='domcontentloaded',timeout=90000)
+                row['status']=resp.status if resp else None
+                page.wait_for_timeout(6000)
+                for _ in range(18):
+                  page.mouse.wheel(0,2500)
+                  page.wait_for_timeout(700)
+                text=page.locator('body').inner_text(timeout=20000)
+                anchors=page.eval_on_selector_all('a','els => els.map(a => ({text:(a.innerText||"").trim(), href:a.href}))')
+                row['title']=page.title()
+                row['text']=text[:1200000]
+                row['links']=anchors[:5000]
+                row['usernames']=sorted(set(re.findall(r'@([A-Za-z0-9_]{4,32})',text)))[:5000]
+                row['network']=net[-3000:]
+                page.screenshot(path=f'crawl-results/{name}.png',full_page=False)
+              except Exception as e:
+                row['error']=repr(e)
+                try: page.screenshot(path=f'crawl-results/{name}-error.png',full_page=False)
+                except Exception: pass
+              finally:
+                page.close()
+              allout.append(row)
+            browser.close()
+          Path('crawl-results/browser.json').write_text(json.dumps({'captured_at':time.time(),'results':allout},ensure_ascii=False,indent=2))
+          PY
+      - name: Commit result
+        run: |
+          git config user.name "runner-5-bot"
+          git config user.email "runner-5-bot@users.noreply.github.com"
+          git add crawl-results/
+          git commit -m "Update Telegram username browser crawl" || exit 0
+          git push
