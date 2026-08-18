@@ -1,4 +1,5 @@
 {
   "site_slug": "runner5-restore-lab-1",
-  "site_url": "https://runner5-restore-lab-1.wasmer.app/"
+  "site_url": "https://runner5-restore-lab-1.wasmer.app/",
+  "probe": "post-seed-check-1"
 }
