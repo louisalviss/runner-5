@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED",
+  "stage": "init",
+  "siteName": "Runner5 Restore Lab 1",
+  "siteSlug": "runner5-restore-lab-1",
+  "appName": "runner5-restore-lab-1",
+  "domainMode": "wasmer",
+  "siteUrl": null,
+  "dashboardUrl": null,
+  "httpCode": null,
+  "wpAdminReachable": false,
+  "wpApiReachable": false,
+  "reusedExistingApp": false,
+  "detail": "wasmer_auth_missing",
+  "updatedAt": "2026-08-18T03:26:57.001Z"
+}
