@@ -14,10 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Install fast dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q 'yt-dlp[default]'
 
       - name: Install Agent Reach and channels
         shell: bash
@@ -42,7 +51,41 @@ jobs:
           echo "doctor_exit=$code" >> "$GITHUB_STEP_SUMMARY"
           exit 0
 
-      - name: Benchmark public retrieval
+      - name: Benchmark hybrid Social Reach
+        shell: bash
+        run: |
+          set +e
+          rm -rf /tmp/social-reach-v2
+          python social_reach.py jobs/social-reach/2026-08-21-hybrid-benchmark-v2.json --output /tmp/social-reach-v2
+          code=$?
+          echo "hybrid_exit=$code" >> "$GITHUB_STEP_SUMMARY"
+          echo '## Hybrid Social Reach' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          d=json.load(open('/tmp/social-reach-v2/result.json'))
+          compact={
+              'wall_seconds': d['wall_seconds'],
+              'ok_count': d['ok_count'],
+              'failed_count': d['failed_count'],
+              'results': [
+                  {
+                      'platform': r.get('platform'),
+                      'ok': r.get('ok'),
+                      'source': r.get('source'),
+                      'elapsed_seconds': r.get('elapsed_seconds'),
+                      'attempts': r.get('attempts'),
+                  }
+                  for r in d['results']
+              ]
+          }
+          print(json.dumps(compact,ensure_ascii=False,indent=2))
+          PY
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat /tmp/social-reach-v2/result.json
+          exit 0
+
+      - name: Benchmark raw Agent Reach/public retrieval
         shell: bash
         run: |
           set +e
@@ -85,17 +128,11 @@ jobs:
           fi
 
           {
-            echo '## Agent Reach benchmark'
+            echo '## Raw Agent Reach/public benchmark'
             echo
             echo '| test | exit | ms | stdout bytes |'
             echo '|---|---:|---:|---:|'
             awk -F '\t' '{printf "| %s | %s | %s | %s |\n", $1,$2,$3,$4}' "$OUT/results.tsv"
-            echo
-            echo '### X zero-auth preview'
-            echo '```text'
-            head -c 2500 "$OUT/x_jina.out" || true
-            echo
-            echo '```'
             echo
             echo '### Errors / auth requirements'
             echo '```text'
@@ -104,9 +141,6 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
           cat "$OUT/results.tsv"
-          echo '--- X Jina preview ---'
-          head -c 2500 "$OUT/x_jina.out" || true
-          echo
           echo '--- errors ---'
           for f in "$OUT"/*.err; do echo "### $f"; head -c 1200 "$f"; echo; done
           exit 0
