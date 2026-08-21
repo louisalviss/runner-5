@@ -4,10 +4,18 @@ on:
   push:
     branches:
       - test/agent-reach-benchmark-20260821
+    paths:
+      - '.github/workflows/agent-reach-benchmark.yml'
   pull_request:
     branches:
       - main
+    paths:
+      - '.github/workflows/agent-reach-benchmark.yml'
   workflow_dispatch:
+
+concurrency:
+  group: agent-reach-benchmark-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   benchmark:
