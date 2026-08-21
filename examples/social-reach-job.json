@@ -1,0 +1,11 @@
+{
+  "name": "example-social-reach-job",
+  "timeout_seconds": 20,
+  "max_workers": 4,
+  "use_agent_reach": false,
+  "urls": [
+    "https://x.com/example/status/1234567890",
+    "https://www.reddit.com/r/artificial/",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  ]
+}

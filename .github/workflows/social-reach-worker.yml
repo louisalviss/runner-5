@@ -1,0 +1,131 @@
+name: Social Reach Worker
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'jobs/social-reach/*.json'
+      - 'jobs/social-reach/**/*.json'
+  workflow_dispatch:
+    inputs:
+      job_file:
+        description: 'Path to a social reach job JSON in the repository'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-reach-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install fast dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q 'yt-dlp[default]'
+
+      - name: Resolve job file
+        id: job
+        shell: bash
+        env:
+          INPUT_JOB_FILE: ${{ github.event.inputs.job_file }}
+        run: |
+          set -euo pipefail
+          JOB_FILE="${INPUT_JOB_FILE:-}"
+          if [ -z "$JOB_FILE" ]; then
+            JOB_FILE="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" -- 'jobs/social-reach/*.json' 'jobs/social-reach/**/*.json' | tail -n 1 || true)"
+          fi
+          if [ -z "$JOB_FILE" ] || [ ! -f "$JOB_FILE" ]; then
+            echo "No valid Social Reach job JSON found: $JOB_FILE" >&2
+            exit 2
+          fi
+          stem="$(basename "$JOB_FILE" .json)"
+          use_agent_reach="$(python -c 'import json,sys; print("true" if json.load(open(sys.argv[1])).get("use_agent_reach") is True else "false")' "$JOB_FILE")"
+          echo "job_file=$JOB_FILE" >> "$GITHUB_OUTPUT"
+          echo "stem=$stem" >> "$GITHUB_OUTPUT"
+          echo "use_agent_reach=$use_agent_reach" >> "$GITHUB_OUTPUT"
+
+      - name: Run fast Social Reach
+        id: reach
+        shell: bash
+        run: |
+          set +e
+          python social_reach.py '${{ steps.job.outputs.job_file }}' --output social_reach_output
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          test -f social_reach_output/result.json || exit 3
+          exit 0
+
+      - name: Agent Reach optional breadth probe
+        if: steps.job.outputs.use_agent_reach == 'true'
+        shell: bash
+        run: |
+          set +e
+          python -m pip install -q 'git+https://github.com/Panniantong/Agent-Reach.git'
+          if command -v agent-reach >/dev/null 2>&1; then
+            agent-reach install --env=auto --system --channels=twitter,reddit,bilibili || true
+            agent-reach doctor --json > social_reach_output/agent-reach-doctor.json 2>&1 || true
+          else
+            printf '{"status":"not-installed"}\n' > social_reach_output/agent-reach-doctor.json
+          fi
+          exit 0
+
+      - name: Summary
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          p=pathlib.Path('social_reach_output/result.json')
+          d=json.loads(p.read_text())
+          with open(pathlib.Path(os.environ['GITHUB_STEP_SUMMARY']), 'a') as f:
+              f.write('## Social Reach result\n\n')
+              f.write(f"URLs: {d['url_count']} | PASS: {d['ok_count']} | FAIL: {d['failed_count']} | wall: {d['wall_seconds']}s\n\n")
+              f.write('| platform | source | ok | seconds | URL |\n')
+              f.write('|---|---|---:|---:|---|\n')
+              for r in d['results']:
+                  f.write(f"| {r.get('platform')} | {r.get('source')} | {r.get('ok')} | {r.get('elapsed_seconds')} | {r.get('requested_url')} |\n")
+          PY
+
+      - name: Persist result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f social_reach_output/result.json ]; then
+            exit 0
+          fi
+          dest="results/social-reach/${{ steps.job.outputs.stem }}"
+          rm -rf "$dest"
+          mkdir -p "$dest"
+          cp -R social_reach_output/. "$dest/"
+          git config user.name 'runner-5-social-reach'
+          git config user.email 'runner-5-social-reach@users.noreply.github.com'
+          git add -- "$dest"
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Store Social Reach result: ${{ steps.job.outputs.stem }} [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 2
+          done
+          exit 1
