@@ -8,14 +8,27 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlunparse
 from urllib.request import Request, urlopen
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/127 Safari/537.36"
+BLOCK_MARKERS = (
+    "target url returned error 403",
+    "you've been blocked by network security",
+    "you have been blocked by network security",
+    "to continue, log in to your reddit account",
+    "use your developer token",
+    "access denied",
+)
 
 
 def now_iso():
     return datetime.now(timezone.utc).isoformat()
+
+
+def looks_blocked(text):
+    lower = (text or "").lower()
+    return any(marker in lower for marker in BLOCK_MARKERS)
 
 
 def fetch_text(url, timeout=20, headers=None, max_bytes=1_500_000):
@@ -85,9 +98,12 @@ def normalize_fx(obj):
     if not isinstance(tweet, dict):
         return None
     author = tweet.get("author") or {}
+    raw_text = tweet.get("raw_text")
+    if isinstance(raw_text, dict):
+        raw_text = raw_text.get("text")
     return {
         "id": tweet.get("id"),
-        "text": tweet.get("text") or tweet.get("raw_text", {}).get("text"),
+        "text": tweet.get("text") or raw_text,
         "url": tweet.get("url"),
         "created_at": tweet.get("created_at"),
         "author": {
@@ -108,13 +124,24 @@ def normalize_fx(obj):
     }
 
 
+def attempt_meta(source, endpoint, rec, valid=None):
+    return {
+        "source": source,
+        "endpoint": endpoint,
+        "ok": rec["ok"],
+        "valid_content": valid,
+        "status": rec["status"],
+        "elapsed_seconds": rec["elapsed_seconds"],
+        "bytes": rec["bytes"],
+        "error": rec["error"],
+    }
+
+
 def read_x(url, timeout):
     handle, tid = x_identity(url)
     attempts = []
     if tid:
-        endpoints = [
-            ("fxtwitter", f"https://api.fxtwitter.com/status/{tid}"),
-        ]
+        endpoints = [("fxtwitter", f"https://api.fxtwitter.com/status/{tid}")]
         if handle:
             endpoints.append(("vxtwitter", f"https://api.vxtwitter.com/{handle}/status/{tid}"))
         endpoints.append(("jina", f"https://r.jina.ai/https://x.com/{handle or 'i'}/status/{tid}"))
@@ -125,15 +152,8 @@ def read_x(url, timeout):
         rec = fetch_text(endpoint, timeout=timeout)
         obj = try_json(rec)
         normalized = normalize_fx(obj) if source in {"fxtwitter", "vxtwitter"} else None
-        attempts.append({
-            "source": source,
-            "endpoint": endpoint,
-            "ok": rec["ok"],
-            "status": rec["status"],
-            "elapsed_seconds": rec["elapsed_seconds"],
-            "bytes": rec["bytes"],
-            "error": rec["error"],
-        })
+        valid_jina = rec["ok"] and len(rec["text"].strip()) > 100 and not looks_blocked(rec["text"])
+        attempts.append(attempt_meta(source, endpoint, rec, valid_jina if source == "jina" else None))
         if normalized and normalized.get("text"):
             return {
                 "platform": "x",
@@ -143,7 +163,7 @@ def read_x(url, timeout):
                 "normalized": normalized,
                 "attempts": attempts,
             }
-        if source == "jina" and rec["ok"] and len(rec["text"].strip()) > 100:
+        if source == "jina" and valid_jina:
             return {
                 "platform": "x",
                 "ok": True,
@@ -152,51 +172,57 @@ def read_x(url, timeout):
                 "normalized": {"text": rec["text"], "url": url},
                 "attempts": attempts,
             }
-
     return {"platform": "x", "ok": False, "source": None, "requested_url": url, "attempts": attempts}
+
+
+def reddit_old_url(url):
+    p = urlparse(url)
+    host = p.hostname or "www.reddit.com"
+    if host.endswith("reddit.com"):
+        host = "old.reddit.com"
+    return urlunparse((p.scheme or "https", host, p.path, "", p.query, ""))
 
 
 def read_reddit(url, timeout):
     attempts = []
-    candidates = []
-    clean = url.split("?", 1)[0]
-    if clean.endswith("/"):
-        candidates.append(("reddit_json", clean + ".json"))
-    else:
-        candidates.append(("reddit_json", clean + ".json"))
-    candidates.append(("jina", f"https://r.jina.ai/{url}"))
+    clean = url.split("?", 1)[0].rstrip("/") + "/"
+    old = reddit_old_url(clean)
+    candidates = [
+        ("reddit_json", clean + ".json"),
+        ("reddit_rss", clean + ".rss"),
+        ("old_reddit_rss", old + ".rss"),
+        ("jina_old_reddit", f"https://r.jina.ai/{old}"),
+        ("jina", f"https://r.jina.ai/{url}"),
+    ]
 
     for source, endpoint in candidates:
         rec = fetch_text(endpoint, timeout=timeout, headers={"Accept-Language": "en-US,en;q=0.9"})
-        attempts.append({
-            "source": source,
-            "endpoint": endpoint,
-            "ok": rec["ok"],
-            "status": rec["status"],
-            "elapsed_seconds": rec["elapsed_seconds"],
-            "bytes": rec["bytes"],
-            "error": rec["error"],
-        })
+        blocked = looks_blocked(rec["text"])
+        valid = False
+        normalized = None
         if source == "reddit_json":
             obj = try_json(rec)
-            if obj is not None:
-                return {
-                    "platform": "reddit",
-                    "ok": True,
-                    "source": source,
-                    "requested_url": url,
-                    "normalized": obj,
-                    "attempts": attempts,
-                }
-        elif rec["ok"] and len(rec["text"].strip()) > 100:
+            valid = obj is not None and not blocked
+            normalized = obj if valid else None
+        elif source in {"reddit_rss", "old_reddit_rss"}:
+            lower = rec["text"].lower()
+            valid = rec["ok"] and not blocked and len(rec["text"]) > 200 and ("<rss" in lower or "<feed" in lower)
+            normalized = {"text": rec["text"], "url": endpoint, "format": "rss"} if valid else None
+        else:
+            valid = rec["ok"] and not blocked and len(rec["text"].strip()) > 150
+            normalized = {"text": rec["text"], "url": url} if valid else None
+
+        attempts.append(attempt_meta(source, endpoint, rec, valid))
+        if valid:
             return {
                 "platform": "reddit",
                 "ok": True,
-                "source": "jina",
+                "source": source,
                 "requested_url": url,
-                "normalized": {"text": rec["text"], "url": url},
+                "normalized": normalized,
                 "attempts": attempts,
             }
+
     return {"platform": "reddit", "ok": False, "source": None, "requested_url": url, "attempts": attempts}
 
 
@@ -214,6 +240,7 @@ def read_youtube(url, timeout):
         attempts.append({
             "source": "yt-dlp",
             "ok": proc.returncode == 0,
+            "valid_content": proc.returncode == 0 and bool(proc.stdout.strip()),
             "status": proc.returncode,
             "elapsed_seconds": elapsed,
             "bytes": len(proc.stdout.encode()),
@@ -250,22 +277,18 @@ def read_youtube(url, timeout):
         attempts.append({
             "source": "yt-dlp",
             "ok": False,
+            "valid_content": False,
             "status": None,
             "elapsed_seconds": round(time.time() - started, 3),
             "bytes": 0,
             "error": repr(exc),
         })
 
-    rec = fetch_text(f"https://r.jina.ai/{url}", timeout=timeout)
-    attempts.append({
-        "source": "jina",
-        "ok": rec["ok"],
-        "status": rec["status"],
-        "elapsed_seconds": rec["elapsed_seconds"],
-        "bytes": rec["bytes"],
-        "error": rec["error"],
-    })
-    if rec["ok"] and len(rec["text"].strip()) > 100:
+    endpoint = f"https://r.jina.ai/{url}"
+    rec = fetch_text(endpoint, timeout=timeout)
+    valid = rec["ok"] and len(rec["text"].strip()) > 100 and not looks_blocked(rec["text"])
+    attempts.append(attempt_meta("jina", endpoint, rec, valid))
+    if valid:
         return {
             "platform": "youtube",
             "ok": True,
@@ -278,22 +301,16 @@ def read_youtube(url, timeout):
 
 
 def read_generic(url, timeout, platform):
-    rec = fetch_text(f"https://r.jina.ai/{url}", timeout=timeout)
+    endpoint = f"https://r.jina.ai/{url}"
+    rec = fetch_text(endpoint, timeout=timeout)
+    valid = rec["ok"] and len(rec["text"].strip()) > 80 and not looks_blocked(rec["text"])
     return {
         "platform": platform,
-        "ok": bool(rec["ok"] and len(rec["text"].strip()) > 80),
-        "source": "jina" if rec["ok"] else None,
+        "ok": valid,
+        "source": "jina" if valid else None,
         "requested_url": url,
-        "normalized": {"text": rec["text"], "url": url} if rec["ok"] else None,
-        "attempts": [{
-            "source": "jina",
-            "endpoint": f"https://r.jina.ai/{url}",
-            "ok": rec["ok"],
-            "status": rec["status"],
-            "elapsed_seconds": rec["elapsed_seconds"],
-            "bytes": rec["bytes"],
-            "error": rec["error"],
-        }],
+        "normalized": {"text": rec["text"], "url": url} if valid else None,
+        "attempts": [attempt_meta("jina", endpoint, rec, valid)],
     }
 
 
@@ -331,6 +348,7 @@ def main():
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
 
+    started_at = now_iso()
     started = time.time()
     results = [None] * len(urls)
     with ThreadPoolExecutor(max_workers=workers) as pool:
@@ -360,7 +378,8 @@ def main():
         "job_name": job.get("name") or Path(args.job_file).stem,
         "engine": "runner-5-social-reach",
         "strategy": "fast-public-fallbacks-first; agent-reach-optional-breadth-layer",
-        "started_at": now_iso(),
+        "started_at": started_at,
+        "finished_at": now_iso(),
         "wall_seconds": round(time.time() - started, 3),
         "url_count": len(urls),
         "ok_count": sum(1 for r in results if r and r.get("ok")),
