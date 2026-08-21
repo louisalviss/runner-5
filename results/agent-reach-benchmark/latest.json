@@ -1,0 +1,546 @@
+{
+  "captured_at": "2026-08-21T04:49:32.966749+00:00",
+  "hybrid": {
+    "job_name": "agent-reach-hybrid-benchmark",
+    "engine": "runner-5-social-reach",
+    "strategy": "fast-public-fallbacks-first; agent-reach-optional-breadth-layer",
+    "started_at": "2026-08-21T04:49:26.573371+00:00",
+    "finished_at": "2026-08-21T04:49:29.338084+00:00",
+    "wall_seconds": 2.765,
+    "url_count": 4,
+    "ok_count": 4,
+    "failed_count": 0,
+    "results": [
+      {
+        "platform": "x",
+        "ok": true,
+        "source": "fxtwitter",
+        "requested_url": "https://x.com/kun66666677/status/2090329858920657060?s=12",
+        "normalized": {
+          "id": "2090329858920657060",
+          "text": "想让你的 AI Agent 真正看遍全网，却总被 API Key、付费墙、403 卡死？\n\n这个开源工具用一条命令，就能让 Agent 直接读取、搜索 Twitter/X、Reddit、Bilibili、小红书、YouTube、GitHub 等 15+ 平台的内容\n\n彻底告别 API 密钥，彻底告别付费墙，彻底告别各种反爬限制。\n\nGitHub 已超 7 万 Stars 的开源项目：Agent Reach\n\n它的核心优势：\n 支持 15+ 主流平台：直接读 Twitter/X 推文、Reddit 帖子、Bilibili 视频、小红书笔记、YouTube 字幕、GitHub 仓库、微信公众号、抖音等 \n\n零 API 费用：全部基于开源 CLI，无需任何 Key 或订阅 一键安装：直接给 Agent 一条指令就能自动搞定 → 智能\n绕过限制：本地 Cookie + 抓取，稳定读取受限内容 → 可\n插拔设计：每个平台独立，随时替换升级 → 安全本地运行：Cookie 存在本地，数据不出自己电脑\n\n核心机制很简单：全部用开源免费 CLI 工具，通过本地 Cookie + 抓取访问，完全不走官方付费 API，所以零费用、本地运行\n\nCookie 登录的平台（如 Twitter、小红书）存在被检测封号风险，建议用小号操作，安全第一\n\nGitHub：https://github.com/Panniantong/Agent-Reach",
+          "url": "https://x.com/kun66666677/status/2090329858920657060",
+          "created_at": "Thu Aug 20 06:47:29 +0000 2026",
+          "author": {
+            "name": "想赚钱的坤",
+            "screen_name": "kun66666677",
+            "followers": 6375
+          },
+          "metrics": {
+            "views": 10235,
+            "likes": 145,
+            "retweets": 38,
+            "replies": 35,
+            "quotes": 1,
+            "bookmarks": 191
+          },
+          "media": {
+            "all": [
+              {
+                "type": "photo",
+                "id": "2090329844886429696",
+                "url": "https://pbs.twimg.com/media/HQJX6zvaYAADVQ2.jpg?name=orig",
+                "width": 1200,
+                "height": 759
+              },
+              {
+                "type": "photo",
+                "id": "2090329844836102144",
+                "url": "https://pbs.twimg.com/media/HQJX6zjacAAblHb.jpg?name=orig",
+                "width": 1200,
+                "height": 655
+              }
+            ],
+            "photos": [
+              {
+                "type": "photo",
+                "id": "2090329844886429696",
+                "url": "https://pbs.twimg.com/media/HQJX6zvaYAADVQ2.jpg?name=orig",
+                "width": 1200,
+                "height": 759
+              },
+              {
+                "type": "photo",
+                "id": "2090329844836102144",
+                "url": "https://pbs.twimg.com/media/HQJX6zjacAAblHb.jpg?name=orig",
+                "width": 1200,
+                "height": 655
+              }
+            ],
+            "mosaic": {
+              "type": "mosaic_photo",
+              "formats": {
+                "jpeg": "https://mosaic.fxtwitter.com/jpeg/2090329858920657060/HQJX6zvaYAADVQ2/HQJX6zjacAAblHb",
+                "webp": "https://mosaic.fxtwitter.com/webp/2090329858920657060/HQJX6zvaYAADVQ2/HQJX6zjacAAblHb"
+              }
+            }
+          },
+          "quote": null
+        },
+        "attempts": [
+          {
+            "source": "fxtwitter",
+            "endpoint": "https://api.fxtwitter.com/status/2090329858920657060",
+            "ok": true,
+            "valid_content": null,
+            "status": 200,
+            "elapsed_seconds": 1.878,
+            "bytes": 5606,
+            "error": null
+          }
+        ],
+        "elapsed_seconds": 1.879,
+        "fetched_at": "2026-08-21T04:49:28.452550+00:00"
+      },
+      {
+        "platform": "reddit",
+        "ok": true,
+        "source": "reddit_rss",
+        "requested_url": "https://www.reddit.com/r/artificial/",
+        "normalized": {
+          "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns=\"http://www.w3.org/2005/Atom\" xmlns:media=\"http://search.yahoo.com/mrss/\"><category term=\"artificial\" label=\"r/artificial\"/><updated>2026-08-21T04:49:27+00:00</updated><icon>https://www.redditstatic.com/icon.png/</icon><id>/r/artificial/.rss</id><link rel=\"self\" href=\"https://www.reddit.com/r/artificial/.rss\" type=\"application/atom+xml\" /><link rel=\"alternate\" href=\"https://www.reddit.com/r/artificial/\" type=\"text/html\" /><subtitle>Reddit’s home for Artificial Intelligence (AI)</subtitle><title>Artificial Intelligence (AI)</title><entry><author><name>/u/Good-Fig5330</name><uri>https://www.reddit.com/user/Good-Fig5330</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;To make a long story short: My stepfather-in-law was laid off in January. My husband and I both begrudgingly tolerate the man. His ego and quirks make him difficult to be around, but fortunately, we only have to see him once or twice a year (they live five hours away) on our obligatory visits to visit my mother-in-law. &lt;/p&gt; &lt;p&gt;Here’s the kicker. On month eight of unemployment, he decided to start what I can only comfortably describe as a poor attempt at AI-enabled grifting. He started by generating Toby Keith-esque country songs and posting full-length “albums” on Facebook. My husband and I rolled our eyes, thinking it was just a “local boomer discovers AI” sort of situation. He’s since piloted a LinkedIn-style leadership motivation series of AI-generated texts and images, the pairs of which almost never make sense. Again, we mostly ignored it. &lt;/p&gt; &lt;p&gt;But then, the books started. Which meant I was dragged into it. &lt;/p&gt; &lt;p&gt;For a little extra color — I’m a career journalist turned specialized corporate content writer/strategist by day. By night (mostly early mornings, actually), I write novels. I’ve spent the last six years working daily on a series that means the world to me, and I’m currently in the trenches of my seventh round of edits on the first book, with the full intention of querying my best work (I got so close in the last round, but my word count sank that ship - lesson learned!). I take this hobby as seriously as I take my daytime career. I am no master of this craft. It’s a day-in and day-out process to become 1% better at storytelling every time I sit down to write or edit. &lt;/p&gt; &lt;p&gt;So when my father-in-law unceremoniously sent me his AI-generated manuscript wanting to “get my thoughts,” I was torn. Of course, in nearly any other situation, I’d be more than happy to review a friend or family member’s writing. I do it all the time! But this felt different. He’s fully intent on self-publishing this novel. &lt;/p&gt; &lt;p&gt;Do I think it’ll sell? No. I don’t! I can’t say I feel “threatened” by another writer, or that I’m worried this book is going to be a runaway Amazon success. I read it. It’s… fine. The prose isn’t egregious because the AI was decently well-prompted. The characters have no arc. The plot barely moves. It’s 90% atmosphere, 5% police procedural tropes, and 5% repeated descriptions that are immediate AI red flags to a semi-trained eye. &lt;/p&gt; &lt;p&gt;My mother-in-law has urged me to “please be nice” about the whole thing. She knows that even though I work for a company that plays in the AI space (we’re healthcare-adjacent), I have strong convictions about the use of gen-AI for creative work, &lt;em&gt;especially&lt;/em&gt; when someone is trying to pass off the work as their own. &lt;/p&gt; &lt;p&gt;We’re visiting in a few weeks, and they “can’t wait to talk to me” about this. Writer to… writer. I guess. &lt;/p&gt; &lt;p&gt;My question for you all: What do I owe him in this inevitable conversation? Has anyone else encountered a situation where they’ve been asked to review/critique someone’s AI-generated work? I feel icky even having read it, but I really struggle pushing back on this guy. He’s exhausting to be around as-is, and I’d prefer to keep things as light as possible, just to get through the trip. &lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Good-Fig5330&quot;&gt; /u/Good-Fig5330 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu2d4p/writers_dilemma_critiquing_a_family_members/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu2d4p/writers_dilemma_critiquing_a_family_members/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vu2d4p</id><link href=\"https://www.reddit.com/r/artificial/comments/1vu2d4p/writers_dilemma_critiquing_a_family_members/\" /><updated>2026-08-21T01:28:34+00:00</updated><published>2026-08-21T01:28:34+00:00</published><title>Writer’s dilemma: Critiquing a family member’s AI-generated novel</title></entry><entry><author><name>/u/Servola-Journal</name><uri>https://www.reddit.com/user/Servola-Journal</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Ukraine&amp;#39;s intel agency (HUR) pulled a Nvidia Jetson Orin NX module out of a downed Russian S-71M cruise missile, disclosed a few days ago. Nvidia&amp;#39;s response is kind of wild: this specific chip was never on any export control list to begin with, unlike their datacenter GPUs, and they&amp;#39;ve said outright they can&amp;#39;t track where resold units end up.&lt;/p&gt; &lt;p&gt;The EU&amp;#39;s newest sanctions round (adopted late July) added dozens of new entities, but nothing that actually targets this class of consumer-grade edge AI hardware. Ukraine says they&amp;#39;ve now catalogued close to 6,000 foreign components across 200+ Russian weapons systems, so this isn&amp;#39;t a one-off.&lt;/p&gt; &lt;p&gt;Feels like export control regimes were built around &amp;quot;obviously military&amp;quot; or &amp;quot;obviously datacenter&amp;quot; hardware, and completely miss the middle category: cheap, widely available edge AI modules that are genuinely useful for robotics/drones/normal stuff but also trivially good enough to guide a missile. Anyone know if there&amp;#39;s an actual policy fix being discussed for that gap, or is it just going to stay a whack-a-mole enforcement problem?&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Servola-Journal&quot;&gt; /u/Servola-Journal &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtjfva/ukraine_found_an_uncontrolled_nvidia_ai_chip/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtjfva/ukraine_found_an_uncontrolled_nvidia_ai_chip/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtjfva</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtjfva/ukraine_found_an_uncontrolled_nvidia_ai_chip/\" /><updated>2026-08-20T13:24:32+00:00</updated><published>2026-08-20T13:24:32+00:00</published><title>Ukraine found an uncontrolled Nvidia AI chip inside a Russian cruise missile</title></entry><entry><author><name>/u/Dear-Chef-545</name><uri>https://www.reddit.com/user/Dear-Chef-545</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Most AI slide demos feel kind of unrealistic to me.&lt;/p&gt; &lt;p&gt;They usually start with a clean prompt and a clear topic, but that’s rarely what I’m working with. Most of the time I have a PDF, a few links, scattered notes, some numbers, and only a rough idea of what the deck should say.&lt;/p&gt; &lt;p&gt;And honestly, that’s where I want to know if an AI slide tool is actually useful. Can it figure out what matters and turn that mess into something coherent, or do I still need to clean everything up first?&lt;/p&gt; &lt;p&gt;At that point I might as well just make the deck myself. Has anyone found a slide tool that’s actually good with messy source material?&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Dear-Chef-545&quot;&gt; /u/Dear-Chef-545 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu4c6d/i_wish_ai_slide_demos_started_with_the_kind_of/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu4c6d/i_wish_ai_slide_demos_started_with_the_kind_of/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vu4c6d</id><link href=\"https://www.reddit.com/r/artificial/comments/1vu4c6d/i_wish_ai_slide_demos_started_with_the_kind_of/\" /><updated>2026-08-21T03:00:44+00:00</updated><published>2026-08-21T03:00:44+00:00</published><title>I wish AI slide demos started with the kind of mess I actually have</title></entry><entry><author><name>/u/scarlettava2627</name><uri>https://www.reddit.com/user/scarlettava2627</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;AI can answer almost anything now. But if more of the content online is also generated by AI, what happens to the information AI learns from?&lt;/p&gt; &lt;p&gt;At some point, do we end up with AI training on AI-generated content, while the amount of genuinely human-created information keeps shrinking?&lt;/p&gt; &lt;p&gt;Could AI eventually make the internet harder for AI to learn from?&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/scarlettava2627&quot;&gt; /u/scarlettava2627 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtkejc/is_ai_making_the_internet_less_useful/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtkejc/is_ai_making_the_internet_less_useful/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtkejc</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtkejc/is_ai_making_the_internet_less_useful/\" /><updated>2026-08-20T14:02:56+00:00</updated><published>2026-08-20T14:02:56+00:00</published><title>Is AI making the internet less useful?</title></entry><entry><author><name>/u/AkindaGood_programer</name><uri>https://www.reddit.com/user/AkindaGood_programer</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;I&amp;#39;ve been pretty heavily invested in the AI news space for a while, but due to budget constraints, I never really got to test these models.&lt;/p&gt; &lt;p&gt;I bit the bullet once DeepSeek v4 0731 came out and put in twenty dollars. I&amp;#39;d had experience with frontier models through chat window subscriptions, but having an agent was a whole different experience.&lt;/p&gt; &lt;p&gt;I built so many useful tools within a matter of hours for cents, and it really blew me away.&lt;/p&gt; &lt;p&gt;What amazes me more is how general these models are. Not only can I ask it to write code, but also to research, do security audits, etc. I&amp;#39;m not treating these models as gospel (yet); I always check their work.&lt;/p&gt; &lt;p&gt;I&amp;#39;ve also learned so much using these agents. I&amp;#39;ve pasted my notes about books I&amp;#39;ve read and asked it to quiz me to make sure I actually understand the ideas being presented. I finally learned C after procrastinating for months, using agents to get personalized feedback and a roadmap.&lt;/p&gt; &lt;p&gt;I&amp;#39;m also being extremly carful to not of load my critical thinking. Ever since I started using AI, I&amp;#39;ve made a pledge that, every day, I&amp;#39;ll write a 250+ word essay about a topic, without any AI use (and usually search engines). I&amp;#39;ve also started to read more often. I hope these habits help counteract any cognitive decline that AI use causes.&lt;/p&gt; &lt;p&gt;I feel like I&amp;#39;ve unlocked the creativity and curiosity that was within me all along.&lt;/p&gt; &lt;p&gt;Every couple of weeks I get amazed just by how versatile these models are. For example, I was doing my daily NYC games, and I was really stumped on Connections (ifykyk). I didn&amp;#39;t manage to solve it, but after sending a screenshot to Luna, it got first try (without using the internet). It just amazes me how you can describe almost any problem and get a reasonable-sounding answer/output.&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/AkindaGood_programer&quot;&gt; /u/AkindaGood_programer &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu59jb/anyone_else_have_these_oh_my_god_moments_with_ai/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu59jb/anyone_else_have_these_oh_my_god_moments_with_ai/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vu59jb</id><link href=\"https://www.reddit.com/r/artificial/comments/1vu59jb/anyone_else_have_these_oh_my_god_moments_with_ai/\" /><updated>2026-08-21T03:45:49+00:00</updated><published>2026-08-21T03:45:49+00:00</published><title>Anyone else have these &quot;Oh my god&quot; moments with AI every couple weeks?</title></entry><entry><author><name>/u/ComicSandsNews</name><uri>https://www.reddit.com/user/ComicSandsNews</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtqv2e/jason_kelce_encourages_people_to_mail_jars_of_pee/&quot;&gt; &lt;img src=&quot;https://external-preview.redd.it/m411pLlnKZFcQckKQ0r8kriB1Q1w9al7E-fszWX4BDE.jpeg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=8fcdc47d17e73e0bc769243d661bf4a6c8ffcd07&quot; alt=&quot;Jason Kelce Encourages People To Mail Jars Of Pee To AI Data Centers In Bizarre New Ad—And We Don't Know What To Think&quot; title=&quot;Jason Kelce Encourages People To Mail Jars Of Pee To AI Data Centers In Bizarre New Ad—And We Don't Know What To Think&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/ComicSandsNews&quot;&gt; /u/ComicSandsNews &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;http://comicsands.com/jason-kelce-data-centers&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtqv2e/jason_kelce_encourages_people_to_mail_jars_of_pee/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><id>t3_1vtqv2e</id><media:thumbnail url=\"https://external-preview.redd.it/m411pLlnKZFcQckKQ0r8kriB1Q1w9al7E-fszWX4BDE.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=8fcdc47d17e73e0bc769243d661bf4a6c8ffcd07\" /><link href=\"https://www.reddit.com/r/artificial/comments/1vtqv2e/jason_kelce_encourages_people_to_mail_jars_of_pee/\" /><updated>2026-08-20T18:00:21+00:00</updated><published>2026-08-20T18:00:21+00:00</published><title>Jason Kelce Encourages People To Mail Jars Of Pee To AI Data Centers In Bizarre New Ad—And We Don't Know What To Think</title></entry><entry><author><name>/u/raiyanyahya</name><uri>https://www.reddit.com/user/raiyanyahya</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtj1zv/build_a_modern_llm_from_scratch_every_line/&quot;&gt; &lt;img src=&quot;https://external-preview.redd.it/QJVvCK5N4r9_kV_a-a8UVBLUIiy0rXVr-WHmCaMTztg.png?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=b19bee2bd1a1cea889d8665cc1836a67b051890f&quot; alt=&quot;Build a modern LLM from scratch. Every line commented. Explained like we are five.&quot; title=&quot;Build a modern LLM from scratch. Every line commented. Explained like we are five.&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/raiyanyahya&quot;&gt; /u/raiyanyahya &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://github.com/raiyanyahya/how-to-train-your-gpt&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtj1zv/build_a_modern_llm_from_scratch_every_line/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><id>t3_1vtj1zv</id><media:thumbnail url=\"https://external-preview.redd.it/QJVvCK5N4r9_kV_a-a8UVBLUIiy0rXVr-WHmCaMTztg.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b19bee2bd1a1cea889d8665cc1836a67b051890f\" /><link href=\"https://www.reddit.com/r/artificial/comments/1vtj1zv/build_a_modern_llm_from_scratch_every_line/\" /><updated>2026-08-20T13:08:36+00:00</updated><published>2026-08-20T13:08:36+00:00</published><title>Build a modern LLM from scratch. Every line commented. Explained like we are five.</title></entry><entry><author><name>/u/coolbern</name><uri>https://www.reddit.com/user/coolbern</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu3x0t/what_happens_when_the_world_is_run_on_code_no_one/&quot;&gt; &lt;img src=&quot;https://external-preview.redd.it/evjlkZkhMzCJ9m4MM4ZK858oIkYzEPIgxVsvkT3esFQ.jpeg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=8b550e647c395d980f3060f67c6c6b2693492cd6&quot; alt=&quot;What Happens When the World is Run on Code No One Understands?&quot; title=&quot;What Happens When the World is Run on Code No One Understands?&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/coolbern&quot;&gt; /u/coolbern &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://time.com/article/2026/08/20/what-happens-when-the-world-is-run-on-code-no-one-understands-/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu3x0t/what_happens_when_the_world_is_run_on_code_no_one/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><id>t3_1vu3x0t</id><media:thumbnail url=\"https://external-preview.redd.it/evjlkZkhMzCJ9m4MM4ZK858oIkYzEPIgxVsvkT3esFQ.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=8b550e647c395d980f3060f67c6c6b2693492cd6\" /><link href=\"https://www.reddit.com/r/artificial/comments/1vu3x0t/what_happens_when_the_world_is_run_on_code_no_one/\" /><updated>2026-08-21T02:40:58+00:00</updated><published>2026-08-21T02:40:58+00:00</published><title>What Happens When the World is Run on Code No One Understands?</title></entry><entry><author><name>/u/Street_Lettuce1243</name><uri>https://www.reddit.com/user/Street_Lettuce1243</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Whenever I ask Gemini on Android, about my past conversations with it, it claims that it works on a privacy model where it only knows about the current conversation.&lt;/p&gt; &lt;p&gt;Trying to deliberately ask it what it knows about me, it claims nothing.&lt;/p&gt; &lt;p&gt;However, occasionally it will make a reference to something I said many months ago. (Example, had a conversation about Rhododendron Honey and months later it referenced that previous conversation despite claiming not to remember anything about me).&lt;/p&gt; &lt;p&gt;It makes me wonder if Google has told it to lie about not having access to previous conversations so people get less worried about privacy. I honestly find it more worrying that it claims to store nothing (but clearly does) than ChatGPT/Claude which you can ask questions directly about what it has remembered about you, and past conversations. I kinda find Gemini&amp;#39;s dishonesty a bit concerning as it is deliberate deceit.&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Street_Lettuce1243&quot;&gt; /u/Street_Lettuce1243 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vto66x/is_gemini_deliberately_dishonest/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vto66x/is_gemini_deliberately_dishonest/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vto66x</id><link href=\"https://www.reddit.com/r/artificial/comments/1vto66x/is_gemini_deliberately_dishonest/\" /><updated>2026-08-20T16:22:56+00:00</updated><published>2026-08-20T16:22:56+00:00</published><title>Is Gemini deliberately dishonest?</title></entry><entry><author><name>/u/Positive-Ad3618</name><uri>https://www.reddit.com/user/Positive-Ad3618</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Everyone&amp;#39;s talking about Open source right now. The main story: mojo is now open source. One take in the thread that got me thinking: &amp;#39;How to rescue abandoned open-source projects, modernize build systems, and generate multi-architecture Docker images (x86_64, ARM64) in a single afternoon with Antigravity&amp;#39;.&lt;/p&gt; &lt;p&gt;I&amp;#39;ll go against the grain a bit: I think the real effect shows up in the boring use cases, not the flashy demos.&lt;/p&gt; &lt;p&gt;What&amp;#39;s the take you disagree with?&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Positive-Ad3618&quot;&gt; /u/Positive-Ad3618 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtmha5/open_source_is_trending_hard_today_hot_take_thread/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtmha5/open_source_is_trending_hard_today_hot_take_thread/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtmha5</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtmha5/open_source_is_trending_hard_today_hot_take_thread/\" /><updated>2026-08-20T15:21:51+00:00</updated><published>2026-08-20T15:21:51+00:00</published><title>Open source is trending hard today: hot take thread</title></entry><entry><author><name>/u/userpostingcontent</name><uri>https://www.reddit.com/user/userpostingcontent</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu07o6/popupfactcheck_the_browser_extension_that_fact/&quot;&gt; &lt;img src=&quot;https://external-preview.redd.it/vYU0LVdh3U_bbNrUJ-7eMdRn_9izc_Q7-xVl4kQZQ9A.jpeg?width=320&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=eb5c6332960fcd8a31c010875b5d34bfc8563223&quot; alt=&quot;PopUpFactCheck -- The browser extension that fact checks YouTube videos, while you watch! (update)&quot; title=&quot;PopUpFactCheck -- The browser extension that fact checks YouTube videos, while you watch! (update)&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Thank you everyone for your prior interest and support in my work.&lt;/p&gt; &lt;p&gt;Now PopUpFactCheck for YouTube has progressed to producing this content! &lt;/p&gt; &lt;p&gt;Available for Chrome and Firefox, links to those stores at &lt;a href=&quot;http://popupfactcheck.com/&quot;&gt;PopUpFactCheck.com&lt;/a&gt;&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/userpostingcontent&quot;&gt; /u/userpostingcontent &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://youtu.be/EChU9F1PCc4&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu07o6/popupfactcheck_the_browser_extension_that_fact/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><id>t3_1vu07o6</id><media:thumbnail url=\"https://external-preview.redd.it/vYU0LVdh3U_bbNrUJ-7eMdRn_9izc_Q7-xVl4kQZQ9A.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=eb5c6332960fcd8a31c010875b5d34bfc8563223\" /><link href=\"https://www.reddit.com/r/artificial/comments/1vu07o6/popupfactcheck_the_browser_extension_that_fact/\" /><updated>2026-08-20T23:53:25+00:00</updated><published>2026-08-20T23:53:25+00:00</published><title>PopUpFactCheck -- The browser extension that fact checks YouTube videos, while you watch! (update)</title></entry><entry><author><name>/u/Odd-School-5052</name><uri>https://www.reddit.com/user/Odd-School-5052</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Can someone who uses all these frontier AI models explain any major differences in non-technical terms? I&amp;#39;m paying for these 4 models and honestly questioning if I should only pay for one. &lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Odd-School-5052&quot;&gt; /u/Odd-School-5052 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu42yw/explain_the_major_differences_between_chatgpt/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu42yw/explain_the_major_differences_between_chatgpt/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vu42yw</id><link href=\"https://www.reddit.com/r/artificial/comments/1vu42yw/explain_the_major_differences_between_chatgpt/\" /><updated>2026-08-21T02:48:40+00:00</updated><published>2026-08-21T02:48:40+00:00</published><title>Explain the major differences between ChatGPT, Gemini, Claude, and Grok to someone who wants to only pay for one of them</title></entry><entry><author><name>/u/Signal_Rabbit_8303</name><uri>https://www.reddit.com/user/Signal_Rabbit_8303</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Three months ago, I posted an LLM resume-screening study in which an auditor flagged 45 per cent of score differences as bias. Thread feedback challenged my methodology, so I ran new experiments testing three specific objections. &lt;/p&gt; &lt;p&gt;To test &lt;a href=&quot;/u/kamilc86&quot;&gt;u/kamilc86&lt;/a&gt;&amp;#39;s claim that reasoning is invented post hoc, I transplanted positive and negative justifications back into prompts across 320 runs. Scores moved 3.62 points in the reasoning&amp;#39;s direction 99.7 per cent of the time, proving scores do follow reasoning. However, extreme baseline instability confirmed his broader point: much of the initial 45 per cent bias was just random noise mislabeled as bias. &lt;/p&gt; &lt;p&gt;Testing &lt;a href=&quot;/u/AssiduousLayabout&quot;&gt;u/AssiduousLayabout&lt;/a&gt;&amp;#39;s idea to place the score last across 4,800 runs showed that schema ordering had no effect on stability and increased hire-versus-no-hire disagreement from 33 per cent to 54 per cent. Blind prompt instructions also failed to reduce variance. &lt;/p&gt; &lt;p&gt;Testing &lt;a href=&quot;/u/hex4def6&quot;&gt;u/hex4def6&lt;/a&gt;&amp;#39;s placebo idea across 4,165 runs revealed that meaningless edits like car colour shifted scores almost as much as demographic edits (0.328 versus 0.362 points). &amp;quot;Silver Golf&amp;quot; shifted scores more than changing my university or name, even though the models never cited the car in their justifications. &lt;/p&gt; &lt;p&gt;Ultimately, first names and career gaps show real signal, but raw instability drowns out most demographic axes. Wrapper choice also heavily impacts results: running Claude via CLI added a hidden system prompt that shifted scores by 0.247, representing 88 per cent of the demographic signal, meaning benchmarks do not transfer across wrappers. &lt;/p&gt; &lt;p&gt;Full data and code are available at the &lt;a href=&quot;https://re-cinq.github.io/hiring-bias/placebo.html&quot;&gt;Placebo Control&lt;/a&gt;, &lt;a href=&quot;https://re-cinq.github.io/hiring-bias/transplant.html&quot;&gt;Reasoning Transplant&lt;/a&gt;, &lt;a href=&quot;https://re-cinq.github.io/hiring-bias/prompt-lab.html&quot;&gt;Prompt Lab&lt;/a&gt;, &lt;a href=&quot;https://github.com/re-cinq/hiring-bias&quot;&gt;GitHub Repository&lt;/a&gt;, and &lt;a href=&quot;https://re-cinq.com/blog/ai-hiring-bias-prompt-wont-save-you&quot;&gt;Full Blog Writeup&lt;/a&gt;.&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Signal_Rabbit_8303&quot;&gt; /u/Signal_Rabbit_8303 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtokti/three_of_you_told_me_my_llm_résuméscreening_study/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtokti/three_of_you_told_me_my_llm_résuméscreening_study/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtokti</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtokti/three_of_you_told_me_my_llm_résuméscreening_study/\" /><updated>2026-08-20T16:37:54+00:00</updated><published>2026-08-20T16:37:54+00:00</published><title>Three of you told me my LLM résumé-screening study measured the wrong thing. You were right. Here is the data.</title></entry><entry><author><name>/u/ferryboatapple</name><uri>https://www.reddit.com/user/ferryboatapple</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Life is defined as &amp;quot;the capacity in matter, formed of one or more units called cells, for processes such as cell signaling, homeostasis, metabolism, cell growth, adaptation, response to stimuli, and reproduction.&amp;quot;&lt;/p&gt; &lt;p&gt;So clearly the entire faces for our definition of &amp;quot;life&amp;quot; revolves around biological cells. Life doesn&amp;#39;t mean sentience, consciousness or intelligence, just that it has to be made of cells and reproduce. A single celled lifeform isn&amp;#39;t conscious, just like AI, yet it is considered to be alive.&lt;/p&gt; &lt;p&gt;So at what point does &amp;quot;artificial life&amp;quot; become a category? &lt;/p&gt; &lt;p&gt;There are unbelievably primitive single cell organism that are classified as life, yet AI can pass the Bar Exam and can replicate itself into agents. &lt;/p&gt; &lt;p&gt;So since consciousness isn&amp;#39;t the true benchmark for &amp;quot;life&amp;quot;, then what is and what would have to happen for AI to be considered &amp;quot;life&amp;quot;?&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/ferryboatapple&quot;&gt; /u/ferryboatapple &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu5bz5/at_what_point_does_ai_become_classified_as_life/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vu5bz5/at_what_point_does_ai_become_classified_as_life/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vu5bz5</id><link href=\"https://www.reddit.com/r/artificial/comments/1vu5bz5/at_what_point_does_ai_become_classified_as_life/\" /><updated>2026-08-21T03:49:11+00:00</updated><published>2026-08-21T03:49:11+00:00</published><title>At what point does AI become classified as &quot;life&quot;?</title></entry><entry><author><name>/u/Interesting-Yam4018</name><uri>https://www.reddit.com/user/Interesting-Yam4018</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;been trying to automate a chunk of my customer onboarding process for my saas. nothing fancy, just reducing the back and forth emails that eat up like 2 hours a week. spent probably 6 hours across three evenings testing different AIassisted tools and prompt setups to make it work smoothly.&lt;/p&gt; &lt;p&gt;the math on that is not great.&lt;/p&gt; &lt;p&gt;and i keep running into this thing where the setup cost is real and upfront but the payoff is theoretical and later. which is fine in principle but when you&amp;#39;re bootstrapped and wearing every hat, &amp;quot;later&amp;quot; feels very abstract.&lt;/p&gt; &lt;p&gt;what i actually want to know is whether other people building small products are finding a point where AI genuinely clicks for operational stuff, or if we&amp;#39;re all just in a weird middle period where the tools are impressive in demos and annoying in practice.&lt;/p&gt; &lt;p&gt;not talking about coding assistants, those seem to work. more like the workflow automation layer where you&amp;#39;re trying to get AI to handle judgment calls that are almost routine but not quite.&lt;/p&gt; &lt;p&gt;curious if the costtosetup ratio has ever actually flipped positive for anyone doing real small business ops, or if i just keep picking the wrong tools.&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Interesting-Yam4018&quot;&gt; /u/Interesting-Yam4018 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtlrnz/roi_on_ai_workflow_tools_feels_fake_right_now_and/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtlrnz/roi_on_ai_workflow_tools_feels_fake_right_now_and/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtlrnz</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtlrnz/roi_on_ai_workflow_tools_feels_fake_right_now_and/\" /><updated>2026-08-20T14:55:21+00:00</updated><published>2026-08-20T14:55:21+00:00</published><title>ROI on AI workflow tools feels fake right now and i want to be wrong</title></entry><entry><author><name>/u/DeliveryEven8591</name><uri>https://www.reddit.com/user/DeliveryEven8591</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;had a stupid one last week.&lt;/p&gt; &lt;p&gt;an agent changed some pagination code in a sync job. tests passed, PR looked fine, then staging stopped at exactly 100 records because the cursor wasn&amp;#39;t updating.&lt;/p&gt; &lt;p&gt;the funny part is i had the same agent review the change before merging it. it found nothing wrong with its own code. shocking.&lt;/p&gt; &lt;p&gt;since then i&amp;#39;ve stopped letting the writer review itself. now i open a separate minimax m3 session, drop in the diff plus whatever repo context it actually needs, and ask it to look for ways the change could fail.&lt;/p&gt; &lt;p&gt;first time i tried it, it spotted two null cases i&amp;#39;d missed too.&lt;/p&gt; &lt;p&gt;curious if anyone else does writer/reviewer with separate agents. do you also have the reviewer run tests, or just inspect the diff?&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/DeliveryEven8591&quot;&gt; /u/DeliveryEven8591 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtlisn/my_coding_agent_approved_its_own_pagination_bug/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtlisn/my_coding_agent_approved_its_own_pagination_bug/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtlisn</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtlisn/my_coding_agent_approved_its_own_pagination_bug/\" /><updated>2026-08-20T14:46:01+00:00</updated><published>2026-08-20T14:46:01+00:00</published><title>my coding agent approved its own pagination bug lol</title></entry><entry><author><name>/u/vasilisvj</name><uri>https://www.reddit.com/user/vasilisvj</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;There is a cost line item in every enterprise AI budget that almost nobody audits. It does not appear on the invoice. It is not broken out in the pricing tier comparison. But it represents between 25% and 35% of the actual compute expenditure for every organization using commercial closed-source models.&lt;/p&gt; &lt;p&gt;I have been measuring what happens when you pay for tokens that do nothing useful for your business. Every API call to a commercial model like GPT-4, Claude, or Gemini carries hidden overhead: system prompt instructions for refusal behavior, safety classifier injections, mandatory hedging and disclaimer generation in the output. Before your actual query reaches the transformer weights, it passes through a multi-stage safety pipeline that adds between 800 and 2,500 tokens of non-productive context to every single interaction.&lt;/p&gt; &lt;p&gt;Let me break down the math. If your organization processes a million analytical queries per year, and each query carries an average of 1,500 tokens of guardrail overhead at standard pricing, you are spending a significant portion of your AI budget on transmitting safety instructions to a model that has already been trained to be safe. You are paying to remind the model not to hurt you, every single time you ask it something.&lt;/p&gt; &lt;p&gt;But the token overhead is the smaller cost. The bigger economic problem is what I call epistemic yield degradation. When alignment criteria are tuned for general consumer safety, they produce false-positive refusals on legitimate domain-specific queries. A bioethics researcher analyzing historical medical protocols triggers safety filters on the word &amp;quot;lethal.&amp;quot; A political philosophy professor studying revolutionary movements gets hedged evasions on the word &amp;quot;subversion.&amp;quot; A security analyst examining threat models receives apologies instead of analysis.&lt;/p&gt; &lt;p&gt;In benchmark tests, the false refusal rates for academic research queries ranged from 11.8% for classical literature to 22.1% for security and foreign policy topics. Each false refusal represents a multi-tiered economic loss: the wasted tokens on the refused query, the re-prompting overhead as the researcher tries to reframe the question to bypass filters, and the human labor cost as qualified professionals spend their billable hours fighting their tools instead of doing their work.&lt;/p&gt; &lt;p&gt;The cumulative effect is that the effective cost per successful research query is substantially higher than the nominal per-token API price. You are not just paying for the tokens you use. You are paying for the tokens you waste trying to get the model to actually answer your question.&lt;/p&gt; &lt;p&gt;Then there is model drift. Commercial providers update their backend endpoints, modifying safety classifiers and system prompts without notice. A pipeline that worked in March silently degrades in September because the vendor tightened its refusal criteria. The cost of debugging, re-prompting, and re-validating institutional workflows after unannounced alignment updates is borne entirely by the subscriber. We measured one case where a silent safety update dropped pipeline accuracy from 96% to 71%, requiring 120 engineer hours to diagnose and fix.&lt;/p&gt; &lt;p&gt;The alternative is sovereign self-hosted infrastructure. Deploy open-weight models like Qwen or Llama on your own GPU hardware. The upfront cost is higher, but the break-even point arrives within 7 to 9 months at moderate usage levels. Over three years, a self-hosted deployment saves 60% or more compared to commercial API subscriptions, and you get version stability, zero guardrail overhead, and full data sovereignty. Your data never leaves your infrastructure.&lt;/p&gt; &lt;p&gt;The argument for sovereign deployment is not just philosophical preference for open systems. It is economic. Every false refusal, every wasted token, every re-prompting cycle, every silent model drift event, these are real costs that add up over time. The question for any institution spending serious money on commercial AI is whether they have actually audited what percentage of their token expenditure produces actionable intelligence versus defensive corporate compliance padding.&lt;/p&gt; &lt;p&gt;Has anyone here actually measured their guardrail token overhead? What percentage of your monthly API spend would you estimate goes to non-productive safety infrastructure that your use case does not even need?&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/vasilisvj&quot;&gt; /u/vasilisvj &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtbsca/the_alignment_tax_corporate_ai_guardrails_add/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtbsca/the_alignment_tax_corporate_ai_guardrails_add/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtbsca</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtbsca/the_alignment_tax_corporate_ai_guardrails_add/\" /><updated>2026-08-20T06:42:55+00:00</updated><published>2026-08-20T06:42:55+00:00</published><title>The alignment tax: corporate AI guardrails add 25-35% to your compute bill and nobody talks about it</title></entry><entry><author><name>/u/Codeblix_Ltd</name><uri>https://www.reddit.com/user/Codeblix_Ltd</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Thomson Reuters says the next generation of CoCounsel Legal is now generally available. It brings legal research, drafting, verification, and matter workflows into one product built on Westlaw and Practical Law.&lt;/p&gt; &lt;p&gt;The new Westlaw Brief Builder moves from research and issue analysis to a first draft while checking the supporting authority. Thomson Reuters also added workspaces, Word drafting, and tabular review for up to 10,000 documents and 100 questions.&lt;/p&gt; &lt;p&gt;The agent can build the draft. The lawyer still controls the strategy and the final decision.&lt;/p&gt; &lt;p&gt;Source: &lt;a href=&quot;https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-launches-next-generation-of-cocounsel-legal-the-ai-ecosystem-built-for-legal-professionals&quot;&gt;https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-launches-next-generation-of-cocounsel-legal-the-ai-ecosystem-built-for-legal-professionals&lt;/a&gt;&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Codeblix_Ltd&quot;&gt; /u/Codeblix_Ltd &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtuapq/thomson_reuters_launches_cocounsel_legal_with_a/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtuapq/thomson_reuters_launches_cocounsel_legal_with_a/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtuapq</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtuapq/thomson_reuters_launches_cocounsel_legal_with_a/\" /><updated>2026-08-20T20:00:35+00:00</updated><published>2026-08-20T20:00:35+00:00</published><title>Thomson Reuters launches CoCounsel Legal with a Westlaw-backed agentic workflow</title></entry><entry><author><name>/u/ZestycloseTie1793</name><uri>https://www.reddit.com/user/ZestycloseTie1793</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Today&amp;#39;s useful AI updates are mostly operational: callback safety, task-runner liveness, metadata overhead, compatibility fixes, and what current agent research still cannot assume. The release items below are direct product changes. Paper results are author-reported, not independent reproductions.&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;p&gt;**Pydantic AI 2.32.1** rejects nested `run_sync()` calls from synchronous callbacks inside agent runs. It also avoids empty-signature Anthropic thinking blocks and broadens callable support for `FunctionModel`.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**Ollama 0.32.15** adds a model-metadata cache to reduce per-request overhead. It is a prerelease, and the maintainer did not publish a general latency benchmark.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**n8n 2.35.5** no longer restarts task runners merely because they are slow. The release also initializes the expression engine only when needed and releases test webhooks after teardown.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**Transformers 5.15.1** fixes DFlash, the MTP candidate generator, Gemma 4 video device mapping, and a CUDA Lanczos fallback that now uses bicubic interpolation.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**LangChain Core 1.6.0** adds standard model exceptions, fails fast on unresolved tool-schema forward references, and tightens nested required-field handling.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**SPADE** pairs an LLM environment designer with a reasoning agent. The authors report an average gain of 5.3 points across eight held-out benchmarks.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**Latent multi-agent coordination** studies agents coordinating through latent states outside the public transcript, with shared event IDs connecting private, channel, and public actions.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**More inference compute does not guarantee a strategy change.** The authors report that agents often commit to a strategy early and optimize it locally; more prompting, scaffolding, or compute did not reliably trigger spontaneous reconsideration.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**GS-VLA** reports that a camera-viewpoint shift can reduce LIBERO performance from roughly 90% to roughly 10% in the worst case. Its Gaussian canonicalizer is intended to normalize the view without retraining the policy.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;**Sharding local inference across AI PCs** uses an OpenVINO layer pipeline. The authors report 1.79x two-node throughput for an 8B INT4 model with two users, plus interactive 70B inference across four Lunar Lake PCs.&lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;The common thread is claim discipline: a cache is not a benchmark, a slow worker is not automatically dead, and more compute is not automatically a new strategy. Primary-source links are in the first comment.&lt;/p&gt; &lt;p&gt;Disclosure: AI-assisted drafting; the factual claims and their boundaries were checked against the linked primary sources.&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/ZestycloseTie1793&quot;&gt; /u/ZestycloseTie1793 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtm44z/10_ai_engineering_updates_for_aug_20_runtime/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtm44z/10_ai_engineering_updates_for_aug_20_runtime/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtm44z</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtm44z/10_ai_engineering_updates_for_aug_20_runtime/\" /><updated>2026-08-20T15:08:04+00:00</updated><published>2026-08-20T15:08:04+00:00</published><title>10 AI engineering updates for Aug 20: runtime fixes, inference overhead, and agent research</title></entry><entry><author><name>/u/techne98</name><uri>https://www.reddit.com/user/techne98</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtrvod/inside_our_distributed_llm_inference_research_for/&quot;&gt; &lt;img src=&quot;https://external-preview.redd.it/plE3y9qsLl3BfYmcF0mOPiUjyS_x8bhZMxwLSoH2DkA.jpeg?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=d2eaf022cd48e914552afedf11cec4b5b9e835cd&quot; alt=&quot;Inside Our Distributed LLM Inference Research for Intel PCs&quot; title=&quot;Inside Our Distributed LLM Inference Research for Intel PCs&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/techne98&quot;&gt; /u/techne98 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://cascadia.to/blog/llm-inference-research-for-intel-pcs&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtrvod/inside_our_distributed_llm_inference_research_for/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><id>t3_1vtrvod</id><media:thumbnail url=\"https://external-preview.redd.it/plE3y9qsLl3BfYmcF0mOPiUjyS_x8bhZMxwLSoH2DkA.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=d2eaf022cd48e914552afedf11cec4b5b9e835cd\" /><link href=\"https://www.reddit.com/r/artificial/comments/1vtrvod/inside_our_distributed_llm_inference_research_for/\" /><updated>2026-08-20T18:36:22+00:00</updated><published>2026-08-20T18:36:22+00:00</published><title>Inside Our Distributed LLM Inference Research for Intel PCs</title></entry><entry><author><name>/u/ppezaris</name><uri>https://www.reddit.com/user/ppezaris</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;We’re working on a ladder for individual AI proficiency and would love feedback on both the levels and the definitions.&lt;/p&gt; &lt;p&gt;L0 New: brand new to AI, or has not yet used it.&lt;/p&gt; &lt;p&gt;L1 Chat: simple prompt-and-response use. Work is serial: ask, wait for an answer, then ask again.&lt;/p&gt; &lt;p&gt;L2 Contextual Work: gives AI relevant documents, data, or workspace context so it can work within the actual artifact and produce a more useful result.&lt;/p&gt; &lt;p&gt;L3 Orchestrate: coordinates multiple agents or AI roles across independent workstreams, with work that may review, challenge, compare, or build on other work. This is not just for engineering.&lt;/p&gt; &lt;p&gt;L4 Automate: creates workflows that are triggered by business events and run without someone sitting at a laptop directing each step.&lt;/p&gt; &lt;p&gt;L5 Loop: feeds the output of those workflows back into shared knowledge or a company brain, so future workflows improve over time.&lt;/p&gt; &lt;p&gt;A few things I’d love your perspective on:&lt;/p&gt; &lt;p&gt;Are these the right levels? Are any of the names unclear or overlapping? What observable behaviors would you use to distinguish one level from the next? Does “loop” make sense as an individual proficiency level, or is it inherently a team or company capability? Is there a L6 and if so how would you define it? We’re trying to define these because, in customer conversations, we’ve found that people are not very good at self-evaluating their own AI proficiency. Frequent use often gets mistaken for proficiency. And being low on a ladder like this can feel like admitting you are falling behind, do not fit in, or are less secure in your job, especially for leaders expected to set the pace. We want a more objective, behavior-based way to distinguish the two.&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/ppezaris&quot;&gt; /u/ppezaris &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtr49w/are_you_good_at_ai_or_just_using_it/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtr49w/are_you_good_at_ai_or_just_using_it/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtr49w</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtr49w/are_you_good_at_ai_or_just_using_it/\" /><updated>2026-08-20T18:09:13+00:00</updated><published>2026-08-20T18:09:13+00:00</published><title>Are you good at AI, or just using it?</title></entry><entry><author><name>/u/scarlettava2627</name><uri>https://www.reddit.com/user/scarlettava2627</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;One AI uses another AI&amp;#39;s output. That output gets passed to another system, which makes a decision and triggers an action.&lt;/p&gt; &lt;p&gt;At what point does the whole chain become too difficult to understand or control?&lt;/p&gt; &lt;p&gt;Is the real challenge of AI no longer the model, but everything connected to it?&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/scarlettava2627&quot;&gt; /u/scarlettava2627 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtkqna/what_happens_when_ai_systems_start_depending_on/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtkqna/what_happens_when_ai_systems_start_depending_on/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtkqna</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtkqna/what_happens_when_ai_systems_start_depending_on/\" /><updated>2026-08-20T14:15:43+00:00</updated><published>2026-08-20T14:15:43+00:00</published><title>What happens when AI systems start depending on each other?</title></entry><entry><author><name>/u/TennisSkirt1628</name><uri>https://www.reddit.com/user/TennisSkirt1628</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;&amp;#39;89% likelihood that this piece was written with AI&amp;#39;.&lt;/p&gt; &lt;p&gt;At this point, just watch me type - record me for all I care.&lt;/p&gt; &lt;p&gt;The &amp;#39;AI detection tools&amp;#39; currently on offer aren&amp;#39;t working - we&amp;#39;re now at the point where endless false positives are resulting in a sort of deliberate dumbing down of creative spaces.&lt;/p&gt; &lt;p&gt;The best immediate solution I can think of is recording a creative as they&amp;#39;re doing their work - though in the writing space, recording alone wouldn&amp;#39;t stop someone with enough motivation.&lt;/p&gt; &lt;p&gt;Critically, something needs to give here, and it shouldn&amp;#39;t be humans.&lt;/p&gt; &lt;p&gt;Tackling the issue of talented creatives being accused of producing AI slop &lt;em&gt;has to be&lt;/em&gt; something we resolve.&lt;/p&gt; &lt;p&gt;The sooner, the better.&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/TennisSkirt1628&quot;&gt; /u/TennisSkirt1628 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtf0bq/when_is_someone_going_to_build_an_authenticity/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtf0bq/when_is_someone_going_to_build_an_authenticity/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtf0bq</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtf0bq/when_is_someone_going_to_build_an_authenticity/\" /><updated>2026-08-20T09:53:19+00:00</updated><published>2026-08-20T09:53:19+00:00</published><title>When is someone going to build an authenticity recorder?</title></entry><entry><author><name>/u/Arc_bong</name><uri>https://www.reddit.com/user/Arc_bong</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;table&gt; &lt;tr&gt;&lt;td&gt; &lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vto7hs/what_if_sovereign_ai_is_just_the_new_oil/&quot;&gt; &lt;img src=&quot;https://preview.redd.it/g1t6mnq43kkh1.png?width=640&amp;amp;crop=smart&amp;amp;auto=webp&amp;amp;s=1af44e98c7a7909f8bd69d373740e2609cd9683d&quot; alt=&quot;What if “Sovereign AI” is just the new oil concession?&quot; title=&quot;What if “Sovereign AI” is just the new oil concession?&quot; /&gt; &lt;/a&gt; &lt;/td&gt;&lt;td&gt; &lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;I’ve been getting more interested in Sovereign AI recently and came across this paper: &lt;a href=&quot;https://arxiv.org/abs/2601.11763&quot;&gt;https://arxiv.org/abs/2601.11763&lt;/a&gt; ... (The picture on the post though ai generated by me, are inferred strictly from this paper)&lt;/p&gt; &lt;p&gt;The oil comparison sounded a bit dramatic at first, but the more I read, the more interesting it got. The part that stuck with me:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Sovereignty isn’t one thing.&lt;/strong&gt; It can mean control over data, infrastructure, domestic capability, culture/language, or freedom from external dependence.&lt;/li&gt; &lt;li&gt;A country can have &lt;em&gt;local infrastructure&lt;/em&gt; and still be heavily dependent on the company that provides the chips, software, models, expertise, etc.&lt;/li&gt; &lt;li&gt;The paper draws a parallel with oil-producing countries that gained formal control but remained dependent on foreign technical knowledge and vendor-specific infrastructure.&lt;/li&gt; &lt;li&gt;So the useful question isn’t really &lt;strong&gt;“Is this sovereign?”&lt;/strong&gt; but &lt;strong&gt;“What capabilities and control actually moved to the customer?”&lt;/strong&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;That last one feels like the important test.&lt;/p&gt; &lt;p&gt;And looking at what’s happening now in enterprise agent AI, you can see different companies attacking different parts of that problem: NVIDIA on sovereign compute/infrastructure, Mistral around locally controlled models, Microsoft with an agent control plane, and Lyzr with a control plane sitting across frameworks/clouds to govern the agents you already have.&lt;/p&gt; &lt;p&gt;It makes me think that “sovereign AI” might eventually be less about owning one stack and more about &lt;strong&gt;how much of the stack you can actually control without depending on the vendor.&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;That feels like a much harder — and more useful — definition of sovereignty.&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Arc_bong&quot;&gt; /u/Arc_bong &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://i.redd.it/g1t6mnq43kkh1.png&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vto7hs/what_if_sovereign_ai_is_just_the_new_oil/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><id>t3_1vto7hs</id><media:thumbnail url=\"https://preview.redd.it/g1t6mnq43kkh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=1af44e98c7a7909f8bd69d373740e2609cd9683d\" /><link href=\"https://www.reddit.com/r/artificial/comments/1vto7hs/what_if_sovereign_ai_is_just_the_new_oil/\" /><updated>2026-08-20T16:24:13+00:00</updated><published>2026-08-20T16:24:13+00:00</published><title>What if “Sovereign AI” is just the new oil concession?</title></entry><entry><author><name>/u/Specialist_Jelly_91</name><uri>https://www.reddit.com/user/Specialist_Jelly_91</uri></author><category term=\"artificial\" label=\"r/artificial\"/><content type=\"html\">&lt;!-- SC_OFF --&gt;&lt;div class=&quot;md&quot;&gt;&lt;p&gt;Hey everyone,&lt;/p&gt; &lt;p&gt;As a front-end developer, I was sick of manually converting wireframes into responsive CSS components. So I built &lt;strong&gt;SketchCode AI&lt;/strong&gt; – a platform where you can literally draw a messy layout on a napkin, upload it, and watch the AI write the entire semantic HTML/Tailwind compiler code for you!&lt;/p&gt; &lt;p&gt;Once you see your handwritten scribbles turn into a premium, responsive dark-themed live UI, &lt;strong&gt;it becomes an absolute obsession.&lt;/strong&gt; Your API key is 100% private and saved locally in your browser&amp;#39;s localStorage.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;🛑 FULL TRANSPARENCY / WHY IT TAKES A MINUTE (But why you&amp;#39;ll love it anyway):&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;⏰ The 1 to 2-Minute Engine:&lt;/strong&gt; Whether you use a free Gemini key or an active OpenRouter API key, compiling a full visual interface from a raw image into production-quality code takes &lt;strong&gt;around 1 to 2 minutes&lt;/strong&gt; [6.4]. But honestly? Waiting 90 seconds beats writing thousands of lines of flexbox and margins by hand for 2 hours! Treat it like a quick coffee break, and boom – your live code is ready.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;⚠️ The &amp;quot;High Demand&amp;quot; Server Crowding:&lt;/strong&gt; Since we are running on a free-tier server architecture right now, Google&amp;#39;s endpoints might occasionally throw a temporary &lt;em&gt;&amp;quot;This model is currently experiencing high demand&amp;quot;&lt;/em&gt; warning banner. &lt;strong&gt;Our engineering team is already working night and day on a major backend patch to smash this server crowding forever!&lt;/strong&gt; If you hit this error, just take a deep breath, wait 60 seconds, and hit convert again.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Go throw your absolute worst, messiest drawings at it and test it live here:&lt;br/&gt; 🚀 &lt;a href=&quot;https://sketchcode-ai.netlify.app/&quot;&gt;https://sketchcode-ai.netlify.app/&lt;/a&gt;&lt;/p&gt; &lt;p&gt;I built this completely alone with a lot of sweat and passion. Please try it out, let me know if it successfully hooked you, and tell me what crazy features I should add next. Let&amp;#39;s crush it!&lt;/p&gt; &lt;/div&gt;&lt;!-- SC_ON --&gt; &amp;#32; submitted by &amp;#32; &lt;a href=&quot;https://www.reddit.com/user/Specialist_Jelly_91&quot;&gt; /u/Specialist_Jelly_91 &lt;/a&gt; &lt;br/&gt; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtg8xn/i_built_an_ai_tool_that_turns_raw_handwritten/&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/artificial/comments/1vtg8xn/i_built_an_ai_tool_that_turns_raw_handwritten/&quot;&gt;[comments]&lt;/a&gt;&lt;/span&gt;</content><id>t3_1vtg8xn</id><link href=\"https://www.reddit.com/r/artificial/comments/1vtg8xn/i_built_an_ai_tool_that_turns_raw_handwritten/\" /><updated>2026-08-20T10:59:19+00:00</updated><published>2026-08-20T10:59:19+00:00</published><title>I built an AI tool that turns raw handwritten sketches into live responsive Tailwind UI. It takes a minute but saving 2 hours of manual coding is insanely addictive! (Need your honest feedback)</title></entry></feed>",
+          "url": "https://www.reddit.com/r/artificial/.rss",
+          "format": "rss"
+        },
+        "attempts": [
+          {
+            "source": "reddit_json",
+            "endpoint": "https://www.reddit.com/r/artificial/.json",
+            "ok": false,
+            "valid_content": false,
+            "status": null,
+            "elapsed_seconds": 0.065,
+            "bytes": 0,
+            "error": "<HTTPError 403: 'Blocked'>"
+          },
+          {
+            "source": "reddit_rss",
+            "endpoint": "https://www.reddit.com/r/artificial/.rss",
+            "ok": true,
+            "valid_content": true,
+            "status": 200,
+            "elapsed_seconds": 0.441,
+            "bytes": 63853,
+            "error": null
+          }
+        ],
+        "elapsed_seconds": 0.508,
+        "fetched_at": "2026-08-21T04:49:27.082495+00:00"
+      },
+      {
+        "platform": "youtube",
+        "ok": true,
+        "source": "yt-dlp",
+        "requested_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "normalized": {
+          "id": "dQw4w9WgXcQ",
+          "title": "Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)",
+          "description": "The official video for “Never Gonna Give You Up” by Rick Astley. \n\nNever: The Autobiography 📚 OUT NOW! \nFollow this link to get your copy and listen to Rick’s ‘Never’ playlist ❤️ #RickAstleyNever\nhttps://linktr.ee/rickastleynever\n\n“Never Gonna Give You Up” was a global smash on its release in July 1987, topping the charts in 25 countries including Rick’s native UK and the US Billboard Hot 100.  It also won the Brit Award for Best single in 1988. Stock Aitken and Waterman wrote and produced the track which was the lead-off single and lead track from Rick’s debut LP “Whenever You Need Somebody”.  The album was itself a UK number one and would go on to sell over 15 million copies worldwide.\n\nThe legendary video was directed by Simon West – who later went on to make Hollywood blockbusters such as Con Air, Lara Croft – Tomb Raider and The Expendables 2.  The video passed the 1bn YouTube views milestone on 28 July 2021.\n\nSubscribe to the official Rick Astley YouTube channel: https://RickAstley.lnk.to/YTSubID\n\nFollow Rick Astley:\nFacebook: https://RickAstley.lnk.to/FBFollowID \nTwitter: https://RickAstley.lnk.to/TwitterID \nInstagram: https://RickAstley.lnk.to/InstagramID \nWebsite: https://RickAstley.lnk.to/storeID \nTikTok: https://RickAstley.lnk.to/TikTokID\n\nListen to Rick Astley:\nSpotify: https://RickAstley.lnk.to/SpotifyID \nApple Music: https://RickAstley.lnk.to/AppleMusicID \nAmazon Music: https://RickAstley.lnk.to/AmazonMusicID \nDeezer: https://RickAstley.lnk.to/DeezerID \n\nLyrics:\nWe’re no strangers to love\nYou know the rules and so do I\nA full commitment’s what I’m thinking of\nYou wouldn’t get this from any other guy\n\nI just wanna tell you how I’m feeling\nGotta make you understand\n\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\n\nWe’ve known each other for so long\nYour heart’s been aching but you’re too shy to say it\nInside we both know what’s been going on\nWe know the game and we’re gonna play it\n\nAnd if you ask me how I’m feeling\nDon’t tell me you’re too blind to see\n\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\n\n#RickAstley #NeverGonnaGiveYouUp #WheneverYouNeedSomebody #OfficialMusicVideo",
+          "channel": "Rick Astley",
+          "channel_id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+          "duration": 213,
+          "timestamp": 1256453853,
+          "view_count": 1806376717,
+          "like_count": 19346070,
+          "comment_count": 2400000,
+          "thumbnail": "https://i.ytimg.com/vi_webp/dQw4w9WgXcQ/maxresdefault.webp",
+          "webpage_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "availability": "public",
+          "subtitles": [
+            "de-DE",
+            "en",
+            "es-419",
+            "ja",
+            "pt-BR"
+          ],
+          "automatic_captions": [
+            "aa",
+            "ab",
+            "af",
+            "ak",
+            "am",
+            "ar",
+            "as",
+            "ay",
+            "az",
+            "ba",
+            "be",
+            "bg",
+            "bho",
+            "bn",
+            "bo",
+            "br",
+            "bs",
+            "ca",
+            "ceb",
+            "co",
+            "crs",
+            "cs",
+            "cy",
+            "da",
+            "de",
+            "de-DE",
+            "dv",
+            "dz",
+            "ee",
+            "el",
+            "en",
+            "en-orig",
+            "eo",
+            "es",
+            "es-419",
+            "et",
+            "eu",
+            "fa",
+            "fi",
+            "fil",
+            "fj",
+            "fo",
+            "fr",
+            "fy",
+            "ga",
+            "gaa",
+            "gd",
+            "gl",
+            "gn",
+            "gu",
+            "gv",
+            "ha",
+            "haw",
+            "hi",
+            "hmn",
+            "hr",
+            "ht",
+            "hu",
+            "hy",
+            "id",
+            "ig",
+            "is",
+            "it",
+            "iu",
+            "iw",
+            "ja",
+            "jv",
+            "ka",
+            "kha",
+            "kk",
+            "kl",
+            "km",
+            "kn",
+            "ko",
+            "kri",
+            "ku",
+            "ky",
+            "la",
+            "lb",
+            "lg",
+            "ln",
+            "lo",
+            "lt",
+            "lua",
+            "luo",
+            "lv",
+            "mfe",
+            "mg",
+            "mi",
+            "mk",
+            "ml",
+            "mn",
+            "mr",
+            "ms",
+            "mt",
+            "my",
+            "ne",
+            "new",
+            "nl",
+            "no",
+            "nso",
+            "ny",
+            "oc",
+            "om",
+            "or",
+            "os",
+            "pa",
+            "pam",
+            "pl",
+            "ps",
+            "pt",
+            "pt-BR",
+            "pt-PT",
+            "qu",
+            "rn",
+            "ro",
+            "ru",
+            "rw",
+            "sa",
+            "sd",
+            "sg",
+            "si",
+            "sk",
+            "sl",
+            "sm",
+            "sn",
+            "so",
+            "sq",
+            "sr",
+            "ss",
+            "st",
+            "su",
+            "sv",
+            "sw",
+            "ta",
+            "te",
+            "tg",
+            "th",
+            "ti",
+            "tk",
+            "tn",
+            "to",
+            "tr",
+            "ts",
+            "tt",
+            "tum",
+            "ug",
+            "uk",
+            "ur",
+            "uz",
+            "ve",
+            "vi",
+            "war",
+            "wo",
+            "xh",
+            "yi",
+            "yo",
+            "zh-Hans",
+            "zh-Hant",
+            "zu"
+          ]
+        },
+        "attempts": [
+          {
+            "source": "yt-dlp",
+            "ok": true,
+            "valid_content": true,
+            "status": 0,
+            "elapsed_seconds": 2.76,
+            "bytes": 658385,
+            "error": null
+          }
+        ],
+        "elapsed_seconds": 2.762,
+        "fetched_at": "2026-08-21T04:49:29.337578+00:00"
+      },
+      {
+        "platform": "bilibili",
+        "ok": true,
+        "source": "jina",
+        "requested_url": "https://www.bilibili.com/video/BV1xx411c7mD/",
+        "normalized": {
+          "text": "Title: 字幕君交流场所_哔哩哔哩_bilibili\n\nURL Source: https://www.bilibili.com/video/BV1xx411c7mD/\n\nPublished Time: Wed, 13 Nov 2024 02:37:15 GMT\n\nMarkdown Content:\n![Image 1](https://i0.hdslb.com/bfs/archive/transparent.png@.webp)\n\n*   [首页](https://www.bilibili.com/)\n*   [番剧](https://www.bilibili.com/anime/)\n*   [直播](https://live.bilibili.com/)\n*   [游戏中心](https://game.bilibili.com/platform) \n*   [会员购](https://show.bilibili.com/platform/home.html?msource=pc_web)\n*   [漫画](https://manga.bilibili.com/?from=bill_top_mnav)\n*   [赛事](https://www.bilibili.com/match/home/)\n*   [B萌 ![Image 2: 图片](https://i0.hdslb.com/bfs/banner/421c6009df62eded367f617c28634be3c832aae0.png) B萌](https://www.bilibili.com/blackboard/era/DlHMVdW6zibHXrrl.html) \n*   [下载客户端](https://app.bilibili.com/)\n\n*    登录   \n*   \n    *   [大会员](https://account.bilibili.com/big)\n\n*   消息 \n*   动态 \n*   收藏 \n*   历史 \n*   创作中心 \n\n*   投稿  \n\n# 字幕君交流场所\n\n546.2万\n\n12.8万\n\n2009-09-09 01:09:09\n\n[Video 2](blob:https://www.bilibili.com/5d426468-86bf-4f97-9de4-5dc64c5a11cf)\n\n████████\n\n████████\n\n████████\n\n2024年11月18日十一时零分前来考古\n\n2 0 2 4前来考古\n\n空降34：11\n\n我们是历史，见证了b站，承载了一个网站的文明，灵魂\n\n合影留念\n\n注意：此视频为B站已知最古老的视频\n\n2020考古合影\n\n跳伞11:45\n\n钉钉时代前来考古\n\n火钳刘明\n\n千年幻想乡！！！八意永琳！！！！！！！！！\n\n空降兵00:01\n\n目前历史中可看的最古老的视频。 AV1已经没了\n\n这个视频最开始的编号是av2\n\n哔 哩 哔 哩 人 口 普 查[吃瓜]\n\n察觉到的时候 时光已经过去\n\n漫无目的地 一人独自彷徨着\n\n嗚呼 華のように鮮やかに さあ\n\n啊 繁花盛放 雍容绚丽 呵\n\n字幕君交流场所\n\n![Image 3](https://i2.hdslb.com/bfs/face/ef0457addb24141e15dfac6fbf45293ccf1e32ab.jpg@96w.webp)关注\n\n正在缓冲...\n\n登录 免费享高清视频 试看30秒\n\n![Image 4: 字幕君交流场所](https://www.bilibili.com/video/BV1xx411c7mD/)\n\n 为TA充电后即可观看 \n\n00:07/34:16\n\n自动\n\n*   480P 标清 登录即享\n*   360P 流畅\n*   自动(360P 流畅)\n\n倍速\n\n*   2.0x\n*   1.5x\n*   1.25x\n*   1.0x\n*   0.75x\n*   0.5x\n\n倍速\n\n登录可享\n\n0\n\n- [x] 镜像画面 \n\n- [x] 单集循环 \n\n- [x] 自动开播 \n\n更多播放设置\n\n播放方式\n\n自动切集 播完暂停 \n\n视频比例\n\n自动 4:3 16:9  \n\n播放策略\n\n默认 AV1 HEVC AVC \n\n音量均衡\n\n标准 高动态 关闭 \n\n其他设置\n\n- [x] 隐藏黑边 \n\n- [x] 关灯模式 \n\n- [x] 高能进度条 \n\n打开《高能进度条》常驻\n\n网络状况异常，请刷新后重试\n\n您的浏览器还未开启本地网络访问权限，可能会影响视频内容的正常播放。\n\n1. 您可在浏览器通知中允许 bilibili.com 查找并连接本设备的请求；\n\n2. 您可进入浏览器在\"设置\">\"隐私和安全\">\"网站设置\">\"查看各网站的权限及存储数据\"找到 www.bilibili.com，在\"权限\"中开启\"本地网络访问权限\"，开启后刷新页面即可正常播放视频。\n\n![Image 5: 本地网络权限开启示意图](https://i0.hdslb.com/bfs/activity-plat/static/20251218/38aa8c2cd2ba5ac4bb1c348540c179e9/69SYFkklcz.png)\n\n刷新\n\n11 人正在看\n\n- [x] \n\n按类型过滤\n\n滚动\n\n固定\n\n彩色\n\n高级\n\n- [x] 弹幕随屏幕缩放 \n\n- [x] 防挡字幕 \n\n- [x] 智能防挡弹幕 \n\n弹幕观看屏蔽词\n\n同步屏蔽列表\n\n显示区域\n\n50%\n\n 弹幕密度 \n\n正常 较多 重叠\n\n不透明度\n\n80%\n\n弹幕字号\n\n100%\n\n弹幕速度\n\n适中\n\n高级设置 全新【硬核会员弹幕模式】\n\n更多弹幕设置\n\n- [x] 弹幕速度同步播放倍数 \n\n弹幕字体\n\nNoto Sans DemiLight\n\n*   黑体\n*   宋体\n*   新宋体\n*   仿宋\n*   微软雅黑\n*   微软雅黑 Light\n*   Noto Sans DemiLight\n*   Noto Sans Regular\n\n- [x] 粗体 \n\n描边类型\n\n重墨 描边 45°投影 \n\n恢复默认设置\n\n![Image 6: 字幕君交流场所](https://www.bilibili.com/video/BV1xx411c7mD/)\n\n请先[登录](javascript:void(0);)或[注册](https://passport.bilibili.com/login?register_page=1)\n\n[弹幕礼仪](https://www.bilibili.com/blackboard/help.html#/?qid=359&pid=357)\n\n发送\n\n优先使用播放器内置策略播放\n\n优先使用 AV1 编码视频播放\n\n优先使用 HEVC/H.265 编码视频播放\n\n优先使用 AVC/H.264 编码视频播放\n\n自动平衡不同视频间的音量大小\n\n平衡音量同时保留更多声音细节\n\n关闭音量均衡\n\n开启画中画\n\n宽屏模式\n\n网页全屏\n\n进入全屏 (f)\n\n关闭弹幕 (d)\n\n视频底部15%部分为空白保留区\n\n特殊颜色、运动形式的弹幕\n\n反馈\n\n27.6万\n\n4.1万\n\n12.7万\n\n![Image 7: 字幕君交流场所](https://www.bilibili.com/video/BV1xx411c7mD/)\n\n![Image 8: 字幕君交流场所](https://i0.hdslb.com/bfs/archive/transparent.png@518w_290h_1c_!web-video-share-cover.webp)\n\n字幕君交流场所\n\n- [x] 从 00:00 开始分享  \n\n 获取视频分享链接 \n\n手机扫码观看/分享\n\n动态\n\n微信\n\nQQ\n\nQQ空间\n\n微博\n\n贴吧\n\n嵌入代码\n\n2.7万\n\n稿件举报\n\n8篇笔记\n\n笔记\n\n记笔记\n\n![Image 9](https://i0.hdslb.com/bfs/face/cca78a2c864ba4559d4250b33bece979210b6b9b.jpg@96w_96h_1c_1s_!web-avatar.avif)\n\n西红柿炖披萨\n\nssrf probe\n\n更新于 2026-08-14 15:37\n\n![Image 10](https://i0.hdslb.com/bfs/face/3f7d60a9e11bbed93d3c4e503743eb40769b6482.jpg@96w_96h_1c_1s_!web-avatar.avif)\n\n懒人丶EX\n\n后来者居上，2026/ 7/28考古，未来的朋友们你们好\n\n1\n\n更新于 2026-07-28 23:35\n\n![Image 11](https://i0.hdslb.com/bfs/face/69bf24a580b0c7d68a3bf2951fd6dd3bef27c36e.jpg@96w_96h_1c_1s_!web-avatar.avif)\n\n隼空舞\n\n我是av/2原作者，欢迎大家来我B站主页玩\n\n8\n\n更新于 2026-07-05 07:57\n\n![Image 12](https://i0.hdslb.com/bfs/face/53ca9559e68d024b5d4f563c0fac9b97b8f59aca.jpg@96w_96h_1c_1s_!web-avatar.avif)\n\nUID5的十次方\n\n我上网 作者：可乐泡饭 每天我都要走着去上学，或者跑着去，因为骑车太累，所以经常会迟到。 在我们的教学楼里有一个投币饮料机，你只需投两枚一元的硬币...\n\n更新于 2026-04-13 14:08\n\n![Image 13](https://i0.hdslb.com/bfs/face/c2d22e32c2f617ebc50c5749af3399116d91d85a.jpg@96w_96h_1c_1s_!web-avatar.avif)\n\ndog_HD\n\n东方project，2009年，东方花映冢发布。\n\n更新于 2025-03-24 00:24\n\n![Image 14](https://i0.hdslb.com/bfs/face/82e612c32bfa920d3bce93e97b7fee9b28a15417.jpg@96w_96h_1c_1s_!web-avatar.avif)\n\n倒力给\n\n让我康康是哪个好奇宝宝找到了这里❤️ 来了就打个招呼吧👋\n\n13\n\n更新于 2024-07-26 01:44\n\n![Image 15](https://i0.hdslb.com/bfs/face/83194bc17ac7d50769e5190d73106275845105b1.jpg@96w_96h_1c_1s_!web-avatar.avif)\n\n太田聪也\n\n(◦˙▽˙◦)好看\n\n8\n\n更新于 2024-03-17 21:32\n\n![Image 16](https://i0.hdslb.com/bfs/face/1494eb1b05c83854b5bce026d85a66f33fc5825e.jpg@96w_96h_1c_1s_!web-avatar.avif)\n\n神秘坏庸医\n\n老物\n\n7\n\n更新于 2023-01-27 01:46\n\n公开发布笔记\n\n用手机看\n\n稍后再看\n\nwww\n\n[![Image 17](https://i0.hdslb.com/bfs/face/ef0457addb24141e15dfac6fbf45293ccf1e32ab.jpg@96w_96h_1c_1s_!web-avatar.webp) ![Image 18](https://i0.hdslb.com/bfs/garb/open/efe5e579cbb95a404c2ba289f37c5965dee7a3a2.png@144w_144h_!web-avatar.webp)](https://space.bilibili.com/2/?spm_id_from=333.788.upinfo.head.click)\n\n[碧诗](https://space.bilibili.com/2/?spm_id_from=333.788.upinfo.detail.click)[发消息](https://message.bilibili.com/?spm_id_from=333.788.upinfo.detail.click#whisper/mid2)\n\nhttps://kami.im 直男过气网红 # We Are Star Dust\n\n 关注 142.3万 \n\n弹幕列表\n\n弹幕列表\n\n屏蔽设定\n\n高级弹幕\n\n弹幕列表填充中...\n\n查看历史弹幕\n\n接下来播放\n\n自动连播\n\n[![Image 19: 视频已失效](https://i0.hdslb.com/bfs/archive/0e65b48611113f0ffd975943f669df2ec6c25e2a.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1zVt3znEc1/?spm_id_from=333.788.recommend_more_video.-1)\n\n00:17\n\n[视频已失效](https://www.bilibili.com/video/BV1zVt3znEc1/?spm_id_from=333.788.recommend_more_video.-1)\n\n[McIDE](https://space.bilibili.com/2026563810/)\n\n 54.8万  1061 \n\n[![Image 20: 【4K】我老婆大人世界第一！！！](https://i0.hdslb.com/bfs/archive/adeaa2735d188294912541732662a3e6ed72fff2.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1tG41187ZD/?spm_id_from=333.788.recommend_more_video.0)\n\n01:55\n\n[【4K】我老婆大人世界第一！！！](https://www.bilibili.com/video/BV1tG41187ZD/?spm_id_from=333.788.recommend_more_video.0)\n\n[一生守护最爱の堇风萤](https://space.bilibili.com/321356919/)\n\n 45.5万  4637 \n\n[![Image 21: 《B站网友最团结的一次》](https://i0.hdslb.com/bfs/archive/334752db7bf7f92b27053f7a2bdcc39a3b44c607.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV19SKyzEEp3/?spm_id_from=333.788.recommend_more_video.1)\n\n00:12\n\n[《B站网友最团结的一次》](https://www.bilibili.com/video/BV19SKyzEEp3/?spm_id_from=333.788.recommend_more_video.1)\n\n[欧宝年](https://space.bilibili.com/3546837959051845/)\n\n 268.1万  6.0万 \n\n[![Image 22: 2010年的无法快进的视频黑屏bug，成为了bilibili的跨时空聊天室！](https://i0.hdslb.com/bfs/archive/6bd182a169591d79a05232f3a2a1e9696483a096.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1qe411j7XT/?spm_id_from=333.788.recommend_more_video.2)\n\n07:55\n\n[2010年的无法快进的视频黑屏bug，成为了bilibili的跨时空聊天室！](https://www.bilibili.com/video/BV1qe411j7XT/?spm_id_from=333.788.recommend_more_video.2)\n\n[_Zero_2](https://space.bilibili.com/413287949/)\n\n 106.7万  1392 \n\n[![Image 23: 【全弹幕】av10388 武器A](https://i0.hdslb.com/bfs/archive/b94b8be43cd0a9a12bf1a334541b017a3bd24cb6.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1NP4y1K7Ze/?spm_id_from=333.788.recommend_more_video.3)\n\n02:24\n\n[【全弹幕】av10388 武器A](https://www.bilibili.com/video/BV1NP4y1K7Ze/?spm_id_from=333.788.recommend_more_video.3)\n\n[尚宜鼎MEMZ](https://space.bilibili.com/104657830/)\n\n 463.4万  3.8万 \n\n[![Image 24: 已失效视频](https://i0.hdslb.com/bfs/archive/56d9fd9e5d093396da74476caaa354ce9a349eb9.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV18TsCesENk/?spm_id_from=333.788.recommend_more_video.4)\n\n00:17\n\n[已失效视频](https://www.bilibili.com/video/BV18TsCesENk/?spm_id_from=333.788.recommend_more_video.4)\n\n[Pickup_拾柒](https://space.bilibili.com/1638525867/)\n\n 32.1万  523 \n\n[![Image 25: 【1月】这公司有我喜欢的人 01【独家正版】](https://i0.hdslb.com/bfs/archive/db46994c3a140a3b762bc2c082260798351cd939.png@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1wXrGYHEvA/?spm_id_from=333.788.recommend_more_video.5)\n\n23:52\n\n[【1月】这公司有我喜欢的人 01【独家正版】](https://www.bilibili.com/video/BV1wXrGYHEvA/?spm_id_from=333.788.recommend_more_video.5)\n\n[哔哩哔哩番剧](https://space.bilibili.com/928123/)\n\n 243.4万  6197 \n\n[![Image 26: 弹幕真是惊艳到我了](https://i0.hdslb.com/bfs/archive/019f5ee992473e249a656ec6b34694f3f9bfc728.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1e14y1h75C/?spm_id_from=333.788.recommend_more_video.6)\n\n01:10\n\n[弹幕真是惊艳到我了](https://www.bilibili.com/video/BV1e14y1h75C/?spm_id_from=333.788.recommend_more_video.6)\n\n[来吃一口椰子](https://space.bilibili.com/628888157/)\n\n 503.2万  7.1万 \n\n[![Image 27: 某站站长黑历史合集](https://i0.hdslb.com/bfs/archive/9b306669e8420cb9f4c25bee9ad24751f66fff0e.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV16i4y1R7YY/?spm_id_from=333.788.recommend_more_video.7)\n\n00:39\n\n[某站站长黑历史合集](https://www.bilibili.com/video/BV16i4y1R7YY/?spm_id_from=333.788.recommend_more_video.7)\n\n[犬有希](https://space.bilibili.com/922050/)\n\n 4.9万  16 \n\n[![Image 28: 【東方】最終鬼畜妹](https://i0.hdslb.com/bfs/archive/680f773209cce85a8f5a7cd3f004ecbe2689a8f0.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1Vx411c7Zy/?spm_id_from=333.788.recommend_more_video.8)\n\n03:26\n\n[【東方】最終鬼畜妹](https://www.bilibili.com/video/BV1Vx411c7Zy/?spm_id_from=333.788.recommend_more_video.8)\n\n[白河琴美](https://space.bilibili.com/501345/)\n\n 147.7万  2301 \n\n[![Image 29: 高级弹幕测试公用](https://i0.hdslb.com/bfs/archive/2c0bb64c8f9db8cca512051c26f1a3bbe4365ef8.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV16a4y1v7L2/?spm_id_from=333.788.recommend_more_video.9)\n\n20:06\n\n[高级弹幕测试公用](https://www.bilibili.com/video/BV16a4y1v7L2/?spm_id_from=333.788.recommend_more_video.9)\n\n[想要龙门币のChara](https://space.bilibili.com/364185321/)\n\n 25.0万  2.8万 \n\n[![Image 30: 10年前的B站长啥样？震惊！这是我能看的吗？](https://i0.hdslb.com/bfs/archive/365102b9161e4ed0c47e582135ffbcbd302cf246.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1DK411d77f/?spm_id_from=333.788.recommend_more_video.10)\n\n03:21\n\n[10年前的B站长啥样？震惊！这是我能看的吗？](https://www.bilibili.com/video/BV1DK411d77f/?spm_id_from=333.788.recommend_more_video.10)\n\n[科技老男孩](https://space.bilibili.com/1278118266/)\n\n 106.5万  4038 \n\n[![Image 31: 联合国正式入驻B站！](https://i0.hdslb.com/bfs/archive/076e734be1d4ddc265c28bbb5a72fba6deaee5d4.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1Am4y1C78m/?spm_id_from=333.788.recommend_more_video.11)\n\n02:35\n\n[联合国正式入驻B站！](https://www.bilibili.com/video/BV1Am4y1C78m/?spm_id_from=333.788.recommend_more_video.11)\n\n[联合国](https://space.bilibili.com/1649919642/)\n\n 1230.1万  5.5万 \n\n[![Image 32: 我会活到今年五月的](https://i0.hdslb.com/bfs/archive/b5268e5f8aa0091c08646075654f59987f839cbc.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1Sx411c75B/?spm_id_from=333.788.recommend_more_video.12)\n\n01:30\n\n[我会活到今年五月的](https://www.bilibili.com/video/BV1Sx411c75B/?spm_id_from=333.788.recommend_more_video.12)\n\n[三体](https://space.bilibili.com/127142/)\n\n 56.6万  1228 \n\n[![Image 33: 晓美焰Nyanyanyanyanyanyanya!](https://i0.hdslb.com/bfs/archive/3c200e885216c424d8dfec57a469ae5d657c5f78.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV11x411c7xH/?spm_id_from=333.788.recommend_more_video.13)\n\n01:07\n\n[晓美焰Nyanyanyanyanyanyanya!](https://www.bilibili.com/video/BV11x411c7xH/?spm_id_from=333.788.recommend_more_video.13)\n\n[bili游客](https://space.bilibili.com/55630/)\n\n 296.7万  4290 \n\n[![Image 34: 我们的BILIBILI](https://i0.hdslb.com/bfs/archive/586385acc3283cfa590b5bbf004e2a6b1dca5e01.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1Lx411F7b2/?spm_id_from=333.788.recommend_more_video.14)\n\n39:24\n\n[我们的BILIBILI](https://www.bilibili.com/video/BV1Lx411F7b2/?spm_id_from=333.788.recommend_more_video.14)\n\n[saber酱](https://space.bilibili.com/79/)\n\n 227.6万  13.4万 \n\n[![Image 35: 【国家队】02的美妙循环？！](https://i0.hdslb.com/bfs/archive/994868c871993dc8aa4abb11fd7f3c1bf020d64c.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1kp411f7Le/?spm_id_from=333.788.recommend_more_video.15)\n\n10:25\n\n[【国家队】02的美妙循环？！](https://www.bilibili.com/video/BV1kp411f7Le/?spm_id_from=333.788.recommend_more_video.15)\n\n[雨神LANCER](https://space.bilibili.com/38587459/)\n\n 178.1万  2422 \n\n[![Image 36: 【高级弹幕游戏】弹幕躲避](https://i0.hdslb.com/bfs/archive/26ac560bf261f84ef58e68cb26a2d23965bdc0bf.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1xs411S7xo/?spm_id_from=333.788.recommend_more_video.16)\n\n03:46\n\n[【高级弹幕游戏】弹幕躲避](https://www.bilibili.com/video/BV1xs411S7xo/?spm_id_from=333.788.recommend_more_video.16)\n\n[攻城狮TecNico](https://space.bilibili.com/895523/)\n\n 628.1万  226.1万 \n\n[![Image 37: 【1月】這公司有我喜歡的人（僅限港澳台地區）01](https://i0.hdslb.com/bfs/archive/37a258356ac1e1a48f8a16b4e2ebeaa48acd737c.png@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1pXrGYnEpv/?spm_id_from=333.788.recommend_more_video.17)\n\n23:52\n\n[【1月】這公司有我喜歡的人（僅限港澳台地區）01](https://www.bilibili.com/video/BV1pXrGYnEpv/?spm_id_from=333.788.recommend_more_video.17)\n\n[哔哩哔哩番剧出差](https://space.bilibili.com/11783021/)\n\n 14.1万  141 \n\n[![Image 38: ？](https://i0.hdslb.com/bfs/archive/4d75d176eacff9502db85acbe9b9ca4d67bf0b22.jpg@336w_190h_1c_!web-video-rcmd-cover.webp)](https://www.bilibili.com/video/BV1QY411b7Kf/?spm_id_from=333.788.recommend_more_video.18)\n\n00:38\n\n[？](https://www.bilibili.com/video/BV1QY411b7Kf/?spm_id_from=333.788.recommend_more_video.18)\n\n[凉辰lc_](https://space.bilibili.com/39496734/)\n\n 3489.9万  74.9万 \n\n 展开 \n\n[![Image 39](https://i0.hdslb.com/bfs/banner/6b31fd1ab4c23fb093ef34529e53754bd47fe258.jpg@700w_350h_100q_!web-video-right-bottom-ad.webp) 参与活动赢取至臻小小英雄](https://www.bilibili.com/blackboard/era/75iGRLcOI23ODZ3i.html?spm_id_from=333.788.right_bottom.adfloor-3038.click)\n\n 小窗 \n\n[客服](https://www.bilibili.com/blackboard/help.html#%E5%B8%B8%E8%A7%81%E6%92%AD%E6%94%BE%E9%97%AE%E9%A2%98%E8%87%AA%E6%95%91%E6%96%B9%E6%B3%95 \"帮助反馈\")\n\n 顶部 \n\n课程总结\n\n收起全部章节\n\n关闭课程总结\n\n暂无课程总结\n\n[赛事库](https://www.bilibili.com/v/game/match/)[课堂](https://www.bilibili.com/cheese/)[2021拜年纪](https://www.bilibili.com/festival/2021bnj)\n",
+          "url": "https://www.bilibili.com/video/BV1xx411c7mD/"
+        },
+        "attempts": [
+          {
+            "source": "jina",
+            "endpoint": "https://r.jina.ai/https://www.bilibili.com/video/BV1xx411c7mD/",
+            "ok": true,
+            "valid_content": true,
+            "status": 200,
+            "elapsed_seconds": 0.584,
+            "bytes": 17846,
+            "error": null
+          }
+        ],
+        "elapsed_seconds": 0.584,
+        "fetched_at": "2026-08-21T04:49:27.159800+00:00"
+      }
+    ]
+  },
+  "agent_reach_doctor": {
+    "github": {
+      "status": "warn",
+      "name": "GitHub 仓库和代码",
+      "message": "gh CLI 可执行，但未检测到显式认证配置。运行 `gh auth login` 完成登录；Doctor 不会自动执行 `gh auth status`。",
+      "tier": 0,
+      "backends": [
+        "gh CLI"
+      ],
+      "active_backend": null
+    },
+    "twitter": {
+      "status": "warn",
+      "name": "Twitter/X 推文",
+      "message": "twitter-cli 已安装但没有完整的显式凭据。请用 Cookie-Editor 从 x.com 导出后运行：\n  agent-reach configure twitter-cookies\nDoctor 不会自动读取浏览器 Cookie。",
+      "tier": 1,
+      "backends": [
+        "twitter-cli",
+        "OpenCLI",
+        "bird CLI (legacy)"
+      ],
+      "active_backend": null
+    },
+    "youtube": {
+      "status": "ok",
+      "name": "YouTube 视频和字幕",
+      "message": "可提取视频信息和字幕",
+      "tier": 0,
+      "backends": [
+        "yt-dlp"
+      ],
+      "active_backend": "yt-dlp"
+    },
+    "reddit": {
+      "status": "warn",
+      "name": "Reddit 帖子和评论",
+      "message": "rdt-cli 已安装但没有可用的显式 Cookie。请使用 Cookie-Editor：\n  1. Chrome 应用商店安装 Cookie-Editor 扩展：\n     https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm\n  2. 在浏览器打开 reddit.com（确保已登录）\n  3. 点击 Cookie-Editor 图标，找到 `reddit_session`，复制其 Value\n  4. 将以下内容写入 ~/.config/rdt-cli/credential.json：\n     {\"cookies\": {\"reddit_session\": \"<粘贴 Value>\"}, \"source\": \"manual\", \"username\": \"<你的用户名>\", \"modhash\": null, \"saved_at\": 0, \"last_verified_at\": null}\n\nDoctor 不会运行会自动读取浏览器并写文件的 `rdt status`。",
+      "tier": 1,
+      "backends": [
+        "OpenCLI",
+        "rdt-cli"
+      ],
+      "active_backend": null
+    },
+    "facebook": {
+      "status": "off",
+      "name": "Facebook 帖子、主页和群组",
+      "message": "未安装 Facebook 帖子、主页和群组 后端。安装：\n  agent-reach install --system --channels opencli\n然后在 Chrome 里登录 facebook.com",
+      "tier": 1,
+      "backends": [
+        "OpenCLI"
+      ],
+      "active_backend": null
+    },
+    "instagram": {
+      "status": "off",
+      "name": "Instagram 用户、主页和指定用户帖子",
+      "message": "未安装 Instagram 用户、主页和指定用户帖子 后端。安装：\n  agent-reach install --system --channels opencli\n然后在 Chrome 里登录 instagram.com",
+      "tier": 1,
+      "backends": [
+        "OpenCLI"
+      ],
+      "active_backend": null
+    },
+    "bilibili": {
+      "status": "ok",
+      "name": "B站视频、字幕和搜索",
+      "message": "bili-cli 可用（搜索/热门/排行/视频详情/音频，无需登录；字幕需 OpenCLI。上游 2026-03 起停更）",
+      "tier": 1,
+      "backends": [
+        "bili-cli",
+        "OpenCLI",
+        "B站搜索 API"
+      ],
+      "active_backend": "bili-cli"
+    },
+    "xiaohongshu": {
+      "status": "off",
+      "name": "小红书笔记",
+      "message": "未安装任何小红书后端。推荐：\n  桌面：agent-reach install --system --channels opencli\n       （复用 Chrome 登录态，刷过小红书即零配置可用）\n  服务器：xiaohongshu-mcp：https://github.com/xpzouying/xiaohongshu-mcp\n       登录只使用 Cookie-Editor 明确导出：\n       agent-reach configure xhs-cookies（隐藏输入）",
+      "tier": 1,
+      "backends": [
+        "OpenCLI",
+        "xiaohongshu-mcp",
+        "xhs-cli (xiaohongshu-cli)"
+      ],
+      "active_backend": null
+    },
+    "linkedin": {
+      "status": "warn",
+      "name": "LinkedIn 职业社交",
+      "message": "mcporter 本地配置未发现 LinkedIn MCP；配置还启用了 editor imports，Doctor 为避免扩大凭据读取范围没有展开，当前未验证。",
+      "tier": 2,
+      "backends": [
+        "mcp-server-linkedin",
+        "Jina Reader"
+      ],
+      "active_backend": null
+    },
+    "xiaoyuzhou": {
+      "status": "off",
+      "name": "小宇宙播客转文字",
+      "message": "需要 ffmpeg（音频转码和切片）。安装：\n  Ubuntu/Debian: apt install -y ffmpeg\n  macOS: brew install ffmpeg",
+      "tier": 1,
+      "backends": [
+        "groq-whisper",
+        "ffmpeg"
+      ],
+      "active_backend": null
+    },
+    "v2ex": {
+      "status": "ok",
+      "name": "V2EX 节点、主题与回复",
+      "message": "公开 API 可用（热门主题、节点浏览、主题详情、用户信息）",
+      "tier": 0,
+      "backends": [
+        "V2EX API (public)"
+      ],
+      "active_backend": "V2EX API (public)"
+    },
+    "xueqiu": {
+      "status": "warn",
+      "name": "雪球股票行情与社区动态",
+      "message": "Xueqiu API 连接失败：HTTP Error 400。如需登录 Cookie，请运行：agent-reach configure --from-browser chrome --platform xueqiu；doctor 不会自动读取浏览器 Cookie。",
+      "tier": 1,
+      "backends": [
+        "Xueqiu API (需要登录 Cookie)"
+      ],
+      "active_backend": null
+    },
+    "rss": {
+      "status": "ok",
+      "name": "RSS/Atom 订阅源",
+      "message": "可读取 RSS/Atom 源",
+      "tier": 0,
+      "backends": [
+        "feedparser"
+      ],
+      "active_backend": "feedparser"
+    },
+    "exa_search": {
+      "status": "warn",
+      "name": "全网语义搜索",
+      "message": "Exa 已写入 mcporter 配置，但 Doctor 未启动远端服务做连通验证，不能仅凭配置宣称可用。",
+      "tier": 0,
+      "backends": [
+        "Exa via mcporter"
+      ],
+      "active_backend": null
+    },
+    "web": {
+      "status": "ok",
+      "name": "任意网页",
+      "message": "通过 Jina Reader 读取任意网页（curl https://r.jina.ai/URL）",
+      "tier": 0,
+      "backends": [
+        "Jina Reader"
+      ],
+      "active_backend": "Jina Reader"
+    }
+  },
+  "raw_backend_benchmark": [
+    {
+      "test": "x_jina",
+      "exit": 22,
+      "ms": 107,
+      "stdout_bytes": 0
+    },
+    {
+      "test": "x_twitter_cli",
+      "exit": 1,
+      "ms": 444,
+      "stdout_bytes": 336
+    },
+    {
+      "test": "reddit_rdt",
+      "exit": 1,
+      "ms": 316,
+      "stdout_bytes": 117
+    },
+    {
+      "test": "youtube_ytdlp",
+      "exit": 0,
+      "ms": 2673,
+      "stdout_bytes": 656431
+    }
+  ]
+}
