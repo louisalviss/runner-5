@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - test/agent-reach-benchmark-20260821
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -59,8 +62,6 @@ jobs:
             printf '%s\t%s\t%s\t%s\n' "$name" "$code" "$ms" "$bytes" >> "$OUT/results.tsv"
           }
 
-          # Exact X post supplied by the user. Two paths are tested:
-          # 1) zero-auth web/Jina retrieval; 2) Agent Reach's installed twitter-cli.
           bench x_jina curl -LfsS "https://r.jina.ai/https://x.com/kun66666677/status/2090329858920657060"
           if command -v twitter >/dev/null 2>&1; then
             bench x_twitter_cli twitter tweet "https://x.com/kun66666677/status/2090329858920657060"
@@ -69,8 +70,6 @@ jobs:
             echo 'twitter command not installed' > "$OUT/x_twitter_cli.err"
           fi
 
-          # Reddit has no supported zero-auth Agent Reach backend; this verifies that
-          # the installed server backend does not falsely report anonymous access.
           if command -v rdt >/dev/null 2>&1; then
             bench reddit_rdt rdt popular --limit 5
           else
@@ -78,7 +77,6 @@ jobs:
             echo 'rdt command not installed' > "$OUT/reddit_rdt.err"
           fi
 
-          # YouTube is a zero-config channel and should work through yt-dlp.
           if command -v yt-dlp >/dev/null 2>&1; then
             bench youtube_ytdlp yt-dlp --dump-json --skip-download "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           else
