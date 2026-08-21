@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/x-fetch-2090486831137886703.yml
+      - x-fetch-trigger-2090486831137886703.txt
 
 permissions:
   contents: write
