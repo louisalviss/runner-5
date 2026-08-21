@@ -1,0 +1,114 @@
+name: Agent Reach Benchmark
+
+on:
+  push:
+    branches:
+      - test/agent-reach-benchmark-20260821
+  workflow_dispatch:
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Agent Reach and channels
+        shell: bash
+        run: |
+          set -u
+          python -m pip install --upgrade pip pipx
+          python -m pipx ensurepath
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.local/bin:$PATH"
+          pipx install https://github.com/Panniantong/agent-reach/archive/main.zip
+          agent-reach install --env=auto --system --channels=twitter,reddit,bilibili || true
+
+      - name: Doctor
+        shell: bash
+        run: |
+          set +e
+          export PATH="$HOME/.local/bin:$PATH"
+          mkdir -p /tmp/agent-reach-bench
+          agent-reach doctor --json > /tmp/agent-reach-bench/doctor.json 2>&1
+          code=$?
+          cat /tmp/agent-reach-bench/doctor.json
+          echo "doctor_exit=$code" >> "$GITHUB_STEP_SUMMARY"
+          exit 0
+
+      - name: Benchmark public retrieval
+        shell: bash
+        run: |
+          set +e
+          export PATH="$HOME/.local/bin:$PATH"
+          OUT=/tmp/agent-reach-bench
+          mkdir -p "$OUT"
+          : > "$OUT/results.tsv"
+
+          bench() {
+            name="$1"; shift
+            start=$(date +%s%3N)
+            timeout 60s "$@" > "$OUT/${name}.out" 2> "$OUT/${name}.err"
+            code=$?
+            end=$(date +%s%3N)
+            ms=$((end-start))
+            bytes=$(wc -c < "$OUT/${name}.out" | tr -d ' ')
+            printf '%s\t%s\t%s\t%s\n' "$name" "$code" "$ms" "$bytes" >> "$OUT/results.tsv"
+          }
+
+          # Exact X post supplied by the user. Two paths are tested:
+          # 1) zero-auth web/Jina retrieval; 2) Agent Reach's installed twitter-cli.
+          bench x_jina curl -LfsS "https://r.jina.ai/https://x.com/kun66666677/status/2090329858920657060"
+          if command -v twitter >/dev/null 2>&1; then
+            bench x_twitter_cli twitter tweet "https://x.com/kun66666677/status/2090329858920657060"
+          else
+            printf 'x_twitter_cli\t127\t0\t0\n' >> "$OUT/results.tsv"
+            echo 'twitter command not installed' > "$OUT/x_twitter_cli.err"
+          fi
+
+          # Reddit has no supported zero-auth Agent Reach backend; this verifies that
+          # the installed server backend does not falsely report anonymous access.
+          if command -v rdt >/dev/null 2>&1; then
+            bench reddit_rdt rdt popular --limit 5
+          else
+            printf 'reddit_rdt\t127\t0\t0\n' >> "$OUT/results.tsv"
+            echo 'rdt command not installed' > "$OUT/reddit_rdt.err"
+          fi
+
+          # YouTube is a zero-config channel and should work through yt-dlp.
+          if command -v yt-dlp >/dev/null 2>&1; then
+            bench youtube_ytdlp yt-dlp --dump-json --skip-download "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          else
+            printf 'youtube_ytdlp\t127\t0\t0\n' >> "$OUT/results.tsv"
+            echo 'yt-dlp command not installed' > "$OUT/youtube_ytdlp.err"
+          fi
+
+          {
+            echo '## Agent Reach benchmark'
+            echo
+            echo '| test | exit | ms | stdout bytes |'
+            echo '|---|---:|---:|---:|'
+            awk -F '\t' '{printf "| %s | %s | %s | %s |\n", $1,$2,$3,$4}' "$OUT/results.tsv"
+            echo
+            echo '### X zero-auth preview'
+            echo '```text'
+            head -c 2500 "$OUT/x_jina.out" || true
+            echo
+            echo '```'
+            echo
+            echo '### Errors / auth requirements'
+            echo '```text'
+            for f in "$OUT"/*.err; do echo "--- $(basename "$f")"; head -c 1200 "$f"; echo; done
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          cat "$OUT/results.tsv"
+          echo '--- X Jina preview ---'
+          head -c 2500 "$OUT/x_jina.out" || true
+          echo
+          echo '--- errors ---'
+          for f in "$OUT"/*.err; do echo "### $f"; head -c 1200 "$f"; echo; done
+          exit 0
