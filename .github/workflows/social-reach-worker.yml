@@ -8,8 +8,6 @@ on:
     paths:
       - 'jobs/social-reach/*.json'
       - 'jobs/social-reach/**/*.json'
-      - 'social_reach.py'
-      - '.github/workflows/social-reach-worker.yml'
   workflow_dispatch:
     inputs:
       job_file:
@@ -62,8 +60,15 @@ jobs:
             exit 2
           fi
           stem="$(basename "$JOB_FILE" .json)"
+          use_agent_reach="$(python - "$JOB_FILE" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1]))
+          print('true' if d.get('use_agent_reach') is True else 'false')
+          PY
+          )"
           echo "job_file=$JOB_FILE" >> "$GITHUB_OUTPUT"
           echo "stem=$stem" >> "$GITHUB_OUTPUT"
+          echo "use_agent_reach=$use_agent_reach" >> "$GITHUB_OUTPUT"
 
       - name: Run fast Social Reach
         id: reach
@@ -76,12 +81,14 @@ jobs:
           test -f social_reach_output/result.json || exit 3
           exit 0
 
-      - name: Agent Reach capability snapshot
+      - name: Agent Reach optional breadth probe
+        if: steps.job.outputs.use_agent_reach == 'true'
         shell: bash
         run: |
           set +e
           python -m pip install -q 'git+https://github.com/Panniantong/Agent-Reach.git'
           if command -v agent-reach >/dev/null 2>&1; then
+            agent-reach install --env=auto --system --channels=twitter,reddit,bilibili || true
             agent-reach doctor --json > social_reach_output/agent-reach-doctor.json 2>&1 || true
           else
             printf '{"status":"not-installed"}\n' > social_reach_output/agent-reach-doctor.json
@@ -92,10 +99,10 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
-          import json, pathlib
+          import json, os, pathlib
           p=pathlib.Path('social_reach_output/result.json')
           d=json.loads(p.read_text())
-          with open(pathlib.Path(__import__('os').environ['GITHUB_STEP_SUMMARY']), 'a') as f:
+          with open(pathlib.Path(os.environ['GITHUB_STEP_SUMMARY']), 'a') as f:
               f.write('## Social Reach result\n\n')
               f.write(f"URLs: {d['url_count']} | PASS: {d['ok_count']} | FAIL: {d['failed_count']} | wall: {d['wall_seconds']}s\n\n")
               f.write('| platform | source | ok | seconds | URL |\n')
