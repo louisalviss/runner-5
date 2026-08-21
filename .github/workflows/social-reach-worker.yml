@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - test/agent-reach-benchmark-20260821
     paths:
       - 'jobs/social-reach/*.json'
       - 'jobs/social-reach/**/*.json'
@@ -131,7 +130,7 @@ jobs:
           fi
           git commit -m "Store Social Reach result: ${{ steps.job.outputs.stem }} [skip ci]"
           for i in 1 2 3; do
-            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
             sleep 2
           done
           exit 1
