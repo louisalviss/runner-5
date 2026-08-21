@@ -3,7 +3,7 @@ name: Agent Reach Benchmark
 on:
   push:
     branches:
-      - test/agent-reach-benchmark-20260821
+      - main
     paths:
       - '.github/workflows/agent-reach-benchmark.yml'
   workflow_dispatch:
@@ -57,8 +57,22 @@ jobs:
       - name: Hybrid benchmark
         shell: bash
         run: |
+          cat > /tmp/social-reach-job.json <<'JSON'
+          {
+            "name": "agent-reach-hybrid-benchmark",
+            "timeout_seconds": 20,
+            "max_workers": 4,
+            "use_agent_reach": false,
+            "urls": [
+              "https://x.com/kun66666677/status/2090329858920657060?s=12",
+              "https://www.reddit.com/r/artificial/",
+              "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "https://www.bilibili.com/video/BV1xx411c7mD/"
+            ]
+          }
+          JSON
           set +e
-          python social_reach.py jobs/social-reach/2026-08-21-hybrid-benchmark-v3.json --output /tmp/social-reach-v3
+          python social_reach.py /tmp/social-reach-job.json --output /tmp/social-reach
           echo "$?" > /tmp/agent-reach-bench/hybrid-exit.txt
           exit 0
 
@@ -90,7 +104,6 @@ jobs:
             printf 'reddit_rdt\t127\t0\t0\n' >> "$OUT/raw.tsv"
           fi
           bench youtube_ytdlp yt-dlp --dump-json --skip-download 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-          cat "$OUT/raw.tsv"
           exit 0
 
       - name: Build benchmark result
@@ -104,7 +117,7 @@ jobs:
               doctor=json.loads((root/'doctor.json').read_text())
           except Exception:
               doctor={'raw':(root/'doctor.json').read_text(errors='replace') if (root/'doctor.json').exists() else ''}
-          hybrid=json.loads(pathlib.Path('/tmp/social-reach-v3/result.json').read_text())
+          hybrid=json.loads(pathlib.Path('/tmp/social-reach/result.json').read_text())
           raw=[]
           for line in (root/'raw.tsv').read_text().splitlines():
               p=line.split('\t')
@@ -128,7 +141,7 @@ jobs:
           git add -- results/agent-reach-benchmark/latest.json
           git commit -m 'Store Agent Reach hybrid benchmark [skip ci]' || exit 0
           for i in 1 2 3; do
-            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
             sleep 2
           done
           exit 1
