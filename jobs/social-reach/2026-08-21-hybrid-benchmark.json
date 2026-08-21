@@ -1,0 +1,11 @@
+{
+  "name": "2026-08-21-hybrid-benchmark",
+  "timeout_seconds": 20,
+  "max_workers": 4,
+  "urls": [
+    "https://x.com/kun66666677/status/2090329858920657060?s=12",
+    "https://www.reddit.com/r/artificial/",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.bilibili.com/video/BV1xx411c7mD/"
+  ]
+}
