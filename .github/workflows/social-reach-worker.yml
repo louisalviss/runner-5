@@ -59,12 +59,7 @@ jobs:
             exit 2
           fi
           stem="$(basename "$JOB_FILE" .json)"
-          use_agent_reach="$(python - "$JOB_FILE" <<'PY'
-          import json,sys
-          d=json.load(open(sys.argv[1]))
-          print('true' if d.get('use_agent_reach') is True else 'false')
-          PY
-          )"
+          use_agent_reach="$(python -c 'import json,sys; print("true" if json.load(open(sys.argv[1])).get("use_agent_reach") is True else "false")' "$JOB_FILE")"
           echo "job_file=$JOB_FILE" >> "$GITHUB_OUTPUT"
           echo "stem=$stem" >> "$GITHUB_OUTPUT"
           echo "use_agent_reach=$use_agent_reach" >> "$GITHUB_OUTPUT"
