@@ -1,0 +1,117 @@
+name: X fetch 2090486831137886703
+
+on:
+  push:
+    branches:
+      - task/x-fetch-2090486831137886703
+    paths:
+      - .github/workflows/x-fetch-2090486831137886703.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-x:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: task/x-fetch-2090486831137886703
+
+      - name: Fetch X post, then WARP fallback if needed
+        shell: bash
+        run: |
+          set -u
+          ID='2090486831137886703'
+          USER='cryptoshan484'
+          OUT="x-fetch-result-${ID}.md"
+          TMP="$(mktemp -d)"
+
+          fetch_one() {
+            local name="$1" url="$2"
+            local body="$TMP/${name}.body" hdr="$TMP/${name}.headers"
+            local code
+            code=$(curl -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/139 Safari/537.36' \
+              -L --connect-timeout 12 --max-time 30 -sS -D "$hdr" -o "$body" -w '%{http_code}' "$url" || true)
+            local bytes
+            bytes=$(wc -c < "$body" 2>/dev/null || echo 0)
+            printf '%s|%s|%s|%s\n' "$name" "$code" "$bytes" "$url" >> "$TMP/status.txt"
+          }
+
+          run_fetches() {
+            : > "$TMP/status.txt"
+            fetch_one direct_x "https://x.com/${USER}/status/${ID}"
+            fetch_one oembed "https://publish.twitter.com/oembed?url=https://twitter.com/${USER}/status/${ID}&omit_script=1"
+            fetch_one syndication "https://cdn.syndication.twimg.com/tweet-result?id=${ID}&lang=en"
+            fetch_one fxtwitter "https://api.fxtwitter.com/${USER}/status/${ID}"
+            fetch_one vxtwitter "https://api.vxtwitter.com/${USER}/status/${ID}"
+          }
+
+          run_fetches
+
+          structured_ok=0
+          while IFS='|' read -r name code bytes url; do
+            if [[ "$name" != 'direct_x' && "$code" == '200' && "$bytes" -gt 80 ]]; then
+              structured_ok=1
+            fi
+          done < "$TMP/status.txt"
+
+          warp_used=0
+          warp_status='not-needed'
+          if [[ "$structured_ok" -eq 0 ]]; then
+            warp_used=1
+            warp_status='install-attempt'
+            sudo apt-get update -y >/dev/null 2>&1 || true
+            sudo apt-get install -y curl gnupg lsb-release >/dev/null 2>&1 || true
+            curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor -o /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg >/dev/null 2>&1 || true
+            codename=$(lsb_release -cs 2>/dev/null || echo jammy)
+            echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ ${codename} main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list >/dev/null
+            sudo apt-get update -y >/dev/null 2>&1 || true
+            sudo apt-get install -y cloudflare-warp >/dev/null 2>&1 || true
+            sudo systemctl start warp-svc >/dev/null 2>&1 || true
+            sudo warp-cli --accept-tos registration new >/dev/null 2>&1 || true
+            sudo warp-cli --accept-tos mode warp >/dev/null 2>&1 || true
+            sudo warp-cli --accept-tos connect >/dev/null 2>&1 || true
+            sleep 5
+            warp_status=$(sudo warp-cli --accept-tos status 2>&1 | tr '\n' ' ' | head -c 500 || true)
+            mkdir -p "$TMP/prewarp"
+            cp "$TMP"/*.body "$TMP/prewarp/" 2>/dev/null || true
+            cp "$TMP/status.txt" "$TMP/prewarp/status.txt" 2>/dev/null || true
+            run_fetches
+          fi
+
+          {
+            echo "# X fetch result"
+            echo
+            echo "tweet_id: ${ID}"
+            echo "user: ${USER}"
+            echo "warp_used: ${warp_used}"
+            echo "warp_status: ${warp_status}"
+            echo
+            echo "## HTTP status"
+            echo '```text'
+            cat "$TMP/status.txt"
+            echo '```'
+            for name in direct_x oembed syndication fxtwitter vxtwitter; do
+              echo
+              echo "## ${name}"
+              echo '```text'
+              head -c 30000 "$TMP/${name}.body" 2>/dev/null || true
+              echo
+              echo '```'
+            done
+            if [[ "$warp_used" -eq 1 ]]; then
+              echo
+              echo "## pre-WARP status"
+              echo '```text'
+              cat "$TMP/prewarp/status.txt" 2>/dev/null || true
+              echo '```'
+            fi
+          } > "$OUT"
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- "$OUT"
+          git commit -m "Store X fetch result ${ID}" || true
+          git push origin HEAD:task/x-fetch-2090486831137886703
