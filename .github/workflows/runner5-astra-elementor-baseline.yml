@@ -1,0 +1,92 @@
+name: Runner5 Astra Elementor Baseline
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/runner5-astra-elementor-baseline.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: runner5-astra-elementor-baseline
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      WASMER_USERNAME: ${{ secrets.WASMER_USERNAME }}
+      WASMER_PASSWORD: ${{ secrets.WASMER_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Initialize diagnostics
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp ops/site-factory
+          printf '{"status":"BOOTSTRAP","stage":"checkout_ok"}\n' > /tmp/runner5-astra-elementor-baseline.json
+          test -n "${WASMER_USERNAME:-}" && test -n "${WASMER_PASSWORD:-}" || { printf '{"status":"FAILED","stage":"auth","detail":"wasmer_secrets_missing"}\n' > /tmp/runner5-astra-elementor-baseline.json; exit 3; }
+          python - <<'PY'
+          import json, os
+          json.dump({'username':os.environ['WASMER_USERNAME'],'password':os.environ['WASMER_PASSWORD']},open('/tmp/wasmer-account.json','w'))
+          json.dump({
+            'siteUrl':'https://runner5-restore-lab-1.wasmer.app/',
+            'dashboardUrl':'https://wasmer.io/apps/runner3wp0b90f6b4ab/runner5-restore-lab-1'
+          },open('ops/site-factory/runner5-restore-lab-1.json','w'))
+          PY
+          printf '{"status":"BOOTSTRAP","stage":"auth_ok"}\n' > /tmp/runner5-astra-elementor-baseline.json
+
+      - name: Fetch canonical importer
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 https://raw.githubusercontent.com/louisalviss/runner-3/main/scripts/runner5-astra-elementor-baseline.mjs -o /tmp/runner5-astra-elementor-baseline.mjs
+          node --check /tmp/runner5-astra-elementor-baseline.mjs
+          printf '{"status":"BOOTSTRAP","stage":"importer_ok"}\n' > /tmp/runner5-astra-elementor-baseline.json
+
+      - name: Prepare browser runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-save playwright-core@1.58.2
+          CHROME_PATH="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$CHROME_PATH" ]; then
+            npm install --no-save playwright@1.58.2
+            npx playwright install --with-deps chromium
+            CHROME_PATH="$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")"
+          fi
+          test -x "$CHROME_PATH"
+          echo "CHROME_PATH=$CHROME_PATH" >> "$GITHUB_ENV"
+          printf '{"status":"BOOTSTRAP","stage":"browser_ok"}\n' > /tmp/runner5-astra-elementor-baseline.json
+
+      - name: Build realistic WordPress baseline
+        run: node /tmp/runner5-astra-elementor-baseline.mjs
+
+      - name: Persist result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s /tmp/runner5-astra-elementor-baseline.json || printf '{"status":"RUNNER_ERROR","stage":"status_missing"}\n' > /tmp/runner5-astra-elementor-baseline.json
+          cp /tmp/runner5-astra-elementor-baseline.json /tmp/baseline-safe.json
+          rm -f /tmp/wasmer-account.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p ops/wordpress-baseline
+            cp /tmp/baseline-safe.json ops/wordpress-baseline/runner5-astra-elementor.json
+            git add ops/wordpress-baseline/runner5-astra-elementor.json
+            if git diff --cached --quiet; then break; fi
+            git commit -m 'Persist Runner5 Astra Elementor baseline result'
+            if git push origin HEAD:main; then break; fi
+            sleep 2
+          done
