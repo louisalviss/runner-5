@@ -6,25 +6,25 @@
     "url": "https://runner5-restore-lab-1.wasmer.app/",
     "status": 200,
     "contentType": "text/html; charset=UTF-8",
-    "bytesSampled": 50521,
-    "bodySample": "<!DOCTYPE html>\n<html lang=\"en-US\" class=\"no-js\">\n<head>\n\t<meta charset=\"UTF-8\" />\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\t<script>(function(html){html.className = html.className.replace(/\\bno-js\\b/,'js')})(document.documentElement);</script>\n<title>WordPress Site 95e41d</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"WordPress Site 95e41d &raquo; Feed\" href=\"https://runner5-restore-lab-1.wa"
+    "bytesSampled": 57137,
+    "bodySample": "<!DOCTYPE html>\n<html class=\"html\" lang=\"en-US\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<link rel=\"profile\" href=\"https://gmpg.org/xfn/11\">\n\n\t<title>Nourish Studio \u2014 Runner5 Demo &#8211; Practical nutrition coaching demo site</title>\n<meta name='robots' content='noindex, nofollow' />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"alternate\" type=\"application/rss+xml\" title=\"Nourish Studio \u2014 Runner5 Demo &raquo; Feed\" href=\"https://runner5-restore-lab-1.wasmer.app/fee"
   },
   "wpJson": {
     "url": "https://runner5-restore-lab-1.wasmer.app/wp-json/",
     "status": 200,
     "contentType": "application/json; charset=UTF-8",
     "bytesSampled": 131072,
-    "bodySample": "{\"name\":\"WordPress Site 95e41d\",\"description\":\"\",\"url\":\"https:\\/\\/runner5-restore-lab-1.wasmer.app\",\"home\":\"https:\\/\\/runner5-restore-lab-1.wasmer.app\",\"gmt_offset\":\"0\",\"timezone_string\":\"\",\"page_for_posts\":0,\"page_on_front\":0,\"show_on_front\":\"posts\",\"namespaces\":[\"oembed\\/1.0\",\"wasmer\\/v1\",\"wp\\/v2\",\"wp-site-health\\/v1\",\"wp-block-editor\\/v1\",\"wp-abilities\\/v1\"],\"authentication\":{\"application-passwords\":{\"endpoints\":{\"authorization\":\"https:\\/\\/runner5-restore-lab-1.wasmer.app\\/wp-admin\\/authorize"
+    "bodySample": "{\"name\":\"Nourish Studio \\u2014 Runner5 Demo\",\"description\":\"Practical nutrition coaching demo site\",\"url\":\"https:\\/\\/runner5-restore-lab-1.wasmer.app\",\"home\":\"https:\\/\\/runner5-restore-lab-1.wasmer.app\",\"gmt_offset\":\"0\",\"timezone_string\":\"\",\"page_for_posts\":0,\"page_on_front\":0,\"show_on_front\":\"posts\",\"namespaces\":[\"oembed\\/1.0\",\"masteriyo\\/v1\",\"masteriyo\\/pro\\/v1\",\"oceanwp\\/v1\",\"wasmer\\/v1\",\"elementor-one\\/v1\",\"ai1wm\\/v1\",\"zipwp\\/v1\",\"spectra\\/v1\",\"uag\\/v1\",\"sureforms\\/v1\",\"elementor\\/v1\\/docume"
   },
   "wpLogin": {
     "url": "https://runner5-restore-lab-1.wasmer.app/wp-login.php",
     "status": 200,
     "contentType": "text/html; charset=UTF-8",
-    "bytesSampled": 4953,
-    "bodySample": "<!DOCTYPE html>\n\t<html lang=\"en-US\">\n\t<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\t<title>Log In &lsaquo; WordPress Site 95e41d &#8212; WordPress</title>\n\t<meta name='robots' content='max-image-preview:large, noindex, noarchive' />\n<link rel='stylesheet' href='https://runner5-restore-lab-1.wasmer.app/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5Bchunk_0%5D=dashicons,buttons,forms,l10n,wp-base-styles,login&amp;ver=7.0.4' media='all' />\n\t<meta name='referrer"
+    "bytesSampled": 6080,
+    "bodySample": "<!DOCTYPE html>\n\t<html lang=\"en-US\">\n\t<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\t<title>Log In &lsaquo; Nourish Studio \u2014 Runner5 Demo &#8212; WordPress</title>\n\t<meta name='robots' content='noindex, nofollow, noarchive' />\n<link rel='stylesheet' id='dashicons-css' href='https://runner5-restore-lab-1.wasmer.app/wp-includes/css/dashicons.min.css?ver=7.0.4' media='all' />\n<link rel='stylesheet' id='buttons-css' href='https://runner5-restore-lab-1.wasmer.app/wp-"
   },
   "homeOk": true,
   "wpApiOk": true,
   "wpLoginOk": true,
-  "checkedAt": "2026-08-18T05:21:46Z"
+  "checkedAt": "2026-08-23T00:53:03Z"
 }
