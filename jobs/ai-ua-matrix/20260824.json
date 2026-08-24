@@ -1,0 +1,10 @@
+{
+  "name": "ai-ua-matrix-20260824",
+  "timeout_seconds": 25,
+  "urls": [
+    "https://www.douyin.com/",
+    "https://www.linkedin.com/",
+    "https://medium.com/",
+    "https://www.reddit.com/r/artificial/"
+  ]
+}
