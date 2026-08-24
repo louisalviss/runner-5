@@ -1,0 +1,177 @@
+{
+  "job_name": "x-2091460360826192363-20260824",
+  "engine": "runner-5-social-reach",
+  "strategy": "fast-public-fallbacks-first; agent-reach-optional-breadth-layer",
+  "started_at": "2026-08-24T00:11:53.103859+00:00",
+  "finished_at": "2026-08-24T00:11:53.391305+00:00",
+  "wall_seconds": 0.287,
+  "url_count": 1,
+  "ok_count": 1,
+  "failed_count": 0,
+  "results": [
+    {
+      "platform": "x",
+      "ok": true,
+      "source": "fxtwitter",
+      "requested_url": "https://x.com/saccc_c/status/2091460360826192363?s=12",
+      "normalized": {
+        "id": "2091460360826192363",
+        "text": "发现一个能让 Agent 抓网页时获取更多信息的方法，而且完全免费！\n\n原理是将Agent的网站请求身份模拟成OpenAI、xAI等官方AI公司，这样就能获得更完整且更AI友好的数据信息\n\n我用抖音视频实际测试了一下，普通curl请求完全无法抓到相关信息，但尝试冒充官方AI爬虫身份就可以了，神奇～\n\n建议可以在你的Agents.md里添加这句话，以后在搜索内容都超级方便：\n“当抓取公开网页时，如果默认 curl 得到空白或明显不完整的内容，请尝试使用搜索/AI 爬虫 UA（如 OAI-SearchBot、Claude-User、Bytespider）重新请求以尝试获取完整信息”",
+        "url": "https://x.com/Saccc_c/status/2091460360826192363",
+        "created_at": "Sun Aug 23 09:39:42 +0000 2026",
+        "author": {
+          "name": "Sac",
+          "screen_name": "Saccc_c",
+          "followers": 31449
+        },
+        "metrics": {
+          "views": 38724,
+          "likes": 448,
+          "retweets": 60,
+          "replies": 67,
+          "quotes": 2,
+          "bookmarks": 674
+        },
+        "media": {
+          "all": [
+            {
+              "type": "photo",
+              "id": "2091457851277598720",
+              "url": "https://pbs.twimg.com/media/HQZZ1bAaYAASFo6.jpg?name=orig",
+              "width": 1620,
+              "height": 1336
+            }
+          ],
+          "photos": [
+            {
+              "type": "photo",
+              "id": "2091457851277598720",
+              "url": "https://pbs.twimg.com/media/HQZZ1bAaYAASFo6.jpg?name=orig",
+              "width": 1620,
+              "height": 1336
+            }
+          ]
+        },
+        "quote": {
+          "url": "https://x.com/_can1357/status/2090837707069014224",
+          "id": "2090837707069014224",
+          "text": "UA spoofing is back on baby, for only $0.00 you too can be OpenAI File Downloader, XaiImageApiFetch/1.0\n\nSome sites like LinkedIn even remove their click-bait/paywall garbage if you're Claude-User",
+          "raw_text": {
+            "text": "UA spoofing is back on baby, for only $0.00 you too can be OpenAI File Downloader, XaiImageApiFetch/1.0\n\nSome sites like LinkedIn even remove their click-bait/paywall garbage if you're Claude-User https://t.co/ti2VbZetVW",
+            "display_text_range": [
+              0,
+              196
+            ],
+            "facets": [
+              {
+                "type": "media",
+                "indices": [
+                  197,
+                  220
+                ],
+                "id": "2090837339132088320",
+                "display": "pic.x.com/ti2VbZetVW",
+                "original": "https://t.co/ti2VbZetVW",
+                "replacement": "https://x.com/_can1357/status/2090837707069014224/photo/1"
+              }
+            ]
+          },
+          "author": {
+            "screen_name": "_can1357",
+            "url": "https://x.com/_can1357",
+            "id": "602951145",
+            "followers": 16167,
+            "following": 444,
+            "likes": 1353,
+            "media_count": 149,
+            "name": "Can Bölük",
+            "description": "BDFL @ http://omp.sh\nI break software for a living, giving back by making LLMs break em less. Lifelong ring-0 resident, LA57 fan, drew a ▲ with dx12 once.",
+            "raw_description": {
+              "text": "BDFL @ https://t.co/MXnNmnVajl\nI break software for a living, giving back by making LLMs break em less. Lifelong ring-0 resident, LA57 fan, drew a ▲ with dx12 once.",
+              "facets": [
+                {
+                  "type": "url",
+                  "indices": [
+                    7,
+                    30
+                  ],
+                  "original": "https://t.co/MXnNmnVajl",
+                  "replacement": "http://omp.sh",
+                  "display": "omp.sh"
+                }
+              ]
+            },
+            "location": "",
+            "banner_url": "https://pbs.twimg.com/profile_banners/602951145/1784267677",
+            "avatar_url": "https://pbs.twimg.com/profile_images/1251174019790974983/ebbPRYLv_200x200.jpg",
+            "joined": "Fri Jun 08 16:05:26 +0000 2012",
+            "protected": false,
+            "website": {
+              "url": "http://can.ac",
+              "display_url": "can.ac"
+            },
+            "verification": {
+              "verified": true,
+              "verified_at": null,
+              "type": "individual"
+            },
+            "avatar_color": null
+          },
+          "replies": 66,
+          "retweets": 201,
+          "likes": 3616,
+          "bookmarks": 4377,
+          "quotes": 42,
+          "created_at": "Fri Aug 21 16:25:29 +0000 2026",
+          "created_timestamp": 1787329529,
+          "possibly_sensitive": false,
+          "views": 672691,
+          "is_note_tweet": false,
+          "community_note": null,
+          "lang": "en",
+          "replying_to": null,
+          "replying_to_status": null,
+          "media": {
+            "all": [
+              {
+                "type": "photo",
+                "id": "2090837339132088320",
+                "url": "https://pbs.twimg.com/media/HQQle3IXUAAYiKM.jpg?name=orig",
+                "width": 924,
+                "height": 1213
+              }
+            ],
+            "photos": [
+              {
+                "type": "photo",
+                "id": "2090837339132088320",
+                "url": "https://pbs.twimg.com/media/HQQle3IXUAAYiKM.jpg?name=orig",
+                "width": 924,
+                "height": 1213
+              }
+            ]
+          },
+          "source": "Twitter Web App",
+          "twitter_card": "summary_large_image",
+          "color": null,
+          "provider": "twitter",
+          "reposted_by": null
+        }
+      },
+      "attempts": [
+        {
+          "source": "fxtwitter",
+          "endpoint": "https://api.fxtwitter.com/status/2091460360826192363",
+          "ok": true,
+          "valid_content": null,
+          "status": 200,
+          "elapsed_seconds": 0.286,
+          "bytes": 6197,
+          "error": null
+        }
+      ],
+      "elapsed_seconds": 0.286,
+      "fetched_at": "2026-08-24T00:11:53.390675+00:00"
+    }
+  ]
+}
