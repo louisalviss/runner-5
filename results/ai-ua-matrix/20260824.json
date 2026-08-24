@@ -1,5 +1,5 @@
 {
-  "job": "ai-ua-matrix-20260824",
+  "job": "ai-ua-matrix-20260824-r2",
   "rows": [
     {
       "url": "https://www.douyin.com/",
@@ -9,60 +9,125 @@
           "status": 200,
           "final_url": "https://www.douyin.com/",
           "content_type": "text/html",
-          "bytes": 2397,
-          "sha256": "bf507f5e74a790f8bb71398b616958aa2dd4e6b7190686195f71047d6c513d73",
+          "bytes": 72914,
+          "sha256": "9b56a6acdcb27eb620b5ee1ad870ad67964c70131b6fc31e8bd946b39c1e309e",
           "blocked_marker": false,
-          "elapsed_seconds": 0.866,
+          "elapsed_seconds": 1.782,
           "error": null,
-          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+          "body_head": "<html><head><meta charset=\"UTF-8\" /></head><body></body> <script> var glb;(glb=\"undefined\"==typeof window?global:window)._$jsvmprt=function(b,e,f){function a(){if(\"undefined\"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if(\"function\"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(b){return!1}}function d(b,e,f){return(d=a()?Reflect.construct:function(b,e,f){var a=[null];a.push.apply(a,e);var d=new(Function.bind.apply(b,a));return f&&c(d,f.prototype),d}).apply(null,arguments)}function c(b,e){return(c=Object.setPrototypeOf||function(b,e){return b.__proto__=e,b})(b,e)}function n(b){return function(b){if(Array.isArray(b)){for(var e=0,f=new Array(b.length);e<b.length;e++)f[e]=b[e];return f}}(b)||function(b){if(Symbol.iterator in Object(b)||\"[object Arguments]\"===Object.prototype.toString.call(b))return Array.from(b)}(b)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable"
         },
         {
           "profile": "chatgpt-user",
           "status": 200,
           "final_url": "https://www.douyin.com/",
           "content_type": "text/html",
-          "bytes": 2397,
-          "sha256": "4a8fcee7c353f9eae96c02a607a4ce20391f5ca7fb0145d0f67dbb255e636d93",
+          "bytes": 72914,
+          "sha256": "9b56a6acdcb27eb620b5ee1ad870ad67964c70131b6fc31e8bd946b39c1e309e",
           "blocked_marker": false,
-          "elapsed_seconds": 0.304,
+          "elapsed_seconds": 0.529,
           "error": null,
-          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+          "body_head": "<html><head><meta charset=\"UTF-8\" /></head><body></body> <script> var glb;(glb=\"undefined\"==typeof window?global:window)._$jsvmprt=function(b,e,f){function a(){if(\"undefined\"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if(\"function\"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(b){return!1}}function d(b,e,f){return(d=a()?Reflect.construct:function(b,e,f){var a=[null];a.push.apply(a,e);var d=new(Function.bind.apply(b,a));return f&&c(d,f.prototype),d}).apply(null,arguments)}function c(b,e){return(c=Object.setPrototypeOf||function(b,e){return b.__proto__=e,b})(b,e)}function n(b){return function(b){if(Array.isArray(b)){for(var e=0,f=new Array(b.length);e<b.length;e++)f[e]=b[e];return f}}(b)||function(b){if(Symbol.iterator in Object(b)||\"[object Arguments]\"===Object.prototype.toString.call(b))return Array.from(b)}(b)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable"
         },
         {
           "profile": "claude-user",
           "status": 200,
           "final_url": "https://www.douyin.com/",
           "content_type": "text/html",
-          "bytes": 2397,
-          "sha256": "763c9db927fef2e827a76b9749d28bd0a54e1654109d6a9cc7e870f87778145d",
+          "bytes": 72914,
+          "sha256": "9b56a6acdcb27eb620b5ee1ad870ad67964c70131b6fc31e8bd946b39c1e309e",
           "blocked_marker": false,
-          "elapsed_seconds": 0.28,
+          "elapsed_seconds": 0.718,
           "error": null,
-          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+          "body_head": "<html><head><meta charset=\"UTF-8\" /></head><body></body> <script> var glb;(glb=\"undefined\"==typeof window?global:window)._$jsvmprt=function(b,e,f){function a(){if(\"undefined\"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if(\"function\"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(b){return!1}}function d(b,e,f){return(d=a()?Reflect.construct:function(b,e,f){var a=[null];a.push.apply(a,e);var d=new(Function.bind.apply(b,a));return f&&c(d,f.prototype),d}).apply(null,arguments)}function c(b,e){return(c=Object.setPrototypeOf||function(b,e){return b.__proto__=e,b})(b,e)}function n(b){return function(b){if(Array.isArray(b)){for(var e=0,f=new Array(b.length);e<b.length;e++)f[e]=b[e];return f}}(b)||function(b){if(Symbol.iterator in Object(b)||\"[object Arguments]\"===Object.prototype.toString.call(b))return Array.from(b)}(b)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable"
         },
         {
           "profile": "oai-searchbot",
           "status": 200,
           "final_url": "https://www.douyin.com/",
           "content_type": "text/html",
-          "bytes": 2397,
-          "sha256": "20766301e38b2f2da7db5af73e139028b345c37b556d487dea297e02ffbcf0ce",
+          "bytes": 72914,
+          "sha256": "9b56a6acdcb27eb620b5ee1ad870ad67964c70131b6fc31e8bd946b39c1e309e",
           "blocked_marker": false,
-          "elapsed_seconds": 0.276,
+          "elapsed_seconds": 0.742,
           "error": null,
-          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+          "body_head": "<html><head><meta charset=\"UTF-8\" /></head><body></body> <script> var glb;(glb=\"undefined\"==typeof window?global:window)._$jsvmprt=function(b,e,f){function a(){if(\"undefined\"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if(\"function\"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(b){return!1}}function d(b,e,f){return(d=a()?Reflect.construct:function(b,e,f){var a=[null];a.push.apply(a,e);var d=new(Function.bind.apply(b,a));return f&&c(d,f.prototype),d}).apply(null,arguments)}function c(b,e){return(c=Object.setPrototypeOf||function(b,e){return b.__proto__=e,b})(b,e)}function n(b){return function(b){if(Array.isArray(b)){for(var e=0,f=new Array(b.length);e<b.length;e++)f[e]=b[e];return f}}(b)||function(b){if(Symbol.iterator in Object(b)||\"[object Arguments]\"===Object.prototype.toString.call(b))return Array.from(b)}(b)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable"
         },
         {
           "profile": "bytespider-experimental",
           "status": 200,
           "final_url": "https://www.douyin.com/",
           "content_type": "text/html",
-          "bytes": 2397,
-          "sha256": "57b0363fb890cee18f450c2fb71b81dad98c5b22b83def706dcfef9e3d4bd4b6",
+          "bytes": 72914,
+          "sha256": "9b56a6acdcb27eb620b5ee1ad870ad67964c70131b6fc31e8bd946b39c1e309e",
           "blocked_marker": false,
-          "elapsed_seconds": 0.295,
+          "elapsed_seconds": 0.493,
           "error": null,
-          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+          "body_head": "<html><head><meta charset=\"UTF-8\" /></head><body></body> <script> var glb;(glb=\"undefined\"==typeof window?global:window)._$jsvmprt=function(b,e,f){function a(){if(\"undefined\"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if(\"function\"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(b){return!1}}function d(b,e,f){return(d=a()?Reflect.construct:function(b,e,f){var a=[null];a.push.apply(a,e);var d=new(Function.bind.apply(b,a));return f&&c(d,f.prototype),d}).apply(null,arguments)}function c(b,e){return(c=Object.setPrototypeOf||function(b,e){return b.__proto__=e,b})(b,e)}function n(b){return function(b){if(Array.isArray(b)){for(var e=0,f=new Array(b.length);e<b.length;e++)f[e]=b[e];return f}}(b)||function(b){if(Symbol.iterator in Object(b)||\"[object Arguments]\"===Object.prototype.toString.call(b))return Array.from(b)}(b)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable"
+        }
+      ]
+    },
+    {
+      "url": "https://www.douyin.com/video/7669061012259179785",
+      "profiles": [
+        {
+          "profile": "normal",
+          "status": 200,
+          "final_url": "https://www.douyin.com/video/7669061012259179785",
+          "content_type": "text/html",
+          "bytes": 72914,
+          "sha256": "9b56a6acdcb27eb620b5ee1ad870ad67964c70131b6fc31e8bd946b39c1e309e",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.543,
+          "error": null,
+          "body_head": "<html><head><meta charset=\"UTF-8\" /></head><body></body> <script> var glb;(glb=\"undefined\"==typeof window?global:window)._$jsvmprt=function(b,e,f){function a(){if(\"undefined\"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if(\"function\"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(b){return!1}}function d(b,e,f){return(d=a()?Reflect.construct:function(b,e,f){var a=[null];a.push.apply(a,e);var d=new(Function.bind.apply(b,a));return f&&c(d,f.prototype),d}).apply(null,arguments)}function c(b,e){return(c=Object.setPrototypeOf||function(b,e){return b.__proto__=e,b})(b,e)}function n(b){return function(b){if(Array.isArray(b)){for(var e=0,f=new Array(b.length);e<b.length;e++)f[e]=b[e];return f}}(b)||function(b){if(Symbol.iterator in Object(b)||\"[object Arguments]\"===Object.prototype.toString.call(b))return Array.from(b)}(b)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable"
+        },
+        {
+          "profile": "chatgpt-user",
+          "status": 200,
+          "final_url": "https://www.douyin.com/video/7669061012259179785",
+          "content_type": "text/html",
+          "bytes": 72914,
+          "sha256": "9b56a6acdcb27eb620b5ee1ad870ad67964c70131b6fc31e8bd946b39c1e309e",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.321,
+          "error": null,
+          "body_head": "<html><head><meta charset=\"UTF-8\" /></head><body></body> <script> var glb;(glb=\"undefined\"==typeof window?global:window)._$jsvmprt=function(b,e,f){function a(){if(\"undefined\"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if(\"function\"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(b){return!1}}function d(b,e,f){return(d=a()?Reflect.construct:function(b,e,f){var a=[null];a.push.apply(a,e);var d=new(Function.bind.apply(b,a));return f&&c(d,f.prototype),d}).apply(null,arguments)}function c(b,e){return(c=Object.setPrototypeOf||function(b,e){return b.__proto__=e,b})(b,e)}function n(b){return function(b){if(Array.isArray(b)){for(var e=0,f=new Array(b.length);e<b.length;e++)f[e]=b[e];return f}}(b)||function(b){if(Symbol.iterator in Object(b)||\"[object Arguments]\"===Object.prototype.toString.call(b))return Array.from(b)}(b)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable"
+        },
+        {
+          "profile": "claude-user",
+          "status": 200,
+          "final_url": "https://www.douyin.com/video/7669061012259179785",
+          "content_type": "text/html",
+          "bytes": 72914,
+          "sha256": "9b56a6acdcb27eb620b5ee1ad870ad67964c70131b6fc31e8bd946b39c1e309e",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.505,
+          "error": null,
+          "body_head": "<html><head><meta charset=\"UTF-8\" /></head><body></body> <script> var glb;(glb=\"undefined\"==typeof window?global:window)._$jsvmprt=function(b,e,f){function a(){if(\"undefined\"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if(\"function\"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(b){return!1}}function d(b,e,f){return(d=a()?Reflect.construct:function(b,e,f){var a=[null];a.push.apply(a,e);var d=new(Function.bind.apply(b,a));return f&&c(d,f.prototype),d}).apply(null,arguments)}function c(b,e){return(c=Object.setPrototypeOf||function(b,e){return b.__proto__=e,b})(b,e)}function n(b){return function(b){if(Array.isArray(b)){for(var e=0,f=new Array(b.length);e<b.length;e++)f[e]=b[e];return f}}(b)||function(b){if(Symbol.iterator in Object(b)||\"[object Arguments]\"===Object.prototype.toString.call(b))return Array.from(b)}(b)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable"
+        },
+        {
+          "profile": "oai-searchbot",
+          "status": 200,
+          "final_url": "https://www.douyin.com/video/7669061012259179785",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 69077,
+          "sha256": "1502c870050655c6844173066dc68b75052c0da1d603c1d08c70a48ed5d0bc51",
+          "blocked_marker": false,
+          "elapsed_seconds": 1.042,
+          "error": null,
+          "body_head": "<!DOCTYPE html><html dark=\"true\"  dark=\"true\"><head><link rel=\"shortcut icon\" href=\"//p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/favicon.png\" type=\"image/x-icon\"/><link rel=\"apple-touch-icon\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png\"/><link rel=\"apple-touch-startup-image\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png\"/><meta name=\"mobile-web-app-capable\" content=\"yes\"/><link rel=\"icon\" sizes=\"192x192\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=0.5,user-scalable=no,viewport-fit=cover\"/><style>pace-island{display:contents}</style><link rel=\"stylesheet\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/ies/douyin_web/static-style.08290944.css\"/><link rel=\"stylesheet\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/ies/douyin_web/vendors-style-0.0e38f842.css\"/><link r"
+        },
+        {
+          "profile": "bytespider-experimental",
+          "status": 200,
+          "final_url": "https://www.douyin.com/video/7669061012259179785",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 70674,
+          "sha256": "75768025fa8ff75dd2884db3e1306164a170b3cfb7a734448a058a082a210252",
+          "blocked_marker": false,
+          "elapsed_seconds": 1.71,
+          "error": null,
+          "body_head": "<!DOCTYPE html><html dark=\"true\"  dark=\"true\"><head><link rel=\"shortcut icon\" href=\"//p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/favicon.png\" type=\"image/x-icon\"/><link rel=\"apple-touch-icon\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png\"/><link rel=\"apple-touch-startup-image\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png\"/><meta name=\"mobile-web-app-capable\" content=\"yes\"/><link rel=\"icon\" sizes=\"192x192\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=0.5,user-scalable=no,viewport-fit=cover\"/><style>pace-island{display:contents}</style><link rel=\"stylesheet\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/ies/douyin_web/static-style.08290944.css\"/><link rel=\"stylesheet\" href=\"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/ies/douyin_web/vendors-style-0.0e38f842.css\"/><link r"
         }
       ]
     },
@@ -74,12 +139,12 @@
           "status": 200,
           "final_url": "https://www.linkedin.com/",
           "content_type": "text/html; charset=utf-8",
-          "bytes": 140642,
-          "sha256": "7f707a740f8a03ce5905ab97e9b0769bd3ff2b315e07adf7a15485f486a75ace",
+          "bytes": 140634,
+          "sha256": "f0d952d87a589552770eb7aed003328ee1fa171d77838b41a96d4b28ee737ed8",
           "blocked_marker": true,
-          "elapsed_seconds": 0.144,
+          "elapsed_seconds": 0.183,
           "error": null,
-          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmCLPSkNsF0+PruEw==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"a3eefcc2-e334-41cd-80ce-440893f2cf23\" data-is-bot=\"false\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;FUSysPxSRaClw13chVObdg==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"enabled\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-rec"
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwDPTjZXlv5mUogjN0g==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"590e6539-f2b2-4301-879a-9372f7b8ab21\" data-is-bot=\"false\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;/t9YFpHDQuGioi5vOMgdkA==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-rec"
         },
         {
           "profile": "chatgpt-user",
@@ -87,11 +152,11 @@
           "final_url": "https://www.linkedin.com/",
           "content_type": "text/html; charset=utf-8",
           "bytes": 139228,
-          "sha256": "82668574944f958970d554baff6430dd4a7b94051cd8212b62511b5d027ea26d",
+          "sha256": "125f85638c5b54ff2ce3bea673e7e60277c85f5c42221ddedf0597e754f6a6ef",
           "blocked_marker": true,
-          "elapsed_seconds": 0.176,
+          "elapsed_seconds": 0.124,
           "error": null,
-          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmEqBOd+63dO/XLJA==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"0e128125-9ee6-4af9-896e-202628fb5fb6\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;9nmueFAcStWC1EXkjH5apg==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwDPV4rRMhADkAcoleA==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"6ae3d253-c5d7-4fd6-8b4c-137fc4bbd523\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;j2hI0TJ0RaqsU1C8yHXE5A==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
         },
         {
           "profile": "claude-user",
@@ -99,11 +164,11 @@
           "final_url": "https://www.linkedin.com/",
           "content_type": "text/html; charset=utf-8",
           "bytes": 140441,
-          "sha256": "7251cb185ce3f42a06cfc840d66a8acc679587986511343621269091e8c74a53",
+          "sha256": "efc42b71e7e7cabd62aba0a524baeecc3389a8733ef527a6e25c027ec430885d",
           "blocked_marker": true,
-          "elapsed_seconds": 0.188,
+          "elapsed_seconds": 0.257,
           "error": null,
-          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmHWNYecpOXLYEdkg==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"b6a2fb9d-a991-4602-85b0-441f17f319c2\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;RkjiJBwoTpmjgkIzjrsvAQ==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwDPYTF7CjfVVX4Sq2Q==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"ae39bb2f-5411-4df7-85c3-bf35a195d9db\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;e2jv0NlqTg+9urF3lyv6dg==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
         },
         {
           "profile": "oai-searchbot",
@@ -111,11 +176,11 @@
           "final_url": "https://www.linkedin.com/",
           "content_type": "text/html; charset=utf-8",
           "bytes": 139228,
-          "sha256": "68648f2e41e176ec8f2de89b35d347d30112cdb30d9949b0ae85ea67214cafba",
+          "sha256": "003bdfbdb1572488e6ceb5a7e75d1a8395d111e28bf0af20f24c89eadda0b8ae",
           "blocked_marker": true,
-          "elapsed_seconds": 0.195,
+          "elapsed_seconds": 0.149,
           "error": null,
-          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmKLkyoy7n7aqHjCA==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"27b48e5f-0a0a-4cde-899b-e112bcc4d8fc\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;36cvqiivSfyJbD421TOlaQ==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwDPbuRoCsCC4M2GA5A==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"58a59c95-4f0c-41bd-8597-9a4adf958d91\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;TyBhAbD5SEeR3KE2f4BrnQ==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
         },
         {
           "profile": "bytespider-experimental",
@@ -123,11 +188,76 @@
           "final_url": "https://www.linkedin.com/",
           "content_type": "text/html; charset=utf-8",
           "bytes": 136078,
-          "sha256": "4161bf54e7991192ffda8aa39c2819be0370a25aa6cdb0cc9dbfbb91b7e0332d",
+          "sha256": "c98e9c1a122334c8b6a03e5a36644bfb8fd4c8a3ca9c630d79f3bbf7eeb284fd",
           "blocked_marker": true,
-          "elapsed_seconds": 0.178,
+          "elapsed_seconds": 0.236,
           "error": null,
-          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"p_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmNHkfC5ixUCLq5rQ==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"009a2a5f-1585-4061-819d-cec6ee2561be\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:p_homepage-guest-home;TZ90HgLMTASO6ADxC1h0oA==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"p_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwDPej31h66ug5Tu8RA==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"3bda77b2-0421-478a-8557-b9c62924b7eb\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:p_homepage-guest-home;4e0lrSBDQT6MivK26qgUzw==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+        }
+      ]
+    },
+    {
+      "url": "https://www.linkedin.com/pulse/why-linkedin-pulse-articles-matter-more-than-ever-ai-search-mistry-2ayve",
+      "profiles": [
+        {
+          "profile": "normal",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/pulse/why-linkedin-pulse-articles-matter-more-than-ever-ai-search-mistry-2ayve",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 288940,
+          "sha256": "27106fedb314b752caafbcbc9bccb3961cf6749a5498f5380480f1e144aa213d",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.836,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n    \n    \n    \n    \n\n    \n\n    \n    \n    \n    \n    \n    <html class=\"cls-fix-enabled\" lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_flagship2_pulse_read\">\n          \n    <meta name=\"robots\" content=\"max-image-preview:large, noarchive\">\n    <meta name=\"bingbot\" content=\"max-image-preview:large, archive\">\n  \n<!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"0.0.5029\" data-call-tree-id=\"AAZZwDPiH8tT3dWOwv9wxQ==\" data-multiproduct-name=\"article-ssr-frontend\" data-service-name=\"article-ssr-frontend\" data-browser-id=\"41c221f9-8e76-4811-82e4-760c7ad3b0ed\" data-is-bot=\"false\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_flagship2_pulse_read;Vb1ecVXtTtez0DKMfb7Itw==\" data-theme=\"light\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-logout-url=\"https://www.linkedin.com/uas/logout?session_full_logout=true&amp;csrfToken=ajax%3A5880770486218253947\" data-"
+        },
+        {
+          "profile": "chatgpt-user",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/pulse/why-linkedin-pulse-articles-matter-more-than-ever-ai-search-mistry-2ayve",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 280048,
+          "sha256": "e118fcb6246cbdc4768849a0d931bedcef9da3ba49a11c7c696f64a73270b5e6",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.742,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n    \n    \n    \n    \n\n    \n\n    \n    \n    \n    \n    \n    <html class=\"cls-fix-enabled\" lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_flagship2_pulse_read\">\n          \n    <meta name=\"robots\" content=\"max-image-preview:large, noarchive\">\n    <meta name=\"bingbot\" content=\"max-image-preview:large, archive\">\n  \n<!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"0.0.5029\" data-call-tree-id=\"AAZZwDPuoCd/5X94dz519g==\" data-multiproduct-name=\"article-ssr-frontend\" data-service-name=\"article-ssr-frontend\" data-browser-id=\"8a8cf511-0da9-4e60-8060-edc9574b535c\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_flagship2_pulse_read;TczBqKSoQQO3H9AMPHjJWw==\" data-theme=\"light\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-logout-url=\"https://www.linkedin.com/uas/logout?session_full_logout=true&amp;csrfToken=ajax%3A1545780610377296276\" data-s"
+        },
+        {
+          "profile": "claude-user",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/pulse/why-linkedin-pulse-articles-matter-more-than-ever-ai-search-mistry-2ayve",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 237250,
+          "sha256": "7f0160ce081c4c41a0ae2c392310175e93fcb9d02633c66d1f734b979bc3dc1e",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.636,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n    \n    \n    \n    \n\n    \n\n    \n    \n    \n    \n    \n    <html class=\"cls-fix-enabled\" lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_flagship2_pulse_read\">\n          \n    <meta name=\"robots\" content=\"max-image-preview:large, noarchive\">\n    <meta name=\"bingbot\" content=\"max-image-preview:large, archive\">\n  \n<!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"0.0.5029\" data-call-tree-id=\"AAZZwDP50LmAw/TR3JMGbw==\" data-multiproduct-name=\"article-ssr-frontend\" data-service-name=\"article-ssr-frontend\" data-browser-id=\"4c9994fb-e99e-418b-859c-6e9f744cdcae\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_flagship2_pulse_read;Jo/8b0VwQbesdMf92pt3KA==\" data-theme=\"light\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-logout-url=\"https://www.linkedin.com/uas/logout?session_full_logout=true&amp;csrfToken=ajax%3A8386805579600059488\" data-s"
+        },
+        {
+          "profile": "oai-searchbot",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/pulse/why-linkedin-pulse-articles-matter-more-than-ever-ai-search-mistry-2ayve",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 280048,
+          "sha256": "6809feb916b94998df637dbe30659441eae081c4c3b83c76bba0bb33858a6b15",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.712,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n    \n    \n    \n    \n\n    \n\n    \n    \n    \n    \n    \n    <html class=\"cls-fix-enabled\" lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_flagship2_pulse_read\">\n          \n    <meta name=\"robots\" content=\"max-image-preview:large, noarchive\">\n    <meta name=\"bingbot\" content=\"max-image-preview:large, archive\">\n  \n<!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"0.0.5029\" data-call-tree-id=\"AAZZwDQDXciPPuHLPcg1Iw==\" data-multiproduct-name=\"article-ssr-frontend\" data-service-name=\"article-ssr-frontend\" data-browser-id=\"29cd65f4-1dbe-49a6-8101-6dde498f0e6f\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_flagship2_pulse_read;hx6gXU7NSUadC68OSLrmBw==\" data-theme=\"light\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-logout-url=\"https://www.linkedin.com/uas/logout?session_full_logout=true&amp;csrfToken=ajax%3A3350341995740573471\" data-s"
+        },
+        {
+          "profile": "bytespider-experimental",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/pulse/why-linkedin-pulse-articles-matter-more-than-ever-ai-search-mistry-2ayve",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 277379,
+          "sha256": "abcdcd4775fb292db6f2947af815b30011215108b1d928173be288c49124bede",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.743,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n    \n    \n    \n    \n\n    \n\n    \n    \n    \n    \n    \n    <html class=\"cls-fix-enabled\" lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"p_flagship2_pulse_read\">\n          \n    <meta name=\"robots\" content=\"max-image-preview:large, noarchive\">\n    <meta name=\"bingbot\" content=\"max-image-preview:large, archive\">\n  \n<!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"0.0.5029\" data-call-tree-id=\"AAZZwDQPGP5Kodws4+t1Vw==\" data-multiproduct-name=\"article-ssr-frontend\" data-service-name=\"article-ssr-frontend\" data-browser-id=\"c8aec1f1-43c4-474e-848e-4855253ee90c\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:p_flagship2_pulse_read;n69k1nBEThyWkOx1Yh8msA==\" data-theme=\"light\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-logout-url=\"https://www.linkedin.com/uas/logout?session_full_logout=true&amp;csrfToken=ajax%3A4680598772828578905\" data-s"
         }
       ]
     },
@@ -140,21 +270,21 @@
           "final_url": "https://medium.com/",
           "content_type": "text/html; charset=UTF-8",
           "bytes": 5571,
-          "sha256": "12dbf77a1d2fd56ac75451280bceb9dc90f2f0ed61b763963ba972bfc1ecc2b0",
+          "sha256": "8a332642975a9aff8c5d4d4cff21c7708cb9c92104f7b2eca6fe9d860b69b62d",
           "blocked_marker": false,
-          "elapsed_seconds": 0.019,
+          "elapsed_seconds": 0.02,
           "error": "<HTTPError 403: 'Forbidden'>",
-          "body_head": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-yAtEXr0sLyIhCRncqkLQ6d&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font"
+          "body_head": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-ou771wSwb9BbYOdPmY9izT&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font"
         },
         {
           "profile": "chatgpt-user",
           "status": 403,
           "final_url": "https://medium.com/",
           "content_type": "text/html; charset=UTF-8",
-          "bytes": 5369,
-          "sha256": "34f687711bd8b90ef5e16d09aca19ab12122be24de79eca53c02c686f0dde0a6",
+          "bytes": 5370,
+          "sha256": "497790209fef5abe19c3c9a45a7f0257c9ae05765b59937f3ee40119264d10a3",
           "blocked_marker": true,
-          "elapsed_seconds": 0.017,
+          "elapsed_seconds": 0.012,
           "error": "<HTTPError 403: 'Forbidden'>",
           "body_head": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', f"
         },
@@ -163,10 +293,10 @@
           "status": 403,
           "final_url": "https://medium.com/",
           "content_type": "text/html; charset=UTF-8",
-          "bytes": 5369,
-          "sha256": "9192c08514e9f3c59da6d5fca5b36205771fe675739bbd9623bc585e9b76bca8",
+          "bytes": 5370,
+          "sha256": "fc374e1df53fcb4bfee8632b34e8d68b47ae64783c4d3ac538423eb7057ea2a3",
           "blocked_marker": true,
-          "elapsed_seconds": 0.015,
+          "elapsed_seconds": 0.014,
           "error": "<HTTPError 403: 'Forbidden'>",
           "body_head": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', f"
         },
@@ -175,10 +305,10 @@
           "status": 403,
           "final_url": "https://medium.com/",
           "content_type": "text/html; charset=UTF-8",
-          "bytes": 5369,
-          "sha256": "f6eaf325c70ec198a898ef2b6f5c7ebd9b9ea96c441099250be370851ad88ab7",
+          "bytes": 5370,
+          "sha256": "ad1a1d8b9b0e5de2e80c5a8c0c020b5b32fc675ba7d35896a1014d778b6b092c",
           "blocked_marker": true,
-          "elapsed_seconds": 0.015,
+          "elapsed_seconds": 0.012,
           "error": "<HTTPError 403: 'Forbidden'>",
           "body_head": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', f"
         },
@@ -187,10 +317,10 @@
           "status": 403,
           "final_url": "https://medium.com/",
           "content_type": "text/html; charset=UTF-8",
-          "bytes": 5369,
-          "sha256": "7d6f61b2bec4a0fb388ed692fea3ae871a8070134509f16bd2bf9cce8595651e",
+          "bytes": 5370,
+          "sha256": "0e9d47d82d2329f8be6a78f9fbfc06bc589e523c8840124941de1918fcaca87a",
           "blocked_marker": true,
-          "elapsed_seconds": 0.017,
+          "elapsed_seconds": 0.016,
           "error": "<HTTPError 403: 'Forbidden'>",
           "body_head": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', f"
         }
@@ -207,7 +337,7 @@
           "bytes": 190240,
           "sha256": "dc131f91303300301ab1b23a7e3b0a084b9e325b318b2722d00fc637247b8b7a",
           "blocked_marker": true,
-          "elapsed_seconds": 0.088,
+          "elapsed_seconds": 0.06,
           "error": "<HTTPError 403: 'Blocked'>",
           "body_head": "<body class=theme-beta><div><style>.theme-light,:root{--rem360:22.5rem;--rem320:20rem;--rem192:12rem;--rem144:9rem;--rem128:8rem;--rem96:6rem;--rem90:5.625rem;--rem88:5.5rem;--rem64:4rem;--rem56:3.5rem;--rem48:3rem;--rem40:2.5rem;--rem36:2.25rem;--rem32:2rem;--rem28:1.75rem;--rem26:1.625rem;--rem24:1.5rem;--rem22:1.375rem;--rem20:1.25rem;--rem18:1.125rem;--rem16:1rem;--rem15:0.9375rem;--rem14:0.875rem;--rem12:0.75rem;--rem10:0.625rem;--rem8:0.5rem;--rem6:0.375rem;--rem4:0.25rem;--rem2:0.125rem;--rem1:0.0625rem;--spacer-4xs:0.125rem;--spacer-2xs:0.25rem;--spacer-xs:0.5rem;--spacer-sm:0.75rem;--spacer-md:1rem;--spacer-lg:1.5rem;--spacer-xl:2rem;--spacer-2xl:3rem;--spacer-a-px:0px;--spacer-button-lg-px:var(--spacer-lg);--spacer-button-md-px:var(--spacer-lg);--spacer-button-sm-px:var(--spacer-md);--spacer-input-padding-left:0px;--spacer-input-padding-top:0px;--spacer-label-default:0px;--spacer-switch-input-active-pl:0px;--size-2xs:0.25rem;--size-xs:0.5rem;--size-sm:0.75rem;--size-md:1rem;-"
         },
@@ -217,9 +347,9 @@
           "final_url": "https://www.reddit.com/r/artificial/",
           "content_type": "text/html",
           "bytes": 1522,
-          "sha256": "ae9408fe4e78785769ac416cea9872558aa0d1bc674e2091f0bf871b19c1158f",
+          "sha256": "00061b87c019b39bc7ab0ae20adf22bebc76799640f733c75552e1211d835ef8",
           "blocked_marker": false,
-          "elapsed_seconds": 0.029,
+          "elapsed_seconds": 0.014,
           "error": "<HTTPError 403: 'Blocked'>",
           "body_head": "<!doctype html>\n     <html>\n  <head>\n    <title>Blocked</title>\n    <style>\n      body {\n          font: small verdana, arial, helvetica, sans-serif;\n          width: 600px;\n          margin: 0 auto;\n      }\n\n      h1 {\n          height: 40px;\n          background: transparent url(//www.redditstatic.com/reddit.com.header.png) no-repeat scroll top right;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>whoa there, pardner!</h1>\n\n<p>Your request has been blocked due to a network policy.</p>\n\n<p>Try logging in or creating an account <a href=https://www.reddit.com/login/>here</a> to get back to browsing.</p>\n\n<p>If you're running a script or application, please register or sign in with your developer credentials <a href=https://www.reddit.com/wiki/api/>here</a>. Additionally make sure your User-Agent is not empty and is something unique and descriptive and try again. if you're supplying an alternate User-Agent string,\ntry changing back to default as that can sometimes result in a block.</p>"
         },
@@ -231,7 +361,7 @@
           "bytes": 190240,
           "sha256": "dc131f91303300301ab1b23a7e3b0a084b9e325b318b2722d00fc637247b8b7a",
           "blocked_marker": true,
-          "elapsed_seconds": 0.02,
+          "elapsed_seconds": 0.023,
           "error": "<HTTPError 403: 'Blocked'>",
           "body_head": "<body class=theme-beta><div><style>.theme-light,:root{--rem360:22.5rem;--rem320:20rem;--rem192:12rem;--rem144:9rem;--rem128:8rem;--rem96:6rem;--rem90:5.625rem;--rem88:5.5rem;--rem64:4rem;--rem56:3.5rem;--rem48:3rem;--rem40:2.5rem;--rem36:2.25rem;--rem32:2rem;--rem28:1.75rem;--rem26:1.625rem;--rem24:1.5rem;--rem22:1.375rem;--rem20:1.25rem;--rem18:1.125rem;--rem16:1rem;--rem15:0.9375rem;--rem14:0.875rem;--rem12:0.75rem;--rem10:0.625rem;--rem8:0.5rem;--rem6:0.375rem;--rem4:0.25rem;--rem2:0.125rem;--rem1:0.0625rem;--spacer-4xs:0.125rem;--spacer-2xs:0.25rem;--spacer-xs:0.5rem;--spacer-sm:0.75rem;--spacer-md:1rem;--spacer-lg:1.5rem;--spacer-xl:2rem;--spacer-2xl:3rem;--spacer-a-px:0px;--spacer-button-lg-px:var(--spacer-lg);--spacer-button-md-px:var(--spacer-lg);--spacer-button-sm-px:var(--spacer-md);--spacer-input-padding-left:0px;--spacer-input-padding-top:0px;--spacer-label-default:0px;--spacer-switch-input-active-pl:0px;--size-2xs:0.25rem;--size-xs:0.5rem;--size-sm:0.75rem;--size-md:1rem;-"
         },
@@ -243,7 +373,7 @@
           "bytes": 190240,
           "sha256": "dc131f91303300301ab1b23a7e3b0a084b9e325b318b2722d00fc637247b8b7a",
           "blocked_marker": true,
-          "elapsed_seconds": 0.016,
+          "elapsed_seconds": 0.022,
           "error": "<HTTPError 403: 'Blocked'>",
           "body_head": "<body class=theme-beta><div><style>.theme-light,:root{--rem360:22.5rem;--rem320:20rem;--rem192:12rem;--rem144:9rem;--rem128:8rem;--rem96:6rem;--rem90:5.625rem;--rem88:5.5rem;--rem64:4rem;--rem56:3.5rem;--rem48:3rem;--rem40:2.5rem;--rem36:2.25rem;--rem32:2rem;--rem28:1.75rem;--rem26:1.625rem;--rem24:1.5rem;--rem22:1.375rem;--rem20:1.25rem;--rem18:1.125rem;--rem16:1rem;--rem15:0.9375rem;--rem14:0.875rem;--rem12:0.75rem;--rem10:0.625rem;--rem8:0.5rem;--rem6:0.375rem;--rem4:0.25rem;--rem2:0.125rem;--rem1:0.0625rem;--spacer-4xs:0.125rem;--spacer-2xs:0.25rem;--spacer-xs:0.5rem;--spacer-sm:0.75rem;--spacer-md:1rem;--spacer-lg:1.5rem;--spacer-xl:2rem;--spacer-2xl:3rem;--spacer-a-px:0px;--spacer-button-lg-px:var(--spacer-lg);--spacer-button-md-px:var(--spacer-lg);--spacer-button-sm-px:var(--spacer-md);--spacer-input-padding-left:0px;--spacer-input-padding-top:0px;--spacer-label-default:0px;--spacer-switch-input-active-pl:0px;--size-2xs:0.25rem;--size-xs:0.5rem;--size-sm:0.75rem;--size-md:1rem;-"
         },
@@ -255,7 +385,7 @@
           "bytes": 0,
           "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "blocked_marker": false,
-          "elapsed_seconds": 0.028,
+          "elapsed_seconds": 0.033,
           "error": "<HTTPError 429: 'Too Many Requests'>",
           "body_head": ""
         }
