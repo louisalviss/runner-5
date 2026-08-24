@@ -1,0 +1,265 @@
+{
+  "job": "ai-ua-matrix-20260824",
+  "rows": [
+    {
+      "url": "https://www.douyin.com/",
+      "profiles": [
+        {
+          "profile": "normal",
+          "status": 200,
+          "final_url": "https://www.douyin.com/",
+          "content_type": "text/html",
+          "bytes": 2397,
+          "sha256": "bf507f5e74a790f8bb71398b616958aa2dd4e6b7190686195f71047d6c513d73",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.866,
+          "error": null,
+          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+        },
+        {
+          "profile": "chatgpt-user",
+          "status": 200,
+          "final_url": "https://www.douyin.com/",
+          "content_type": "text/html",
+          "bytes": 2397,
+          "sha256": "4a8fcee7c353f9eae96c02a607a4ce20391f5ca7fb0145d0f67dbb255e636d93",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.304,
+          "error": null,
+          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+        },
+        {
+          "profile": "claude-user",
+          "status": 200,
+          "final_url": "https://www.douyin.com/",
+          "content_type": "text/html",
+          "bytes": 2397,
+          "sha256": "763c9db927fef2e827a76b9749d28bd0a54e1654109d6a9cc7e870f87778145d",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.28,
+          "error": null,
+          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+        },
+        {
+          "profile": "oai-searchbot",
+          "status": 200,
+          "final_url": "https://www.douyin.com/",
+          "content_type": "text/html",
+          "bytes": 2397,
+          "sha256": "20766301e38b2f2da7db5af73e139028b345c37b556d487dea297e02ffbcf0ce",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.276,
+          "error": null,
+          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+        },
+        {
+          "profile": "bytespider-experimental",
+          "status": 200,
+          "final_url": "https://www.douyin.com/",
+          "content_type": "text/html",
+          "bytes": 2397,
+          "sha256": "57b0363fb890cee18f450c2fb71b81dad98c5b22b83def706dcfef9e3d4bd4b6",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.295,
+          "error": null,
+          "body_head": "<!DOCTYPE html><html lang=\"en\"><head><link rel=\"icon\"href=\"data:;base64,=\"><head><script>;(function(w,d,u,b,n,pc,ga,ae,po,s,p,e,t,pp){pc='precollect';ga='getAttribute';ae='addEventListener';po='PerformanceObserver';s=function(m){p=[].slice.call(arguments);p.push(Date.now(),location.href);(m==pc?s.p.a:s.q).push(p)};s.q=[];s.p={a:[]};w[n]=s;e=document.createElement('script');e.src=u+'?bid='+b+'&globalName='+n;e.crossOrigin=u.indexOf('sdk-web')>0?'anonymous':'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if(ae in w){s.pcErr=function(e){e=e||w.event;t=e.target||e.srcElement;if(t instanceof Element||t instanceof HTMLElement){if(t[ga]('integrity')){w[n](pc,'sri',t[ga]('href')||t[ga]('src'))}else{w[n](pc,'st',{tagName:t.tagName,url:t[ga]('href')||t[ga]('src')})}}else{w[n](pc,'err',e.error)}};s.pcRej=function(e){e=e||w.event;w[n](pc,'reject',e.reason||(e.detail&&e.detail.reason))};w[ae]('error',s.pcErr,true);w[ae]('unhandledrejection',s.pcRej,true)};if('PerformanceLongTaskT"
+        }
+      ]
+    },
+    {
+      "url": "https://www.linkedin.com/",
+      "profiles": [
+        {
+          "profile": "normal",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 140642,
+          "sha256": "7f707a740f8a03ce5905ab97e9b0769bd3ff2b315e07adf7a15485f486a75ace",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.144,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmCLPSkNsF0+PruEw==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"a3eefcc2-e334-41cd-80ce-440893f2cf23\" data-is-bot=\"false\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;FUSysPxSRaClw13chVObdg==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"enabled\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-rec"
+        },
+        {
+          "profile": "chatgpt-user",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 139228,
+          "sha256": "82668574944f958970d554baff6430dd4a7b94051cd8212b62511b5d027ea26d",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.176,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmEqBOd+63dO/XLJA==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"0e128125-9ee6-4af9-896e-202628fb5fb6\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;9nmueFAcStWC1EXkjH5apg==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+        },
+        {
+          "profile": "claude-user",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 140441,
+          "sha256": "7251cb185ce3f42a06cfc840d66a8acc679587986511343621269091e8c74a53",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.188,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmHWNYecpOXLYEdkg==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"b6a2fb9d-a991-4602-85b0-441f17f319c2\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;RkjiJBwoTpmjgkIzjrsvAQ==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+        },
+        {
+          "profile": "oai-searchbot",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 139228,
+          "sha256": "68648f2e41e176ec8f2de89b35d347d30112cdb30d9949b0ae85ea67214cafba",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.195,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"d_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmKLkyoy7n7aqHjCA==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"27b48e5f-0a0a-4cde-899b-e112bcc4d8fc\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:d_homepage-guest-home;36cvqiivSfyJbD421TOlaQ==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+        },
+        {
+          "profile": "bytespider-experimental",
+          "status": 200,
+          "final_url": "https://www.linkedin.com/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 136078,
+          "sha256": "4161bf54e7991192ffda8aa39c2819be0370a25aa6cdb0cc9dbfbb91b7e0332d",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.178,
+          "error": null,
+          "body_head": "<!DOCTYPE html>\n\n\n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n\n    \n    <html lang=\"en\">\n      <head>\n        <meta name=\"pageKey\" content=\"p_homepage-guest-home\">\n<!----><!----><!---->        <meta name=\"locale\" content=\"en_US\">\n<!---->        <meta id=\"config\" data-app-version=\"2.1.2979\" data-call-tree-id=\"AAZZwCmNHkfC5ixUCLq5rQ==\" data-jet-tags=\"guest-homepage\" data-multiproduct-name=\"homepage-guest-frontend\" data-service-name=\"homepage-guest-frontend\" data-browser-id=\"009a2a5f-1585-4061-819d-cec6ee2561be\" data-is-bot=\"true\" data-enable-page-view-heartbeat-tracking data-page-instance=\"urn:li:page:p_homepage-guest-home;TZ90HgLMTASO6ADxC1h0oA==\" data-disable-jsbeacon-pagekey-suffix=\"false\" data-member-id=\"0\" data-should-use-full-url-in-pve-path=\"true\" data-dna-member-lix-treatment=\"enabled\" data-human-member-lix-treatment=\"enabled\" data-dfp-member-lix-treatment=\"control\" data-sync-apfc-headers-lix-treatment=\"control\" data-sync-apfc-cb-lix-treatment=\"control\" data-reca"
+        }
+      ]
+    },
+    {
+      "url": "https://medium.com/",
+      "profiles": [
+        {
+          "profile": "normal",
+          "status": 403,
+          "final_url": "https://medium.com/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5571,
+          "sha256": "12dbf77a1d2fd56ac75451280bceb9dc90f2f0ed61b763963ba972bfc1ecc2b0",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.019,
+          "error": "<HTTPError 403: 'Forbidden'>",
+          "body_head": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-yAtEXr0sLyIhCRncqkLQ6d&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font"
+        },
+        {
+          "profile": "chatgpt-user",
+          "status": 403,
+          "final_url": "https://medium.com/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5369,
+          "sha256": "34f687711bd8b90ef5e16d09aca19ab12122be24de79eca53c02c686f0dde0a6",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.017,
+          "error": "<HTTPError 403: 'Forbidden'>",
+          "body_head": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', f"
+        },
+        {
+          "profile": "claude-user",
+          "status": 403,
+          "final_url": "https://medium.com/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5369,
+          "sha256": "9192c08514e9f3c59da6d5fca5b36205771fe675739bbd9623bc585e9b76bca8",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.015,
+          "error": "<HTTPError 403: 'Forbidden'>",
+          "body_head": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', f"
+        },
+        {
+          "profile": "oai-searchbot",
+          "status": 403,
+          "final_url": "https://medium.com/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5369,
+          "sha256": "f6eaf325c70ec198a898ef2b6f5c7ebd9b9ea96c441099250be370851ad88ab7",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.015,
+          "error": "<HTTPError 403: 'Forbidden'>",
+          "body_head": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', f"
+        },
+        {
+          "profile": "bytespider-experimental",
+          "status": 403,
+          "final_url": "https://medium.com/",
+          "content_type": "text/html; charset=UTF-8",
+          "bytes": 5369,
+          "sha256": "7d6f61b2bec4a0fb388ed692fea3ae871a8070134509f16bd2bf9cce8595651e",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.017,
+          "error": "<HTTPError 403: 'Forbidden'>",
+          "body_head": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', f"
+        }
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/artificial/",
+      "profiles": [
+        {
+          "profile": "normal",
+          "status": 403,
+          "final_url": "https://www.reddit.com/r/artificial/",
+          "content_type": "text/html",
+          "bytes": 190240,
+          "sha256": "dc131f91303300301ab1b23a7e3b0a084b9e325b318b2722d00fc637247b8b7a",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.088,
+          "error": "<HTTPError 403: 'Blocked'>",
+          "body_head": "<body class=theme-beta><div><style>.theme-light,:root{--rem360:22.5rem;--rem320:20rem;--rem192:12rem;--rem144:9rem;--rem128:8rem;--rem96:6rem;--rem90:5.625rem;--rem88:5.5rem;--rem64:4rem;--rem56:3.5rem;--rem48:3rem;--rem40:2.5rem;--rem36:2.25rem;--rem32:2rem;--rem28:1.75rem;--rem26:1.625rem;--rem24:1.5rem;--rem22:1.375rem;--rem20:1.25rem;--rem18:1.125rem;--rem16:1rem;--rem15:0.9375rem;--rem14:0.875rem;--rem12:0.75rem;--rem10:0.625rem;--rem8:0.5rem;--rem6:0.375rem;--rem4:0.25rem;--rem2:0.125rem;--rem1:0.0625rem;--spacer-4xs:0.125rem;--spacer-2xs:0.25rem;--spacer-xs:0.5rem;--spacer-sm:0.75rem;--spacer-md:1rem;--spacer-lg:1.5rem;--spacer-xl:2rem;--spacer-2xl:3rem;--spacer-a-px:0px;--spacer-button-lg-px:var(--spacer-lg);--spacer-button-md-px:var(--spacer-lg);--spacer-button-sm-px:var(--spacer-md);--spacer-input-padding-left:0px;--spacer-input-padding-top:0px;--spacer-label-default:0px;--spacer-switch-input-active-pl:0px;--size-2xs:0.25rem;--size-xs:0.5rem;--size-sm:0.75rem;--size-md:1rem;-"
+        },
+        {
+          "profile": "chatgpt-user",
+          "status": 403,
+          "final_url": "https://www.reddit.com/r/artificial/",
+          "content_type": "text/html",
+          "bytes": 1522,
+          "sha256": "ae9408fe4e78785769ac416cea9872558aa0d1bc674e2091f0bf871b19c1158f",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.029,
+          "error": "<HTTPError 403: 'Blocked'>",
+          "body_head": "<!doctype html>\n     <html>\n  <head>\n    <title>Blocked</title>\n    <style>\n      body {\n          font: small verdana, arial, helvetica, sans-serif;\n          width: 600px;\n          margin: 0 auto;\n      }\n\n      h1 {\n          height: 40px;\n          background: transparent url(//www.redditstatic.com/reddit.com.header.png) no-repeat scroll top right;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>whoa there, pardner!</h1>\n\n<p>Your request has been blocked due to a network policy.</p>\n\n<p>Try logging in or creating an account <a href=https://www.reddit.com/login/>here</a> to get back to browsing.</p>\n\n<p>If you're running a script or application, please register or sign in with your developer credentials <a href=https://www.reddit.com/wiki/api/>here</a>. Additionally make sure your User-Agent is not empty and is something unique and descriptive and try again. if you're supplying an alternate User-Agent string,\ntry changing back to default as that can sometimes result in a block.</p>"
+        },
+        {
+          "profile": "claude-user",
+          "status": 403,
+          "final_url": "https://www.reddit.com/r/artificial/",
+          "content_type": "text/html",
+          "bytes": 190240,
+          "sha256": "dc131f91303300301ab1b23a7e3b0a084b9e325b318b2722d00fc637247b8b7a",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.02,
+          "error": "<HTTPError 403: 'Blocked'>",
+          "body_head": "<body class=theme-beta><div><style>.theme-light,:root{--rem360:22.5rem;--rem320:20rem;--rem192:12rem;--rem144:9rem;--rem128:8rem;--rem96:6rem;--rem90:5.625rem;--rem88:5.5rem;--rem64:4rem;--rem56:3.5rem;--rem48:3rem;--rem40:2.5rem;--rem36:2.25rem;--rem32:2rem;--rem28:1.75rem;--rem26:1.625rem;--rem24:1.5rem;--rem22:1.375rem;--rem20:1.25rem;--rem18:1.125rem;--rem16:1rem;--rem15:0.9375rem;--rem14:0.875rem;--rem12:0.75rem;--rem10:0.625rem;--rem8:0.5rem;--rem6:0.375rem;--rem4:0.25rem;--rem2:0.125rem;--rem1:0.0625rem;--spacer-4xs:0.125rem;--spacer-2xs:0.25rem;--spacer-xs:0.5rem;--spacer-sm:0.75rem;--spacer-md:1rem;--spacer-lg:1.5rem;--spacer-xl:2rem;--spacer-2xl:3rem;--spacer-a-px:0px;--spacer-button-lg-px:var(--spacer-lg);--spacer-button-md-px:var(--spacer-lg);--spacer-button-sm-px:var(--spacer-md);--spacer-input-padding-left:0px;--spacer-input-padding-top:0px;--spacer-label-default:0px;--spacer-switch-input-active-pl:0px;--size-2xs:0.25rem;--size-xs:0.5rem;--size-sm:0.75rem;--size-md:1rem;-"
+        },
+        {
+          "profile": "oai-searchbot",
+          "status": 403,
+          "final_url": "https://www.reddit.com/r/artificial/",
+          "content_type": "text/html",
+          "bytes": 190240,
+          "sha256": "dc131f91303300301ab1b23a7e3b0a084b9e325b318b2722d00fc637247b8b7a",
+          "blocked_marker": true,
+          "elapsed_seconds": 0.016,
+          "error": "<HTTPError 403: 'Blocked'>",
+          "body_head": "<body class=theme-beta><div><style>.theme-light,:root{--rem360:22.5rem;--rem320:20rem;--rem192:12rem;--rem144:9rem;--rem128:8rem;--rem96:6rem;--rem90:5.625rem;--rem88:5.5rem;--rem64:4rem;--rem56:3.5rem;--rem48:3rem;--rem40:2.5rem;--rem36:2.25rem;--rem32:2rem;--rem28:1.75rem;--rem26:1.625rem;--rem24:1.5rem;--rem22:1.375rem;--rem20:1.25rem;--rem18:1.125rem;--rem16:1rem;--rem15:0.9375rem;--rem14:0.875rem;--rem12:0.75rem;--rem10:0.625rem;--rem8:0.5rem;--rem6:0.375rem;--rem4:0.25rem;--rem2:0.125rem;--rem1:0.0625rem;--spacer-4xs:0.125rem;--spacer-2xs:0.25rem;--spacer-xs:0.5rem;--spacer-sm:0.75rem;--spacer-md:1rem;--spacer-lg:1.5rem;--spacer-xl:2rem;--spacer-2xl:3rem;--spacer-a-px:0px;--spacer-button-lg-px:var(--spacer-lg);--spacer-button-md-px:var(--spacer-lg);--spacer-button-sm-px:var(--spacer-md);--spacer-input-padding-left:0px;--spacer-input-padding-top:0px;--spacer-label-default:0px;--spacer-switch-input-active-pl:0px;--size-2xs:0.25rem;--size-xs:0.5rem;--size-sm:0.75rem;--size-md:1rem;-"
+        },
+        {
+          "profile": "bytespider-experimental",
+          "status": 429,
+          "final_url": "https://www.reddit.com/r/artificial/",
+          "content_type": "",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "blocked_marker": false,
+          "elapsed_seconds": 0.028,
+          "error": "<HTTPError 429: 'Too Many Requests'>",
+          "body_head": ""
+        }
+      ]
+    }
+  ]
+}
