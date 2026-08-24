@@ -1,0 +1,10 @@
+/tmp/tvDatafeed/tvDatafeed/main.py:136: SyntaxWarning: invalid escape sequence '\['
+  out = re.search('"s":\[(.+?)\}\]', raw_data).group(1)
+/tmp/tvDatafeed/tvDatafeed/main.py:142: SyntaxWarning: invalid escape sequence '\['
+  xi = re.split("\[|:|,|\]", xi)
+you are using nologin method, data you access may be limited
+Traceback (most recent call last):
+  File "<stdin>", line 53, in <module>
+  File "<stdin>", line 14, in features
+  File "<stdin>", line 9, in rma
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
