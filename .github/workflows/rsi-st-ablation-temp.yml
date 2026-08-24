@@ -27,7 +27,7 @@ jobs:
           def rma(s,n):
             a=np.asarray(s,float);y=np.full(len(a),np.nan);v=[];st=None
             for i,x in enumerate(a):
-              if np.isfinite(x):v.append(x)
+              if np.isfinite(x):v.append(i)
               if len(v)==n:st=i;y[i]=np.mean([a[j] for j in v[-n:]]);break
             if st is None:return pd.Series(y)
             for i in range(st+1,len(a)):y[i]=((n-1)*y[i-1]+a[i])/n if np.isfinite(a[i]) else y[i-1]
