@@ -1,0 +1,9 @@
+{
+  "name": "x-2091460360826192363-20260824",
+  "timeout_seconds": 30,
+  "max_workers": 1,
+  "use_agent_reach": false,
+  "urls": [
+    "https://x.com/saccc_c/status/2091460360826192363?s=12"
+  ]
+}
