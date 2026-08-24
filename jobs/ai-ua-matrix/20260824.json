@@ -1,9 +1,11 @@
 {
-  "name": "ai-ua-matrix-20260824",
+  "name": "ai-ua-matrix-20260824-r2",
   "timeout_seconds": 25,
   "urls": [
     "https://www.douyin.com/",
+    "https://www.douyin.com/video/7669061012259179785",
     "https://www.linkedin.com/",
+    "https://www.linkedin.com/pulse/why-linkedin-pulse-articles-matter-more-than-ever-ai-search-mistry-2ayve",
     "https://medium.com/",
     "https://www.reddit.com/r/artificial/"
   ]
