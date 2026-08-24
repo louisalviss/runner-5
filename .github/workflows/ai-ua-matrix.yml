@@ -1,0 +1,60 @@
+name: AI UA Matrix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'jobs/ai-ua-matrix/*.json'
+  workflow_dispatch:
+    inputs:
+      job_file:
+        description: 'AI UA matrix job JSON path'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Resolve job
+        id: j
+        shell: bash
+        env:
+          INPUT_JOB_FILE: ${{ github.event.inputs.job_file }}
+        run: |
+          set -euo pipefail
+          JOB="${INPUT_JOB_FILE:-}"
+          if [ -z "$JOB" ]; then
+            JOB="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" -- 'jobs/ai-ua-matrix/*.json' | tail -n 1 || true)"
+          fi
+          test -n "$JOB" && test -f "$JOB"
+          echo "job=$JOB" >> "$GITHUB_OUTPUT"
+          echo "stem=$(basename "$JOB" .json)" >> "$GITHUB_OUTPUT"
+      - name: Run matrix
+        run: python ai_ua_matrix.py '${{ steps.j.outputs.job }}' --output matrix.json
+      - name: Persist
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest='results/ai-ua-matrix/${{ steps.j.outputs.stem }}.json'
+          mkdir -p "$(dirname "$dest")"
+          cp matrix.json "$dest"
+          git config user.name 'runner-5-ai-ua-matrix'
+          git config user.email 'runner-5-ai-ua-matrix@users.noreply.github.com'
+          git add "$dest"
+          git commit -m 'Store AI UA matrix: ${{ steps.j.outputs.stem }} [skip ci]' || exit 0
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 2
+          done
+          exit 1
